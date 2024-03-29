@@ -113,6 +113,71 @@ function showTotalA4brosur() {
 		}
 	}
 
+	if (bahan === "Art Paper 120") {
+		if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 400000;
+		} else if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 450000;
+		}
+		if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 800000;
+		} else if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 850000;
+		}
+	}
+	if (bahan === "Art Paper 150") {
+		if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 420000;
+		} else if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 470000;
+		}
+		if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 840000;
+		} else if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 890000;
+		}
+	}
+
 	if (bahan === "Art Carton 210") {
 		if (
 			sisi === "1 Muka" &&

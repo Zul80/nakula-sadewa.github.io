@@ -385,6 +385,31 @@ class PesanController extends CI_Controller
 					$total = $jumlah * 810000;
 				}
 			}
+
+			if ($bahan === "Art Paper 120"){
+				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
+					$total = $jumlah * 400000;
+				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
+					$total = $jumlah * 450000;
+			}
+				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
+					$total = $jumlah * 800000;
+				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
+					$total = $jumlah * 850000;
+			}
+		}
+			if ($bahan === "Art Paper 150"){
+				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
+					$total = $jumlah * 420000;
+				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
+					$total = $jumlah * 470000;
+			}
+				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
+					$total = $jumlah * 840000;
+				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
+					$total = $jumlah * 890000;
+			}
+		}
 		
 			if ($bahan === "Art Carton 210") {
 				if (
@@ -438,6 +463,7 @@ class PesanController extends CI_Controller
 					$total = $jumlah * 1400000;
 				}
 			}
+		
 		
 
 

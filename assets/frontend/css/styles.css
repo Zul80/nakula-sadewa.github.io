@@ -2267,8 +2267,6 @@ header.main {
 		display: -moz-box;
 		display: -ms-box;
 		display: -webkit-flex;
-	}
-	 {
 		display: box;
 		display: flex;
 	}

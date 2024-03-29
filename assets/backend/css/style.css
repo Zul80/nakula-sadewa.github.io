@@ -16557,6 +16557,7 @@ tbody.collapse.show {
 }
 
 .navbar-brand {
+	height: 50px;
 	width: 300px;
 	display: inline-block;
 	padding-top: 0.3125rem;
