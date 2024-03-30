@@ -238,7 +238,7 @@
                     </button>
                     <!-- <nav class="navbar navbar-dark bg-dark"> -->
                     <a class="navbar-brand" href="<?= base_url('index.php') ?>">
-                        <img src=" assets/frontend/img/sipesan/Logo NS.png" style="width: 200px;"
+                        <img src=" assets/frontend/img/sipesan/Logo NS.png" style="width: 170px;"
                             class="d-inline-block align-center" alt="">
                     </a>
                     <!-- </nav> -->
