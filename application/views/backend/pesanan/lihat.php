@@ -232,7 +232,7 @@
                 <?php
 				if ($a5brosur == !null):
 					?>
-                <h5>Brosur A4</h5>
+                <h5>Brosur A5</h5>
                 <table class="table table-bordered">
                     <thead>
                         <tr>

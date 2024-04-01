@@ -544,7 +544,7 @@ class PesanController extends CI_Controller
 	{
 
 		if (isset ($_POST['keranjang'])) {
-			$a5brosurId = 'A4B-' . substr(time(), 5);
+			$a5brosurId = 'A5B-' . substr(time(), 5);
 			$bahan = $this->input->post('bahan');
 			$sisi = $this->input->post('sisi');
 			$laminasi = $this->input->post('laminasi');
@@ -675,7 +675,7 @@ class PesanController extends CI_Controller
 				$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
 
 				if ($allCart == null) {
-					$cartId = 'A4B-' . substr(time(), 5);
+					$cartId = 'A5B-' . substr(time(), 5);
 					$dataA5brosur['a5brosur_keranjang_id'] = $cartId;
 					$dataCart = array(
 						'keranjang_id' => $cartId,
@@ -698,7 +698,7 @@ class PesanController extends CI_Controller
 						$this->session->set_flashdata('alert', 'pesan_sukses');
 						redirect('a5brosur');
 					} else {
-						$cartId = 'A4B-' . substr(time(), 5);
+						$cartId = 'A5B-' . substr(time(), 5);
 						$dataA5brosur['a5brosur_keranjang_id'] = $cartId;
 						$dataCart = array(
 							'keranjang_id' => $cartId,
