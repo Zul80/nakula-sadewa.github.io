@@ -207,7 +207,7 @@
                                 <?php
 							if ($a5brosur == !null):
 								?>
-                                <td>Brosur A4</td>
+                                <td>Brosur A5</td>
                                 <td><?= count($a5brosur) ?></td>
                                 <td style="text-align: right">
                                     <?php
