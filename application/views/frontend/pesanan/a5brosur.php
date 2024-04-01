@@ -66,7 +66,7 @@
                                 <div class="col-md-6">
                                     <label for="satuanLaminasi">Nominal/Rim:</label>
                                     <input type="text" id="satuanLaminasi" class="form-control" value="Rp. 0"
-                                        style="font-weight: 600;" readonly>
+                                        style="font-weight: 600; text-align: right" readonly>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                 <div class="col-md-6">
                                     <label for="satuanLipat">Nominal/Rim:</label>
                                     <input type="text" id="satuanLipat" class="form-control" value="Rp. 0"
-                                        style="font-weight: 600;" readonly>
+                                        style="font-weight: 600; text-align: right;" readonly>
                                 </div>
                             </div>
                         </div>
