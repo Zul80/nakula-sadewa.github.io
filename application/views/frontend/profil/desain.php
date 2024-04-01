@@ -213,6 +213,49 @@
 				?>
                 <hr>
                 <?php
+				if ($a5brosur == !null):
+					?>
+                <h5>Brosur A5</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Jenis Bahan</th>
+                            <th>Sisi</th>
+                            <th>Laminasi</th>
+                            <th>Lipat</th>
+                            <th>Jumlah</th>
+                            <th>Foto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+						$no = 1;
+						foreach ($a5brosur as $key => $value):
+							?>
+                        <tr>
+                            <td><?= $no ?></td>
+                            <td><?= $value['a5brosur_bahan'] ?></td>
+                            <td><?= $value['a5brosur_sisi'] ?></td>
+                            <td><?= $value['a5brosur_laminasi'] ?></td>
+                            <td><?= $value['a5brosur_lipat'] ?></td>
+                            <td><?= $value['a5brosur_jumlah'] ?></td>
+                            <td>
+                                <a href="<?= base_url('detail-desain/' . $value['a5brosur_id']) ?>"
+                                    class="label label-primary"><i class="fa fa-eye"></i> Lihat</a>
+                            </td>
+                        </tr>
+                        <?php
+							$no++;
+						endforeach;
+						?>
+                    </tbody>
+                </table>
+                <?php
+				endif;
+				?>
+                <hr>
+                <?php
 				if ($kalender == !null):
 					?>
                 <h5>Kalender</h5>

@@ -98,6 +98,26 @@
 			endif;
 			?>
             <?php
+			if ($a5brosur != null):
+			?>
+            <h3 class="card-title">
+                Foto Brosur A5
+            </h3>
+            <img src="<?=base_url('assets/images/a5brosur/'.$a5brosur['a5brosur_foto'])?>" style="width: 100%" alt="">
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <button type="button" onclick="return window.history.back();"
+                        class="btn btn-secondary">Kembali</button>
+                    <a href="<?=base_url('admin/pesanan/desain/'.$a5brosur['a5brosur_id'])?>"
+                        class="btn btn-primary">Lihat
+                        hasil desain</a>
+                </div>
+            </div>
+            <?php
+			endif;
+			?>
+            <?php
 			if ($kalender != null):
 			?>
             <h3 class="card-title">

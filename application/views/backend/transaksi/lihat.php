@@ -175,6 +175,25 @@
                         </tr>
                         <tr>
                             <?php
+						if ($a5brosur == !null):
+							?>
+                            <td>Brosur A5</td>
+                            <td><?= count($a5brosur) ?></td>
+                            <td style="text-align: right">
+                                <?php
+								$harga = 0;
+								foreach ($a5brosur as $key => $value) {
+									$harga = $harga + $value['a5brosur_total'];
+								}
+								echo 'Rp. ' . nominal($harga)
+								?>
+                            </td>
+                            <?php
+						endif;
+						?>
+                        </tr>
+                        <tr>
+                            <?php
 						if ($kalender == !null):
 							?>
                             <td>kalender</td>

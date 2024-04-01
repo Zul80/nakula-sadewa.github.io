@@ -264,6 +264,9 @@
                                 <li><a href="<?= base_url('a4brosur') ?>"><i
                                             class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A4</a>
                                 </li>
+                                <li><a href="<?= base_url('a5brosur') ?>"><i
+                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A5</a>
+                                </li>
                                 <li><a href="<?= base_url('nota') ?>"><i
                                             class="fa fa-file-text dropdown-menu-category-icon"></i>Nota</a>
                                 </li>
