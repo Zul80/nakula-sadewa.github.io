@@ -250,6 +250,171 @@ function showTotalA4brosur() {
 	html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
 	$("#total").html(html);
 }
+function showTotalA5brosur() {
+	var satuanlaminasi = $("satuanLaminasi").val();
+	var satuanlipat = $("satuanLipat").val();
+	var bahan = $("#bahan").val();
+	var sisi = $("#sisi").val();
+	var laminasi = $("#laminasi").val();
+	var lipat = $("#lipat").val();
+	var jumlah = $("#jumlah").val();
+	var total = 0;
+	var html = "";
+
+	if (bahan === "HVS 100") {
+		if (sisi === "1 Muka" && lipat === "Tanpa Lipat") {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 190000;
+		} else if (sisi === "1 Muka" && lipat === "Lipat") {
+			satuanLipat.value = "Rp. 25.000";
+			total = jumlah * 215000;
+		}
+		if (sisi === "2 Muka" && lipat === "Tanpa Lipat") {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 380000;
+		} else if (sisi === "2 Muka" && lipat === "Lipat") {
+			satuanLipat.value = "Rp. 25.000";
+			total = jumlah * 405000;
+		}
+	}
+
+	if (bahan === "Art Paper 120") {
+		if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 200000;
+		} else if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 225000;
+		}
+		if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 400000;
+		} else if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 425000;
+		}
+	}
+	if (bahan === "Art Paper 150") {
+		if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 210000;
+		} else if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 235000;
+		}
+		if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			total = jumlah * 420000;
+		} else if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			total = jumlah * 445000;
+		}
+	}
+
+	if (bahan === "Art Carton 210") {
+		if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			satuanLaminasi.value = "Rp. 0";
+			total = jumlah * 280000;
+		} else if (
+			sisi === "1 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			satuanLaminasi.value = "Rp. 0";
+			total = jumlah * 330000;
+		} else if (
+			sisi === "1 Muka" &&
+			laminasi !== "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			satuanLaminasi.value = "Rp. 125.000";
+			total = jumlah * 405000;
+		} else if (
+			sisi === "1 Muka" &&
+			laminasi !== "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			satuanLaminasi.value = "Rp. 125.000";
+			total = jumlah * 455000;
+		}
+		if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			satuanLaminasi.value = "Rp. 0";
+			total = jumlah * 560000;
+		} else if (
+			sisi === "2 Muka" &&
+			laminasi === "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			satuanLaminasi.value = "Rp. 0";
+			total = jumlah * 610000;
+		} else if (
+			sisi === "2 Muka" &&
+			laminasi !== "Tanpa Laminasi" &&
+			lipat === "Tanpa Lipat"
+		) {
+			satuanLipat.value = "Rp. 0";
+			satuanLaminasi.value = "Rp. 250.000";
+			total = jumlah * 810000;
+		} else if (
+			sisi === "2 Muka" &&
+			laminasi !== "Tanpa Laminasi" &&
+			lipat === "Lipat"
+		) {
+			satuanLipat.value = "Rp. 50.000";
+			satuanLaminasi.value = "Rp. 250.000";
+			total = jumlah * 860000;
+		}
+	}
+
+	html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+	$("#total").html(html);
+}
 
 function showTotalKalender() {
 	var bahan = $("#bahan").val();

@@ -555,39 +555,39 @@ class PesanController extends CI_Controller
 			
 			if ($bahan === "HVS 100") {
 				if ($sisi === "1 Muka" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 380000;
+					$total = $jumlah * 190000;
 				} else if ($sisi === "1 Muka" && $lipat === "Lipat") {
-					$total = $jumlah * 430000;
+					$total = $jumlah * 215000;
 				}
 				if ($sisi === "2 Muka" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 760000;
+					$total = $jumlah * 380000;
 				} else if ($sisi === "2 Muka" && $lipat === "Lipat") {
-					$total = $jumlah * 810000;
+					$total = $jumlah * 405000;
 				}
 			}
 
 			if ($bahan === "Art Paper 120"){
 				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 400000;
+					$total = $jumlah * 200000;
 				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 450000;
+					$total = $jumlah * 225000;
 			}
 				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 800000;
+					$total = $jumlah * 400000;
 				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 850000;
+					$total = $jumlah * 425000;
 			}
 		}
 			if ($bahan === "Art Paper 150"){
 				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 420000;
+					$total = $jumlah * 210000;
 				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 470000;
+					$total = $jumlah * 435000;
 			}
 				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 840000;
+					$total = $jumlah * 420000;
 				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 890000;
+					$total = $jumlah * 445000;
 			}
 		}
 		
@@ -597,50 +597,50 @@ class PesanController extends CI_Controller
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 550000;
+					$total = $jumlah * 280000;
 				} else if (
 					$sisi === "1 Muka" &&
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 600000;
+					$total = $jumlah * 330000;
 				} else if (
 					$sisi === "1 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 675000;
+					$total = $jumlah * 405000;
 				} else if (
 					$sisi === "1 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 725000;
+					$total = $jumlah * 455000;
 				}
 				if (
 					$sisi === "2 Muka" &&
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 1100000;
+					$total = $jumlah * 560000;
 				} else if (
 					$sisi === "2 Muka" &&
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 1150000;
+					$total = $jumlah * 610000;
 				} else if (
 					$sisi === "2 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 1350000;
+					$total = $jumlah * 810000;
 				} else if (
 					$sisi === "2 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 1400000;
+					$total = $jumlah * 860000;
 				}
 			}
 		
