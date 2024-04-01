@@ -238,7 +238,7 @@
                             <th>Laminasi</th>
                             <th>Lipat</th>
                             <th>Jumlah</th>
-                            <th>Foto</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -282,7 +282,7 @@
                             <th>Laminasi</th>
                             <th>Lipat</th>
                             <th>Jumlah</th>
-                            <th>Foto</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
