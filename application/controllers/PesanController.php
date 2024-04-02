@@ -482,9 +482,6 @@ class PesanController extends CI_Controller
 				$dataA4brosur = array(
 					'a4brosur_id' => $a4brosurId,
 					'a4brosur_bahan' => $bahan,
-					'a4brosur_sisi' => $sisi,
-					'a4brosur_laminasi' => $laminasi,
-					'a4brosur_lipat' => $lipat,
 					'a4brosur_jumlah' => $jumlah,
 					'a4brosur_estimasi' => $estimasi,
 					'a4brosur_total' => $total,
@@ -662,9 +659,6 @@ class PesanController extends CI_Controller
 				$dataA5brosur = array(
 					'a5brosur_id' => $a5brosurId,
 					'a5brosur_bahan' => $bahan,
-					'a5brosur_sisi' => $sisi,
-					'a5brosur_laminasi' => $laminasi,
-					'a5brosur_lipat' => $lipat,
 					'a5brosur_jumlah' => $jumlah,
 					'a5brosur_estimasi' => $estimasi,
 					'a5brosur_total' => $total,
