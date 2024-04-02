@@ -708,7 +708,7 @@ class PesanController extends CI_Controller
 			}
 		}
 		$data = array(
-			'title' => 'Pesan Brosur A4 | Nakula Sadewa Digital'
+			'title' => 'Pesan Brosur A5 | Nakula Sadewa Digital'
 		);
 		$this->load->view('frontend/templates/header', $data);
 		$this->load->view('frontend/pesanan/a5brosur');
