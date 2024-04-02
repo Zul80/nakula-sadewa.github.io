@@ -270,6 +270,9 @@
                                 <li><a href="<?= base_url('a6brosur') ?>"><i
                                             class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A6</a>
                                 </li>
+                                <li><a href="<?= base_url('flyer10x21') ?>"><i
+                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Flalyer 10x21</a>
+                                </li>
                                 <li><a href="<?= base_url('nota') ?>"><i
                                             class="fa fa-file-text dropdown-menu-category-icon"></i>Nota</a>
                                 </li>

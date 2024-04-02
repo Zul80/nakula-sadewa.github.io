@@ -138,6 +138,26 @@
 			endif;
 			?>
             <?php
+			if ($flyer10x21 != null):
+			?>
+            <h3 class="card-title">
+                Foto Flayer 10x21
+            </h3>
+            <img src="<?=base_url('assets/images/flyer10x21/'.$flyer10x21['flyer10x21_foto'])?>" style="width: 100%" alt="">
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <button type="button" onclick="return window.history.back();"
+                        class="btn btn-secondary">Kembali</button>
+                    <a href="<?=base_url('admin/pesanan/desain/'.$flyer10x21['flyer10x21_id'])?>"
+                        class="btn btn-primary">Lihat
+                        hasil desain</a>
+                </div>
+            </div>
+            <?php
+			endif;
+			?>
+            <?php
 			if ($kalender != null):
 			?>
             <h3 class="card-title">
