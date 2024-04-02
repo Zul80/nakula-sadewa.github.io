@@ -1570,6 +1570,20 @@ class PesanController extends CI_Controller
 		$this->session->set_flashdata('alert', 'pesan_hapus');
 		redirect('keranjang');
 	}
+	public function hapusa6brosur($id)
+	{
+		$a6brosur = $this->PesanModel->lihat_a6brosur_by_id($id);
+		$keranjang_id = $a6brosur['a6brosur_keranjang_id'];
+		$keranjang = $this->BayarModel->lihat_keranjang_by_id($keranjang_id);
+		$total = $a6brosur['a6brosur_total'];
+		$data = array(
+			'keranjang_total' => $keranjang['keranjang_total'] - $total
+		);
+		$this->PesanModel->delete('a6brosur_id', $id, 'sipesan_a6brosur');
+		$this->BayarModel->update_keranjang($keranjang_id, $data);
+		$this->session->set_flashdata('alert', 'pesan_hapus');
+		redirect('keranjang');
+	}
 	public function hapusKalender($id)
 	{
 		$kalender = $this->PesanModel->lihat_kalender_by_id($id);
