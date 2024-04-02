@@ -1570,7 +1570,7 @@ class PesanController extends CI_Controller
 		$this->session->set_flashdata('alert', 'pesan_hapus');
 		redirect('keranjang');
 	}
-	public function hapusa6brosur($id)
+	public function hapusA6brosur($id)
 	{
 		$a6brosur = $this->PesanModel->lihat_a6brosur_by_id($id);
 		$keranjang_id = $a6brosur['a6brosur_keranjang_id'];
