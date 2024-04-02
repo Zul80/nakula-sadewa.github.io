@@ -121,7 +121,7 @@
 			if ($a6brosur != null):
 			?>
             <h3 class="card-title">
-                Foto Brosur A5
+                Foto Brosur A6
             </h3>
             <img src="<?=base_url('assets/images/a6brosur/'.$a6brosur['a6brosur_foto'])?>" style="width: 100%" alt="">
             <div class="row">
