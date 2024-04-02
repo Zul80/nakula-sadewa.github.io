@@ -718,7 +718,7 @@ class PesanController extends CI_Controller
 	{
 
 		if (isset ($_POST['keranjang'])) {
-			$a6brosurId = 'A5B-' . substr(time(), 5);
+			$a6brosurId = 'A6B-' . substr(time(), 5);
 			$bahan = $this->input->post('bahan');
 			$sisi = $this->input->post('sisi');
 			$laminasi = $this->input->post('laminasi');
@@ -742,18 +742,6 @@ class PesanController extends CI_Controller
 
 			if ($bahan === "Art Paper 120"){
 				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 200000;
-				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 225000;
-			}
-				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 400000;
-				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 425000;
-			}
-		}
-			if ($bahan === "Art Paper 150"){
-				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
 					$total = $jumlah * 130000;
 				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
 					$total = $jumlah * 150000;
@@ -764,6 +752,18 @@ class PesanController extends CI_Controller
 					$total = $jumlah * 280000;
 			}
 		}
+			if ($bahan === "Art Paper 150"){
+				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
+					$total = $jumlah * 140000;
+				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
+					$total = $jumlah * 160000;
+			}
+				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
+					$total = $jumlah * 280000;
+				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
+					$total = $jumlah * 300000;
+			}
+		}
 		
 			if ($bahan === "Art Carton 210") {
 				if (
@@ -771,56 +771,53 @@ class PesanController extends CI_Controller
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 280000;
+					$total = $jumlah * 165000;
 				} else if (
 					$sisi === "1 Muka" &&
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 330000;
+					$total = $jumlah * 195000;
 				} else if (
 					$sisi === "1 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 405000;
+					$total = $jumlah * 290000;
 				} else if (
 					$sisi === "1 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 455000;
+					$total = $jumlah * 320000;
 				}
 				if (
 					$sisi === "2 Muka" &&
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 560000;
+					$total = $jumlah * 330000;
 				} else if (
 					$sisi === "2 Muka" &&
 					$laminasi === "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 610000;
+					$total = $jumlah * 360000;
 				} else if (
 					$sisi === "2 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Tanpa Lipat"
 				) {
-					$total = $jumlah * 810000;
+					$total = $jumlah * 580000;
 				} else if (
 					$sisi === "2 Muka" &&
 					$laminasi !== "Tanpa Laminasi" &&
 					$lipat === "Lipat"
 				) {
-					$total = $jumlah * 860000;
+					$total = $jumlah * 610000;
 				}
 			}
 		
-		
-
-
 
 			$config['upload_path'] = './assets/images/a6brosur/';
 			$config['allowed_types'] = 'jpg|png|jpeg|zip|rar|pdf';
@@ -846,7 +843,7 @@ class PesanController extends CI_Controller
 				$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
 
 				if ($allCart == null) {
-					$cartId = 'A5B-' . substr(time(), 5);
+					$cartId = 'A6B-' . substr(time(), 5);
 					$dataA6brosur['a6brosur_keranjang_id'] = $cartId;
 					$dataCart = array(
 						'keranjang_id' => $cartId,
@@ -869,7 +866,7 @@ class PesanController extends CI_Controller
 						$this->session->set_flashdata('alert', 'pesan_sukses');
 						redirect('a6brosur');
 					} else {
-						$cartId = 'A5B-' . substr(time(), 5);
+						$cartId = 'A6B-' . substr(time(), 5);
 						$dataA6brosur['a6brosur_keranjang_id'] = $cartId;
 						$dataCart = array(
 							'keranjang_id' => $cartId,
@@ -885,7 +882,7 @@ class PesanController extends CI_Controller
 			}
 		}
 		$data = array(
-			'title' => 'Pesan Brosur A5 | Nakula Sadewa Digital'
+			'title' => 'Pesan Brosur A6 | Nakula Sadewa Digital'
 		);
 		$this->load->view('frontend/templates/header', $data);
 		$this->load->view('frontend/pesanan/a6brosur');
@@ -934,61 +931,6 @@ class PesanController extends CI_Controller
 					$total = $jumlah * 42200;
 				} else $total = $jumlah * 55100;
 			}
-		
-			
-			// if ($bahan == 'AC360' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 40200;
-			// } else if ($bahan == 'AC360' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 50200;
-			// }
-
-			// if ($bahan == 'BCT' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 42200;
-			// } else if ($bahan == 'BCT' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 52200;
-			// }
-
-			// if ($bahan == 'B/W' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 42200;
-			// } else if ($bahan == 'B/W' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 52200;
-			// }
-
-			// if ($bahan == 'LINEN' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 42200;
-			// } else if ($bahan == 'LINEN' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 52200;
-			// }
-
-			// if ($bahan == 'AC230' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 49500;
-			// } else if ($bahan == 'AC230' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 59500;
-			// }
-
-			// if ($bahan == 'AC360' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 51600;
-			// } else if ($bahan == 'AC360' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 61600;
-			// }
-
-			// if ($bahan == 'BCT' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 55100;
-			// } else if ($bahan == 'BCT' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 65100;
-			// }
-
-			// if ($bahan == 'B/W' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 55100;
-			// } else if ($bahan == 'B/W' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 65100;
-			// }
-
-			// if ($bahan == 'LINEN' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 55100;
-			// } else if ($bahan == 'LINEN' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 65100;
-			// }
 
 			$config['upload_path'] = './assets/images/kalender/';
 			$config['allowed_types'] = 'jpg|png|jpeg|zip|rar|pdf';

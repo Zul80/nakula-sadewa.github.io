@@ -168,6 +168,18 @@ class TransaksiController extends CI_Controller
 			);
 			array_push($table, $a5brosur);
 		}
+		if ($data['a6brosur'] != null) {
+			$harga = 0;
+			foreach ($data['a6brosur'] as $key => $value) {
+				$harga = $harga + $value['a6brosur_total'];
+			}
+			$a6brosur = array(
+				'jenis' => 'Brosur A5',
+				'jumlah' => count($data['a6brosur']),
+				'harga' => $harga
+			);
+			array_push($table, $a6brosur);
+		}
 		if ($data['kalender'] != null) {
 			$harga = 0;
 			foreach ($data['kalender'] as $key => $value) {

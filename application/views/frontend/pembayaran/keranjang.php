@@ -259,6 +259,45 @@ elseif ($keranjang == !null):
 				endif;
 				?>
             <?php
+				if ($a6brosur != null):
+					?>
+            <h4>Brosur A6</h4>
+            <table class="table table-bordered table-shopping-cart">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Bahan</th>
+                        <th>Jumlah</th>
+                        <th>Estimasi</th>
+                        <th>Total</th>
+                        <th>Hapus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+						foreach ($a6brosur as $key => $value):
+							?>
+                    <tr>
+                        <td><img src="<?= base_url('assets/images/a6brosur/') . $value['a6brosur_foto'] ?>" alt="foto"
+                                style="width: 100%"></td>
+                        <td><?= $value['a6brosur_bahan'] ?></td>
+                        <td><?= $value['a6brosur_jumlah'] ?> </td>
+                        <td><?= $value['a6brosur_estimasi'] ?> Hari</td>
+                        <td style="text-align: right"> Rp.<?= nominal($value['a6brosur_total']) ?></td>
+                        <td><a class="fa fa-close table-shopping-remove"
+                                href="<?= base_url('hapus/a6brosur/' . $value['a6brosur_id']) ?>"
+                                onclick="return confirm('Hapus Pesanan? ')"></a></td>
+                    </tr>
+                    <?php
+						endforeach;
+						?>
+                </tbody>
+            </table>
+            <div class="gap gap-small"></div>
+            <?php
+				endif;
+				?>
+            <?php
 				if ($kalender != null):
 					?>
             <h4>Kalender</h4>
