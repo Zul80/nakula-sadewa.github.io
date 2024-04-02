@@ -43,6 +43,7 @@ class TransaksiController extends CI_Controller
 			'brosur' => $this->BayarModel->lihat_keranjang_brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'a4brosur' => $this->BayarModel->lihat_keranjang_a4brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'a5brosur' => $this->BayarModel->lihat_keranjang_a5brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
+			'a6brosur' => $this->BayarModel->lihat_keranjang_a6brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'kalender' => $this->BayarModel->lihat_keranjang_kalender($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'nota' => $this->BayarModel->lihat_keranjang_nota($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'dtf' => $this->BayarModel->lihat_keranjang_dtf($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
@@ -88,6 +89,7 @@ class TransaksiController extends CI_Controller
 			'brosur' => $this->BayarModel->lihat_keranjang_brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'a4brosur' => $this->BayarModel->lihat_keranjang_a4brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'a5brosur' => $this->BayarModel->lihat_keranjang_a5brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
+			'a6brosur' => $this->BayarModel->lihat_keranjang_a6brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'kalender' => $this->BayarModel->lihat_keranjang_kalender($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'nota' => $this->BayarModel->lihat_keranjang_nota($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'dtf' => $this->BayarModel->lihat_keranjang_dtf($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
@@ -174,7 +176,7 @@ class TransaksiController extends CI_Controller
 				$harga = $harga + $value['a6brosur_total'];
 			}
 			$a6brosur = array(
-				'jenis' => 'Brosur A5',
+				'jenis' => 'Brosur A6',
 				'jumlah' => count($data['a6brosur']),
 				'harga' => $harga
 			);
