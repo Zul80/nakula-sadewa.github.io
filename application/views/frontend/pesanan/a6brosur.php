@@ -33,7 +33,7 @@
                                 <div class="col-md-6">
                                     <label for="">Type Kertas<span style="color: red">*</span> :</label>
                                     <select name="bahan" id="bahan" class="form-control"
-                                        onchange="checkOption(); showTotalA4brosur()" required>
+                                        onchange="checkOption(); showTotalA6brosur()" required>
                                         <option value="HVS 100">HVS 100</option>
                                         <option value="Art Paper 120">Art Paper 120</option>
                                         <option value="Art Paper 150">Art Paper 150</option>
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Cetak Sisi<span style="color: red">*</span> :</label>
-                                    <select name="sisi" id="sisi" class="form-control" onchange="showTotalA4brosur()"
+                                    <select name="sisi" id="sisi" class="form-control" onchange="showTotalA6brosur()"
                                         required>
                                         <option value="1 Muka">1 Muka</option>
                                         <option value="2 Muka">2 Muka</option>
@@ -56,7 +56,7 @@
                                 <div class="col-md-6">
                                     <label for="">Pilih Jenis Laminasi:</label>
                                     <select name="laminasi" id="laminasi" class="form-control"
-                                        onchange="showTotalA4brosur()">
+                                        onchange="showTotalA6brosur()">
                                         <option value="Tanpa Laminasi">Tanpa Laminasi</option>
                                         <option value="Laminasi Doff">Laminasi Doff</option>
                                         <option value="Laminasi Glossy">Laminasi Glossy</option>
@@ -74,7 +74,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="">Lipat :</label>
-                                    <select name="lipat" id="lipat" class="form-control" onchange="showTotalA4brosur()"
+                                    <select name="lipat" id="lipat" class="form-control" onchange="showTotalA6brosur()"
                                         required>
                                         <option value="Tanpa Lipat">Tanpa Lipat</option>
                                         <option value="Lipat">Lipat</option>
@@ -95,7 +95,7 @@
                                 <div class="col-md-6">
                                     <label for="">Jumlah (rim) :</label>
                                     <input type="number" name="jumlah" class="form-control" id="jumlah"
-                                        onkeyup="showTotalA4brosur()" required autocomplete="off">
+                                        onkeyup="showTotalA6brosur()" required autocomplete="off">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Estimasi Waktu (hari) :</label>
