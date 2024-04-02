@@ -182,6 +182,16 @@ class BayarModel extends CI_Model
 		$this->db->where('faktur_status', 'sudah');
 		return $this->db->get();
 	}
+	public function lihat_keranjang_a6brosur_admin($status,$tanggal){
+		$this->db->from('sipesan_a6brosur');
+		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_a6brosur.a6brosur_keranjang_id');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
+		$this->db->like('faktur_date_created',$tanggal);
+		$this->db->where('keranjang_status', $status);
+		$this->db->where('faktur_status', 'sudah');
+		return $this->db->get();
+	}
 	public function lihat_keranjang_kalender_admin($status,$tanggal){
 		$this->db->from('sipesan_kalender');
 		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_kalender.kalender_keranjang_id');
