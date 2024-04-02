@@ -18,7 +18,7 @@ class PesanController extends CI_Controller
 	public function pesanSpanduk()
 	{
 		if (isset ($_POST['keranjang'])) {
-			$spandukId = 'SDK-' . substr(time(), 5);
+			$spandukId = 'SPD-' . substr(time(), 5);
 			$panjang = $this->input->post('panjang');
 			$lebar = $this->input->post('lebar');
 			$bahan = $this->input->post('bahan');
@@ -59,7 +59,7 @@ class PesanController extends CI_Controller
 				$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
 
 				if ($allCart == null) {
-					$cartId = 'CRT-' . substr(time(), 5);
+					$cartId = 'SPD-' . substr(time(), 5);
 					$dataSpanduk['spanduk_keranjang_id'] = $cartId;
 					$dataCart = array(
 						'keranjang_id' => $cartId,
@@ -82,7 +82,7 @@ class PesanController extends CI_Controller
 						$this->session->set_flashdata('alert', 'pesan_sukses');
 						redirect('spanduk');
 					} else {
-						$cartId = 'CRT-' . substr(time(), 5);
+						$cartId = 'SPD-' . substr(time(), 5);
 						$dataSpanduk['spanduk_keranjang_id'] = $cartId;
 						$dataCart = array(
 							'keranjang_id' => $cartId,
