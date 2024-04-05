@@ -232,7 +232,7 @@
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/frontend/img/sipean/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title" />
+                        <img src="assets/frontend/img/sipesan/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title" />
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
