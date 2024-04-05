@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'www.nakula-sadewa.com',
 	'username' => 'u405585585_admin',
 	'password' => 'AdminNakula123',
 	'database' => 'u405585585_sipesan',
