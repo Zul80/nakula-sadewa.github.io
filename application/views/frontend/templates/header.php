@@ -232,7 +232,7 @@
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/frontend/img/sipesan/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title" />
+                        <img src="assets/frontend/img/sipean/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title" />
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -248,25 +248,25 @@
                                                         <h5 class="dropdown-menu-category-title">Home & Garden</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Home</a>
-                                                                <p>Ullamcorper ut mauris blandit nascetur</p>
+                                                                <p>Hac primis inceptos diam volutpat</p>
                                                             </li>
                                                             <li><a href="#">Kitchen</a>
-                                                                <p>Non platea donec condimentum facilisi</p>
+                                                                <p>Arcu fermentum integer penatibus laoreet</p>
                                                             </li>
                                                             <li><a href="#">Furniture & Decor</a>
-                                                                <p>Hac quisque consectetur posuere suspendisse</p>
+                                                                <p>Cras habitant litora auctor porta</p>
                                                             </li>
                                                             <li><a href="#">Bedding & Bath</a>
-                                                                <p>Duis platea augue aliquet morbi</p>
+                                                                <p>Viverra volutpat platea fusce ridiculus</p>
                                                             </li>
                                                             <li><a href="#">Appilances</a>
-                                                                <p>Lacus consectetur elementum egestas lacus</p>
+                                                                <p>Fringilla mattis turpis phasellus blandit</p>
                                                             </li>
                                                             <li><a href="#">Patio, Lawn & Garden</a>
-                                                                <p>Amet fames donec et nec</p>
+                                                                <p>Erat quam dictum habitasse convallis</p>
                                                             </li>
                                                             <li><a href="#">Wedding Registry</a>
-                                                                <p>Neque vitae at ut turpis</p>
+                                                                <p>Posuere elit potenti tellus consequat</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -274,16 +274,16 @@
                                                         <h5 class="dropdown-menu-category-title">Home Improvement</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Home Improvement</a>
-                                                                <p>Maecenas in sodales nunc dui</p>
+                                                                <p>Fusce est placerat sociosqu lacinia</p>
                                                             </li>
                                                             <li><a href="#">Lamps & Light Fixtures</a>
-                                                                <p>Habitant mattis nisi conubia mi</p>
+                                                                <p>Non facilisi dolor viverra sociis</p>
                                                             </li>
                                                             <li><a href="#">Kitchen & Bath Fixtures</a>
-                                                                <p>Penatibus cum porta aenean mauris</p>
+                                                                <p>Ullamcorper arcu vitae molestie est</p>
                                                             </li>
                                                             <li><a href="#">Home Automation</a>
-                                                                <p>Consequat tincidunt lectus sagittis tellus</p>
+                                                                <p>Purus tellus scelerisque natoque consectetur</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -302,28 +302,28 @@
                                                         <h5 class="dropdown-menu-category-title">Jewelry</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Necklances & Pendants</a>
-                                                                <p>Dapibus suspendisse porta eget mattis</p>
+                                                                <p>Orci egestas morbi malesuada quam</p>
                                                             </li>
                                                             <li><a href="#">Bracelets</a>
-                                                                <p>Tempus vestibulum mus imperdiet nibh</p>
+                                                                <p>Turpis ipsum quis diam lectus</p>
                                                             </li>
                                                             <li><a href="#">Rings</a>
-                                                                <p>Sem pharetra quis netus vel</p>
+                                                                <p>Tincidunt duis iaculis ultrices dictumst</p>
                                                             </li>
                                                             <li><a href="#">Errings</a>
-                                                                <p>Vehicula class vestibulum nisl donec</p>
+                                                                <p>Proin fermentum ut aenean orci</p>
                                                             </li>
                                                             <li><a href="#">Wedding & Engagement</a>
-                                                                <p>Hendrerit fermentum magna sed amet</p>
+                                                                <p>Magna nec nunc sapien sodales</p>
                                                             </li>
                                                             <li><a href="#">Charms</a>
-                                                                <p>Purus sit nec class sit</p>
+                                                                <p>Leo praesent molestie sollicitudin odio</p>
                                                             </li>
                                                             <li><a href="#">Booches</a>
-                                                                <p>Fringilla tellus volutpat per eget</p>
+                                                                <p>Mattis porta lorem proin praesent</p>
                                                             </li>
                                                             <li><a href="#">Men's Jewelry</a>
-                                                                <p>Molestie platea suspendisse eget tortor</p>
+                                                                <p>Nunc dis sodales natoque dictum</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -331,19 +331,19 @@
                                                         <h5 class="dropdown-menu-category-title">Jewelry Shops</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Contemporary & Designer</a>
-                                                                <p>Pharetra magna nam senectus tristique</p>
+                                                                <p>Vivamus morbi ridiculus platea euismod</p>
                                                             </li>
                                                             <li><a href="#">Juniors</a>
-                                                                <p>Cursus ut odio sollicitudin venenatis</p>
+                                                                <p>Vehicula mus a class nunc</p>
                                                             </li>
                                                             <li><a href="#">Meternity</a>
-                                                                <p>Natoque dis maecenas magna dignissim</p>
+                                                                <p>Odio ligula tellus porta egestas</p>
                                                             </li>
                                                             <li><a href="#">Pettite</a>
-                                                                <p>Sociosqu et sociis accumsan interdum</p>
+                                                                <p>Turpis neque pulvinar ante platea</p>
                                                             </li>
                                                             <li><a href="#">Uniforms, Works & Safety</a>
-                                                                <p>Dictum netus quis enim phasellus</p>
+                                                                <p>Porta sollicitudin fermentum parturient dictumst</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -362,31 +362,31 @@
                                                         <h5 class="dropdown-menu-category-title">Kids Clothing</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Accessories</a>
-                                                                <p>Suscipit nunc donec purus dui</p>
+                                                                <p>Nulla rhoncus convallis mauris cum</p>
                                                             </li>
                                                             <li><a href="#">Active Wear</a>
-                                                                <p>Himenaeos nulla sociosqu rhoncus dictumst</p>
+                                                                <p>Nisi vivamus parturient aenean mollis</p>
                                                             </li>
                                                             <li><a href="#">Coats & Jackets</a>
-                                                                <p>Fusce ultricies congue sapien porttitor</p>
+                                                                <p>Molestie augue habitant sed orci</p>
                                                             </li>
                                                             <li><a href="#">Jeans</a>
-                                                                <p>Maecenas fringilla ipsum nam lorem</p>
+                                                                <p>Purus posuere consectetur ornare conubia</p>
                                                             </li>
                                                             <li><a href="#">Sets</a>
-                                                                <p>Aliquam rhoncus elit himenaeos facilisis</p>
+                                                                <p>Dis platea inceptos dis interdum</p>
                                                             </li>
                                                             <li><a href="#">Indoors</a>
-                                                                <p>Auctor nostra cubilia pretium ante</p>
+                                                                <p>Enim egestas lacinia lectus ac</p>
                                                             </li>
                                                             <li><a href="#">Swimwear</a>
-                                                                <p>A enim interdum ullamcorper erat</p>
+                                                                <p>Viverra ridiculus tempus placerat accumsan</p>
                                                             </li>
                                                             <li><a href="#">Special Occasion</a>
-                                                                <p>Pharetra varius imperdiet praesent tempor</p>
+                                                                <p>Posuere sociis massa curabitur donec</p>
                                                             </li>
                                                             <li><a href="#">Shoes</a>
-                                                                <p>Justo placerat eleifend senectus laoreet</p>
+                                                                <p>Tempus dictum quis pulvinar conubia</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -394,13 +394,13 @@
                                                         <h5 class="dropdown-menu-category-title">More For Kids</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Kids Furniture</a>
-                                                                <p>Mi cubilia volutpat augue convallis</p>
+                                                                <p>Urna penatibus est curabitur lorem</p>
                                                             </li>
                                                             <li><a href="#">Kids Jewelry & Watches</a>
-                                                                <p>Facilisi gravida vehicula duis aliquam</p>
+                                                                <p>Duis eros at aliquam erat</p>
                                                             </li>
                                                             <li><a href="#">Toys & Games</a>
-                                                                <p>Habitant cras accumsan dis vitae</p>
+                                                                <p>Platea libero feugiat cras adipiscing</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -419,25 +419,25 @@
                                                         <h5 class="dropdown-menu-category-title">Electronics</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">TV & Video</a>
-                                                                <p>Eleifend duis convallis porta gravida</p>
+                                                                <p>Integer natoque placerat eget mauris</p>
                                                             </li>
                                                             <li><a href="#">Home Audio & Theater</a>
-                                                                <p>Auctor phasellus luctus ante et</p>
+                                                                <p>Maecenas eros risus torquent eu</p>
                                                             </li>
                                                             <li><a href="#">Camera, Photo & Video</a>
-                                                                <p>Dignissim sagittis leo aptent malesuada</p>
+                                                                <p>Posuere odio congue porta habitasse</p>
                                                             </li>
                                                             <li><a href="#">Cell Phones & Accessories</a>
-                                                                <p>Nibh convallis cras velit himenaeos</p>
+                                                                <p>Etiam et urna aptent penatibus</p>
                                                             </li>
                                                             <li><a href="#">Headphones</a>
-                                                                <p>Dis pretium interdum bibendum elementum</p>
+                                                                <p>Vivamus posuere curae est faucibus</p>
                                                             </li>
                                                             <li><a href="#">Video Games</a>
-                                                                <p>Morbi dignissim dis habitant senectus</p>
+                                                                <p>Enim magnis aptent taciti etiam</p>
                                                             </li>
                                                             <li><a href="#">Gar Electronics</a>
-                                                                <p>Curabitur placerat consequat est nunc</p>
+                                                                <p>Justo malesuada pulvinar ac rhoncus</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -445,22 +445,22 @@
                                                         <h5 class="dropdown-menu-category-title">Computers</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Laptops & Tablets</a>
-                                                                <p>Ad ornare commodo luctus curabitur</p>
+                                                                <p>Nascetur mi curabitur torquent pretium</p>
                                                             </li>
                                                             <li><a href="#">Desktops & Monitors</a>
-                                                                <p>Mi aliquet aliquam nec sollicitudin</p>
+                                                                <p>Fermentum varius nunc varius potenti</p>
                                                             </li>
                                                             <li><a href="#">Computer Accessories</a>
-                                                                <p>Fames cubilia elit donec nostra</p>
+                                                                <p>Bibendum feugiat platea scelerisque sed</p>
                                                             </li>
                                                             <li><a href="#">Software</a>
-                                                                <p>Cum nullam porta dignissim tortor</p>
+                                                                <p>Sit ut diam semper lorem</p>
                                                             </li>
                                                             <li><a href="#">Printers & Ink</a>
-                                                                <p>Porta turpis quam pretium ultricies</p>
+                                                                <p>Cum urna gravida congue facilisi</p>
                                                             </li>
                                                             <li><a href="#">Networking</a>
-                                                                <p>Varius massa maecenas et id</p>
+                                                                <p>Pellentesque condimentum augue sollicitudin ligula</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -479,25 +479,25 @@
                                                         <h5 class="dropdown-menu-category-title">TheBox Fashion</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Woman</a>
-                                                                <p>Dictumst mattis donec fringilla ac</p>
+                                                                <p>Felis egestas ridiculus ullamcorper porttitor</p>
                                                             </li>
                                                             <li><a href="#">Men</a>
-                                                                <p>Parturient posuere id phasellus erat</p>
+                                                                <p>Torquent montes convallis lobortis urna</p>
                                                             </li>
                                                             <li><a href="#">Girls</a>
-                                                                <p>Elementum nullam lacus cursus rhoncus</p>
+                                                                <p>Consequat porta habitant pharetra vivamus</p>
                                                             </li>
                                                             <li><a href="#">Boys</a>
-                                                                <p>Parturient vitae praesent quisque nascetur</p>
+                                                                <p>Porttitor morbi vestibulum bibendum quam</p>
                                                             </li>
                                                             <li><a href="#">Baby</a>
-                                                                <p>Molestie quis dignissim vel sit</p>
+                                                                <p>Scelerisque cursus tristique ultricies felis</p>
                                                             </li>
                                                             <li><a href="#">Luggage</a>
-                                                                <p>Odio metus tristique auctor dictumst</p>
+                                                                <p>Class ipsum sit sem congue</p>
                                                             </li>
                                                             <li><a href="#">Accessories</a>
-                                                                <p>Primis ad viverra quisque etiam</p>
+                                                                <p>Augue montes massa aptent suspendisse</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -516,31 +516,31 @@
                                                         <h5 class="dropdown-menu-category-title">Sports</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Athletic Clothing</a>
-                                                                <p>In rutrum donec cras non</p>
+                                                                <p>Pharetra consequat et eleifend faucibus</p>
                                                             </li>
                                                             <li><a href="#">Exorcise & Fitness</a>
-                                                                <p>Dis suscipit risus ridiculus lacus</p>
+                                                                <p>Tempor nisl diam ante magna</p>
                                                             </li>
                                                             <li><a href="#">Hunting & Fishing</a>
-                                                                <p>Mus cursus luctus donec pellentesque</p>
+                                                                <p>In cubilia vivamus diam magna</p>
                                                             </li>
                                                             <li><a href="#">Team Sports</a>
-                                                                <p>Rhoncus sem quam vulputate mus</p>
+                                                                <p>Condimentum porta pellentesque eget mollis</p>
                                                             </li>
                                                             <li><a href="#">Fan Sports</a>
-                                                                <p>Hendrerit risus ultrices a elementum</p>
+                                                                <p>Facilisi curae ligula integer hendrerit</p>
                                                             </li>
                                                             <li><a href="#">Golf</a>
-                                                                <p>Massa est at aenean parturient</p>
+                                                                <p>Imperdiet metus diam ac nascetur</p>
                                                             </li>
                                                             <li><a href="#">Sports Collections</a>
-                                                                <p>In egestas senectus lectus convallis</p>
+                                                                <p>Eros senectus sem justo aenean</p>
                                                             </li>
                                                             <li><a href="#">Camping & Hiking</a>
-                                                                <p>Lectus dui neque sit dignissim</p>
+                                                                <p>Sed tellus curae parturient condimentum</p>
                                                             </li>
                                                             <li><a href="#">Cycling</a>
-                                                                <p>Facilisis fames feugiat laoreet pharetra</p>
+                                                                <p>Risus malesuada magna dictum nunc</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -559,16 +559,16 @@
                                                         <h5 class="dropdown-menu-category-title">Entertaiment</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Video Games & Consoles</a>
-                                                                <p>Felis vitae ornare lacus sodales</p>
+                                                                <p>Pharetra id a ad in</p>
                                                             </li>
                                                             <li><a href="#">Music</a>
-                                                                <p>Non sapien curae nisl nec</p>
+                                                                <p>Per amet aliquet tempor dis</p>
                                                             </li>
                                                             <li><a href="#">DVD & Movies</a>
-                                                                <p>Habitant velit semper pretium et</p>
+                                                                <p>Et eu sociosqu fames curabitur</p>
                                                             </li>
                                                             <li><a href="#">Tickets</a>
-                                                                <p>Ipsum dolor in amet nunc</p>
+                                                                <p>Sollicitudin malesuada sodales parturient fermentum</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -600,22 +600,22 @@
                                                         <h5 class="dropdown-menu-category-title">Travel Equepment</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Luggage</a>
-                                                                <p>Vestibulum lacus nulla dis sollicitudin</p>
+                                                                <p>Netus curabitur enim sed faucibus</p>
                                                             </li>
                                                             <li><a href="#">Travel Accessories</a>
-                                                                <p>Diam luctus dolor ante lobortis</p>
+                                                                <p>Augue turpis tempus in venenatis</p>
                                                             </li>
                                                             <li><a href="#">Luggage Accessories</a>
-                                                                <p>Neque enim facilisis penatibus integer</p>
+                                                                <p>Class pellentesque ante ornare risus</p>
                                                             </li>
                                                             <li><a href="#">Lodging</a>
-                                                                <p>Lacinia semper nibh ullamcorper feugiat</p>
+                                                                <p>Praesent a maecenas lacinia curae</p>
                                                             </li>
                                                             <li><a href="#">Maps</a>
-                                                                <p>Faucibus non nec amet ac</p>
+                                                                <p>Lobortis fames accumsan nec cursus</p>
                                                             </li>
                                                             <li><a href="#">Other Travel</a>
-                                                                <p>Mus hac diam nulla ridiculus</p>
+                                                                <p>Litora a arcu felis scelerisque</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -623,22 +623,22 @@
                                                         <h5 class="dropdown-menu-category-title">Booking</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Vacation Packages</a>
-                                                                <p>Proin sem iaculis condimentum pharetra</p>
+                                                                <p>Hendrerit donec nunc pellentesque natoque</p>
                                                             </li>
                                                             <li><a href="#">Campground & RV</a>
-                                                                <p>Morbi volutpat torquent orci luctus</p>
+                                                                <p>Congue gravida tempor netus hendrerit</p>
                                                             </li>
                                                             <li><a href="#">Rail</a>
-                                                                <p>Pharetra volutpat nisl dis curae</p>
+                                                                <p>Curae sem tempus arcu facilisis</p>
                                                             </li>
                                                             <li><a href="#">Car Rental</a>
-                                                                <p>Primis aliquet sapien pellentesque velit</p>
+                                                                <p>Facilisi lacinia sagittis maecenas pharetra</p>
                                                             </li>
                                                             <li><a href="#">Cruises</a>
-                                                                <p>Tristique taciti tincidunt adipiscing pharetra</p>
+                                                                <p>Phasellus parturient ut sapien nullam</p>
                                                             </li>
                                                             <li><a href="#">Airline</a>
-                                                                <p>Massa at quisque fermentum faucibus</p>
+                                                                <p>Elit hendrerit a primis ornare</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -657,22 +657,22 @@
                                                         <h5 class="dropdown-menu-category-title">Art</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Paintings from Dealers & Resellers</a>
-                                                                <p>Ultrices mi fames himenaeos pellentesque</p>
+                                                                <p>A convallis vel lobortis mus</p>
                                                             </li>
                                                             <li><a href="#">Paintings Direct from Artist</a>
-                                                                <p>Curabitur nisl etiam a volutpat</p>
+                                                                <p>Molestie quisque sapien elit aptent</p>
                                                             </li>
                                                             <li><a href="#">Art Prints</a>
-                                                                <p>Phasellus convallis diam tempus malesuada</p>
+                                                                <p>Cras duis sapien aliquam montes</p>
                                                             </li>
                                                             <li><a href="#">Art Photographs from Resellers</a>
-                                                                <p>Mauris torquent dapibus montes mollis</p>
+                                                                <p>Sociis lacinia faucibus vehicula elementum</p>
                                                             </li>
                                                             <li><a href="#">Art Photographs from the Artist</a>
-                                                                <p>Iaculis porta ridiculus rutrum fusce</p>
+                                                                <p>Sodales elementum semper metus etiam</p>
                                                             </li>
                                                             <li><a href="#">Art Posters</a>
-                                                                <p>Sed parturient habitant a gravida</p>
+                                                                <p>Pellentesque consequat eu leo turpis</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -680,19 +680,19 @@
                                                         <h5 class="dropdown-menu-category-title">Design</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Home Decor Decals</a>
-                                                                <p>Curabitur senectus blandit parturient quam</p>
+                                                                <p>Feugiat nostra nam sociosqu interdum</p>
                                                             </li>
                                                             <li><a href="#">Furniture</a>
-                                                                <p>Fames sem nec interdum id</p>
+                                                                <p>Condimentum habitant sagittis sociis sollicitudin</p>
                                                             </li>
                                                             <li><a href="#">Wallpapers</a>
-                                                                <p>Torquent litora nibh curae morbi</p>
+                                                                <p>Aenean nisl nascetur leo faucibus</p>
                                                             </li>
                                                             <li><a href="#">Bar Flasks</a>
-                                                                <p>Cum etiam duis malesuada viverra</p>
+                                                                <p>Nullam bibendum viverra justo posuere</p>
                                                             </li>
                                                             <li><a href="#">Posters & Prints</a>
-                                                                <p>Ultricies pellentesque vestibulum sed mattis</p>
+                                                                <p>Gravida arcu augue dictum senectus</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -711,19 +711,19 @@
                                                         <h5 class="dropdown-menu-category-title">Motors</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Parts & Accessories</a>
-                                                                <p>Augue penatibus venenatis malesuada nam</p>
+                                                                <p>Ridiculus magnis torquent maecenas porttitor</p>
                                                             </li>
                                                             <li><a href="#">Cars & Trucks</a>
-                                                                <p>Semper facilisis taciti posuere convallis</p>
+                                                                <p>Inceptos dignissim sed vel a</p>
                                                             </li>
                                                             <li><a href="#">Motorcycles</a>
-                                                                <p>Curae auctor non sodales iaculis</p>
+                                                                <p>Ultrices purus consectetur adipiscing ipsum</p>
                                                             </li>
                                                             <li><a href="#">Passenger Vehicles</a>
-                                                                <p>Blandit taciti pellentesque faucibus id</p>
+                                                                <p>Risus eu phasellus mi tellus</p>
                                                             </li>
                                                             <li><a href="#">Industry Vehicles</a>
-                                                                <p>Nam scelerisque sapien ultricies euismod</p>
+                                                                <p>Ante porttitor nisi magnis mattis</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -763,45 +763,45 @@
                                                     <div class="col-md-4">
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Backyard Poultry Supplies</a>
-                                                                <p>Maecenas accumsan parturient integer lacus</p>
+                                                                <p>Gravida convallis potenti sollicitudin accumsan</p>
                                                             </li>
                                                             <li><a href="#">Bird Supplies</a>
-                                                                <p>Justo torquent cras sociis a</p>
+                                                                <p>Commodo nullam aenean cursus ornare</p>
                                                             </li>
                                                             <li><a href="#">Cat Supplies</a>
-                                                                <p>Massa molestie inceptos congue venenatis</p>
+                                                                <p>Dis mi ad nulla imperdiet</p>
                                                             </li>
                                                             <li><a href="#">Dog Supplies</a>
-                                                                <p>Platea hac neque egestas dignissim</p>
+                                                                <p>Varius euismod himenaeos per hac</p>
                                                             </li>
                                                             <li><a href="#">Pet Memorials & Urns</a>
-                                                                <p>Lacinia quisque ridiculus cras semper</p>
+                                                                <p>Dis primis accumsan id lobortis</p>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Fish & Aquariums</a>
-                                                                <p>Magnis nascetur consequat enim conubia</p>
+                                                                <p>Aptent tincidunt class faucibus diam</p>
                                                             </li>
                                                             <li><a href="#">Horse Supplies</a>
-                                                                <p>Auctor eleifend vel magnis est</p>
+                                                                <p>Erat blandit libero leo nibh</p>
                                                             </li>
                                                             <li><a href="#">Reptile Supplies</a>
-                                                                <p>Auctor nunc vel nulla primis</p>
+                                                                <p>Lobortis condimentum posuere taciti senectus</p>
                                                             </li>
                                                             <li><a href="#">Small Animal Supplies</a>
-                                                                <p>Mauris fringilla blandit sapien fermentum</p>
+                                                                <p>Volutpat fames montes elit feugiat</p>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Wholesale Lots</a>
-                                                                <p>Volutpat curabitur himenaeos eros quis</p>
+                                                                <p>Augue nibh feugiat sociis himenaeos</p>
                                                             </li>
                                                             <li><a href="#">Other Pet Supplies</a>
-                                                                <p>Risus amet arcu viverra laoreet</p>
+                                                                <p>Magna dapibus primis aliquam dignissim</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -820,28 +820,28 @@
                                                         <h5 class="dropdown-menu-category-title">Hobby & DIY</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Model & Kit Tools</a>
-                                                                <p>Viverra diam dictum curabitur laoreet</p>
+                                                                <p>Facilisi lorem nostra eros dictumst</p>
                                                             </li>
                                                             <li><a href="#">Supplies & Engines</a>
-                                                                <p>Facilisi conubia purus taciti malesuada</p>
+                                                                <p>Magnis porttitor in netus massa</p>
                                                             </li>
                                                             <li><a href="#">RC Airline & Helicopter</a>
-                                                                <p>Eget cum malesuada nunc libero</p>
+                                                                <p>Primis magnis egestas sollicitudin curabitur</p>
                                                             </li>
                                                             <li><a href="#">RC Car, Truck & motorcycle</a>
-                                                                <p>Vestibulum aptent aliquam eros facilisi</p>
+                                                                <p>Penatibus faucibus iaculis velit malesuada</p>
                                                             </li>
                                                             <li><a href="#">Military Airline Models & Kits</a>
-                                                                <p>Purus mus odio praesent facilisi</p>
+                                                                <p>Nascetur justo nisi class dui</p>
                                                             </li>
                                                             <li><a href="#">Craft Airbrushing Supplies</a>
-                                                                <p>Molestie amet fringilla ultricies sem</p>
+                                                                <p>Sit ante aliquam venenatis vehicula</p>
                                                             </li>
                                                             <li><a href="#">Card Making Supplies</a>
-                                                                <p>Leo pulvinar gravida pulvinar felis</p>
+                                                                <p>Rutrum ipsum amet nostra quisque</p>
                                                             </li>
                                                             <li><a href="#">Craft Sewing</a>
-                                                                <p>Adipiscing risus curae nulla rutrum</p>
+                                                                <p>Sociis dapibus dictumst ligula imperdiet</p>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -1026,7 +1026,7 @@
                                         <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
                                     </a>
                                     <div class="dropdown-menu-shipping-cart-inner">
-                                        <p class="dropdown-menu-shipping-cart-price">$41</p>
+                                        <p class="dropdown-menu-shipping-cart-price">$13</p>
                                         <p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>
                                         </p>
                                     </div>
@@ -1036,7 +1036,7 @@
                                         <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
                                     </a>
                                     <div class="dropdown-menu-shipping-cart-inner">
-                                        <p class="dropdown-menu-shipping-cart-price">$89</p>
+                                        <p class="dropdown-menu-shipping-cart-price">$76</p>
                                         <p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>
                                         </p>
                                     </div>
@@ -1046,7 +1046,7 @@
                                         <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
                                     </a>
                                     <div class="dropdown-menu-shipping-cart-inner">
-                                        <p class="dropdown-menu-shipping-cart-price">$68</p>
+                                        <p class="dropdown-menu-shipping-cart-price">$46</p>
                                         <p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>
                                         </p>
                                     </div>
@@ -1056,7 +1056,7 @@
                                         <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
                                     </a>
                                     <div class="dropdown-menu-shipping-cart-inner">
-                                        <p class="dropdown-menu-shipping-cart-price">$67</p>
+                                        <p class="dropdown-menu-shipping-cart-price">$23</p>
                                         <p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>
                                         </p>
                                     </div>
