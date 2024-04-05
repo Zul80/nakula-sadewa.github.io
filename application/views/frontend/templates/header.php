@@ -253,7 +253,7 @@
                 <ul class="nav navbar-nav navbar-right navbar-mob-item-left">
                     <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
                     </li>
-                    <li class="dropdown"><a href="shopping-cart.html"><span >Your Cart</span><i class="fa fa-shopping-cart"></i> 3 Items</a>
+                    <li class="dropdown"><a href="<?= base_url('keranjang') ?>"><span >Your Cart</span><i class="fa fa-shopping-cart"></i> 3 Items</a>
                         
                         <li>
                             <?php
