@@ -14,10 +14,10 @@
     <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/mystyles.css">
+    <link rel="stylesheet" href="assets/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/frontend/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/frontend/css/styles.css">
+    <link rel="stylesheet" href="assets/frontend/css/mystyles.css">
 
 </head>
 
@@ -2257,15 +2257,15 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets//bootstrap.js"></script>
-    <script src="assets//icheck.js"></script>
-    <script src="assets/js/ionrangeslider.js"></script>
-    <script src="assets/js/jqzoom.js"></script>
-    <script src="assets/js/card-payment.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/magnific.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/frontend/js/jquery.js"></script>
+    <script src="assets/frontend/js/bootstrap.js"></script>
+    <script src="assets/frontend/js/icheck.js"></script>
+    <script src="assets/frontend/js/ionrangeslider.js"></script>
+    <script src="assets/frontend/js/jqzoom.js"></script>
+    <script src="assets/frontend/js/card-payment.js"></script>
+    <script src="assets/frontend/js/owl-carousel.js"></script>
+    <script src="assets/frontend/js/magnific.js"></script>
+    <script src="assets/frontend/js/custom.js"></script>
 
 
 
