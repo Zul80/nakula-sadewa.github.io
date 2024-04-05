@@ -155,10 +155,6 @@
                                     <li class="nav-item"> <a class="nav-link"
                                             href="<?=base_url('admin/laporan/a5brosur')?>">Brosur A5</a></li>
                                     <li class="nav-item"> <a class="nav-link"
-                                            href="<?=base_url('admin/laporan/a6brosur')?>">Brosur A6</a></li>
-                                    <li class="nav-item"> <a class="nav-link"
-                                            href="<?=base_url('admin/laporan/flyer10x21')?>">Flyer 10x21</a></li>
-                                    <li class="nav-item"> <a class="nav-link"
                                             href="<?=base_url('admin/laporan/kalender')?>">Kalender</a></li>
                                     <li class="nav-item"> <a class="nav-link"
                                             href="<?=base_url('admin/laporan/nota')?>">Nota</a></li>

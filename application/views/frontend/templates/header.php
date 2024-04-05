@@ -228,109 +228,345 @@
                 <input class="btn btn-primary" type="submit" value="Recover Password" />
             </form>
         </div>
-        <nav class="navbar navbar-inverse navbar-main yamm">
+        <nav class="navbar navbar-default navbar-main-white navbar-pad-top navbar-first">
             <div class="container">
                 <div class="navbar-header">
-                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
-                        data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main
-                            Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span
-                            class="icon-bar"></span>
-                    </button>
-                    <!-- <nav class="navbar navbar-dark bg-dark"> -->
-                    <a class="navbar-brand" href="<?= base_url('index.php') ?>">
-                        <img src=" assets/frontend/img/sipesan/Logo NS.png" style="width: 170px;"
-                            class="d-inline-block align-center" alt="">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/frontend/img/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title"/>
                     </a>
-                    <!-- </nav> -->
                 </div>
-                <div class="collapse navbar-collapse" id="main-nav-collapse">
+                <form class="navbar-form navbar-left navbar-main-search navbar-main-search-category" role="search">
+                    <select class="navbar-main-search-category-select">
+                        <option>All Departmens</option>
+                        <option>Brosur</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur A4</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur A5</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur A6</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur Flyer 10x21</option>
 
+                    </select>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Search the Entire Store..." />
+                    </div>
+                    <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+                </form>
+                <ul class="nav navbar-nav navbar-right navbar-mob-item-left">
+                    <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
+                    </li>
+                    <li class="dropdown"><a href="keranjang.php"><span >Your Cart</span><i class="fa fa-shopping-cart"></i> 3 Items</a>
+                        <ul class="dropdown-menu dropdown-menu-shipping-cart">
+                            <li>
+                                <a class="dropdown-menu-shipping-cart-img" href="#">
+                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                                </a>
+                                <div class="dropdown-menu-shipping-cart-inner">
+                                    <p class="dropdown-menu-shipping-cart-price">$80</p>
+                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-shipping-cart-img" href="#">
+                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                                </a>
+                                <div class="dropdown-menu-shipping-cart-inner">
+                                    <p class="dropdown-menu-shipping-cart-price">$53</p>
+                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-shipping-cart-img" href="#">
+                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                                </a>
+                                <div class="dropdown-menu-shipping-cart-inner">
+                                    <p class="dropdown-menu-shipping-cart-price">$59</p>
+                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-shipping-cart-img" href="#">
+                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                                </a>
+                                <div class="dropdown-menu-shipping-cart-inner">
+                                    <p class="dropdown-menu-shipping-cart-price">$30</p>
+                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="dropdown-menu-shipping-cart-total">Total: $150</p>
+                                <button class="dropdown-menu-shipping-cart-checkout btn btn-primary">Checkout</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar-default navbar-main-white yamm">
+            <div class="container">
+                <div class="collapse navbar-collapse navbar-collapse-no-pad" id="main-nav-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown"><a href="#"><i class="fa fa-reorder"></i>&nbsp; Pesan Sekarang<i
-                                    class="drop-caret" data-toggle="dropdown"></i></a>
-
+                        <li class="dropdown"><a href="#"><span >Print by</span>Department<i class="drop-caret" data-toggle="dropdown"></i></a>
                             <ul class="dropdown-menu dropdown-menu-category">
-
-                                <li><a href="<?= base_url('stiker') ?>"><i
-                                            class="fa fa-sticky-note dropdown-menu-category-icon"></i>Stiker</a>
-                                </li>
-                                <li><a href="<?= base_url('spanduk') ?>"><i
-                                            class="fa fa-photo dropdown-menu-category-icon"></i>Spanduk</a>
-                                </li>
-                                <li><a href="<?= base_url('kartu') ?>"><i
-                                            class="fa fa-id-card dropdown-menu-category-icon"></i>Kartu
-                                        Nama</a>
-                                </li>
-                                <li><a href="<?= base_url('a4brosur') ?>"><i
+                                <li><a href="#"><i class="fa fa-home dropdown-menu-category-icon"></i>Print on Paper</a>
+                                    <div class="dropdown-menu-category-section">
+                                        <div class="dropdown-menu-category-section-inner">
+                                            <div class="dropdown-menu-category-section-content">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h5 class="dropdown-menu-category-title">Print on Paper</h5>
+                                                        <ul class="dropdown-menu-category-list">
+                                                            <li><a href="<?= base_url('a4brosur') ?>"><i
                                             class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A4</a>
-                                </li>
-                                <li><a href="<?= base_url('a5brosur') ?>"><i
+                                                                <p>Cetak Brosur dengan ukuran Kertas A4</p>
+                                                            </li>
+                                                            <li><a href="<?= base_url('a5brosur') ?>"><i
                                             class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A5</a>
-                                </li>
-                                <li><a href="<?= base_url('a6brosur') ?>"><i
+                                                                <p>Cetak Brosur dengan ukuran Kertas A5</p>
+                                                            </li>
+                                                            <li><a href="<?= base_url('a6brosur') ?>"><i
                                             class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A6</a>
+                                                                <p>Cetak Brosur dengan ukuran Kertas A6</p>
+                                                            </li>
+                                                            <li><a href="<?= base_url('flyer10x21') ?>"><i
+                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Flyer 10x21</a>
+                                                                <p>Cetak Brosur dengan ukuran Flyer 10 x 21 cm</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img class="dropdown-menu-category-section-theme-img" src="img/test_cat/2-i.png" alt="Image Alternative text" title="Image Title" style="right: -10px;" />
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><a href="<?= base_url('flyer10x21') ?>"><i
-                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Flayer 10x21</a>
+                                <li><a href="#"><i class="fa fa-diamond dropdown-menu-category-icon"></i>Kartu Nama</a>
+                                    <div class="dropdown-menu-category-section">
+                                        <div class="dropdown-menu-category-section-inner">
+                                            <div class="dropdown-menu-category-section-content">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h5 class="dropdown-menu-category-title">Kartu Nama</h5>
+                                                        <ul class="dropdown-menu-category-list">
+                                                            <li><a href="#">Kartu Nama Standart</a>
+                                                                <p>Kartu Nama dengan potongan standart, banyak pilihan bahan</p>
+                                                            </li>
+                                                            <li><a href="#">Kartu Nama Hook</a>
+                                                                <p>Kartu Nama dengan potongan Lengkung tiap sudutnya, banyak pilihan bahan</p>
+                                                            </li>
+                                                            <li><a href="#">Kartu Nama Pola</a>
+                                                                <p>Kartu Nama dengan potongan Lengkung tiap sudutnya, banyak pilihan bahan</p>
+                                                            </li>
+                                                            <li><a href="#">Kartu Nama Lipat</a>
+                                                                <p>Kartu Nama dengan ukuran 85x55 jika dilipat, isi 48 pcs/box</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- <div class="col-md-6">
+                                                        <h5 class="dropdown-menu-category-title">Jewelry Shops</h5>
+                                                        <ul class="dropdown-menu-category-list">
+                                                            <li><a href="#">Contemporary & Designer</a>
+                                                                <p>Ipsum rhoncus id aliquet fusce</p>
+                                                            </li>
+                                                            <li><a href="#">Juniors</a>
+                                                                <p>Eget quisque posuere condimentum lectus</p>
+                                                            </li>
+                                                            <li><a href="#">Meternity</a>
+                                                                <p>Molestie pulvinar placerat ac interdum</p>
+                                                            </li>
+                                                            <li><a href="#">Pettite</a>
+                                                                <p>Maecenas mollis ad nostra rutrum</p>
+                                                            </li>
+                                                            <li><a href="#">Uniforms, Works & Safety</a>
+                                                                <p>Ornare arcu taciti vitae lobortis</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            <img class="dropdown-menu-category-section-theme-img" src="img/test_cat/3-i.png" alt="Image Alternative text" title="Image Title" style="right: -10px; bottom: -10px;" />
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><a href="<?= base_url('nota') ?>"><i
-                                            class="fa fa-file-text dropdown-menu-category-icon"></i>Nota</a>
-                                </li>
-                                <li><a href="<?= base_url('dtf') ?>"><i
-                                            class="fa fa-file-text dropdown-menu-category-icon"></i>DTF</a>
-                                </li>
-                                <li><a href="<?= base_url('tdtf') ?>"><i
-                                            class="fa fa-file-text dropdown-menu-category-icon"></i>T-Shirts |
-                                        DTF</a>
-                                </li>
-                                <li><a href="<?= base_url('lbstiker') ?>"><i
-                                            class="fa fa-file-text dropdown-menu-category-icon"></i>Label
-                                        Stiker</a>
+                                
+                            </ul>
+                        </li>
+                        <li class="dropdown yamm-fw"><a class="navbar-item-top" href="#">Pages<i class="drop-caret" data-toggle="dropdown"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="yamm-content">
+                                    <div class="row row-eq-height row-col-border">
+                                        <div class="col-md-2">
+                                            <h5>Homepages</h5>
+                                            <ul class="dropdown-menu-items-list">
+                                                <li><a href="index.html">Layout 1</a>
+                                                    <p class="dropdown-menu-items-list-desc">Default Layout</p>
+                                                </li>
+                                                <li><a href="index-layout-2.html">Layout 2</a>
+                                                    <p class="dropdown-menu-items-list-desc">Banners Area + Product Carousel</p>
+                                                </li>
+                                                <li><a href="index-layout-3.html">Layout 3</a>
+                                                    <p class="dropdown-menu-items-list-desc">Aside Departmens</p>
+                                                </li>
+                                                <li><a href="index-layout-4.html">Layout 4</a>
+                                                    <p class="dropdown-menu-items-list-desc">Sidebar Right</p>
+                                                </li>
+                                                <li><a href="index-layout-5.html">Layout 5</a>
+                                                    <p class="dropdown-menu-items-list-desc">Small Aside Departmens + Sidebar</p>
+                                                </li>
+                                                <li><a href="index-layout-6.html">Layout 6</a>
+                                                    <p class="dropdown-menu-items-list-desc">Full Banners + Product Tabs</p>
+                                                </li>
+                                                <li><a href="index-layout-7.html">Layout 7</a>
+                                                    <p class="dropdown-menu-items-list-desc">Small Aside Departmens + Slider</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>Category Pages</h5>
+                                            <ul class="dropdown-menu-items-list">
+                                                <li><a href="category.html">Layout 1</a>
+                                                    <p class="dropdown-menu-items-list-desc">Default Layout</p>
+                                                </li>
+                                                <li><a href="category-layout-2.html">Layout 2</a>
+                                                    <p class="dropdown-menu-items-list-desc">Banner Title</p>
+                                                </li>
+                                                <li><a href="category-layout-3.html">Layout 3</a>
+                                                    <p class="dropdown-menu-items-list-desc">4 Columns Thumbs</p>
+                                                </li>
+                                                <li><a href="category-layout-4.html">Layout 4</a>
+                                                    <p class="dropdown-menu-items-list-desc">6 Columns Small Thumbs</p>
+                                                </li>
+                                                <li><a href="category-layout-5.html">Layout 5</a>
+                                                    <p class="dropdown-menu-items-list-desc">3 Columns Horizontal Thumbs</p>
+                                                </li>
+                                                <li><a href="category-layout-6.html">Layout 6</a>
+                                                    <p class="dropdown-menu-items-list-desc">4 Columns Horizontal Thumbs</p>
+                                                </li>
+                                                <li><a href="category-layout-7.html">Layout 7</a>
+                                                    <p class="dropdown-menu-items-list-desc">No Filters</p>
+                                                </li>
+                                                <li><a href="category-layout-8.html">Layout 8</a>
+                                                    <p class="dropdown-menu-items-list-desc">Sidebar Right</p>
+                                                </li>
+                                                <li><a href="category-layout-9.html">Layout 9</a>
+                                                    <p class="dropdown-menu-items-list-desc">Sidebar Inverse</p>
+                                                </li>
+                                                <li><a href="category-layout-10.html">Layout 10</a>
+                                                    <p class="dropdown-menu-items-list-desc">Sidebar Color</p>
+                                                </li>
+                                                <li><a href="category-layout-11.html">Layout 11</a>
+                                                    <p class="dropdown-menu-items-list-desc">Horizontal Thumbs</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>Product Pages</h5>
+                                            <ul class="dropdown-menu-items-list">
+                                                <li><a href="product-page.html">Layout 1</a>
+                                                    <p class="dropdown-menu-items-list-desc">Default Layout</p>
+                                                </li>
+                                                <li><a href="product-layout-2.html">Layout 2</a>
+                                                    <p class="dropdown-menu-items-list-desc">No Sidebar</p>
+                                                </li>
+                                                <li><a href="product-layout-3.html">Layout 3</a>
+                                                    <p class="dropdown-menu-items-list-desc">Full Area Layout + Banners</p>
+                                                </li>
+                                                <li><a href="product-layout-4.html">Layout 4</a>
+                                                    <p class="dropdown-menu-items-list-desc">Gallery Style</p>
+                                                </li>
+                                                <li><a href="product-layout-5.html">Layout 5</a>
+                                                    <p class="dropdown-menu-items-list-desc">Sidebar Right</p>
+                                                </li>
+                                                <li><a href="product-layout-6.html">Layout 6</a>
+                                                    <p class="dropdown-menu-items-list-desc">Sidebar Left</p>
+                                                </li>
+                                                <li><a href="product-layout-7.html">Layout 7</a>
+                                                    <p class="dropdown-menu-items-list-desc">Product Gallery Left</p>
+                                                </li>
+                                                <li><a href="product-layout-8.html">Layout 8</a>
+                                                    <p class="dropdown-menu-items-list-desc">Product Gallery Right</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>Header Layouts</h5>
+                                            <ul class="dropdown-menu-items-list">
+                                                <li><a href="index.html">Layout 1</a>
+                                                    <p class="dropdown-menu-items-list-desc">Default Layout</p>
+                                                </li>
+                                                <li><a href="index-nav-layout-2.html">Layout 2</a>
+                                                    <p class="dropdown-menu-items-list-desc">Center Logo + Category Nav</p>
+                                                </li>
+                                                <li><a href="index-nav-layout-3.html">Layout 3</a>
+                                                    <p class="dropdown-menu-items-list-desc">Special Area + Extended Search</p>
+                                                </li>
+                                                <li><a href="index-nav-layout-4.html">Layout 4</a>
+                                                    <p class="dropdown-menu-items-list-desc">White Area + Extended Search</p>
+                                                </li>
+                                            </ul>
+                                            <hr />
+                                            <h5>Footer Layouts</h5>
+                                            <ul class="dropdown-menu-items-list">
+                                                <li><a href="index.html">Layout 1</a>
+                                                    <p class="dropdown-menu-items-list-desc">Default Layout</p>
+                                                </li>
+                                                <li><a href="index-footer-layout-2.html">Layout 2</a>
+                                                    <p class="dropdown-menu-items-list-desc">Minimal</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>Misc</h5>
+                                            <ul class="dropdown-menu-items-list">
+                                                <li><a href="shopping-cart.html">Shopping Cart</a>
+                                                </li>
+                                                <li><a href="shopping-cart-empty.html">Cart Empty</a>
+                                                </li>
+                                                <li><a href="checkout.html">Checkout</a>
+                                                </li>
+                                                <li><a href="order-summary.html">Summary</a>
+                                                </li>
+                                                <li><a href="about-us.html">About Us</a>
+                                                </li>
+                                                <li><a href="contact.html">Contact</a>
+                                                </li>
+                                                <li><a href="404.html">404</a>
+                                                </li>
+                                                <li><a href="blog.html">Blog</a>
+                                                </li>
+                                                <li><a href="blog-post.html">Blog Post</a>
+                                                </li>
+                                                <li><a href="login-register.html">Login/Register</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="dropdown"><a class="navbar-item-top" href="#">Following</a>
+                        </li>
+                        <li class="dropdown"><a class="navbar-item-top" href="#">Today Delas</a>
+                        </li>
+                        <li class="dropdown"><a class="navbar-item-top" href="#">Gift Cards</a>
+                        </li>
+                        <li class="dropdown"><a class="navbar-item-top" href="#">Gift Ideas</a>
+                        </li>
+                        <li class="dropdown"><a class="navbar-item-top" href="#">Weekly Ad</a>
                         </li>
                     </ul>
-
-                    </form>
                     <ul class="nav navbar-nav navbar-right">
-                        <?php if ($this->session->userdata('session_level') == null): ?>
-                        <li><a href="<?=base_url('admin')?>">Login Admin</a></li>
-                        <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">Login</a>
+                        <li><a href="#" class="navbar-item-top">Shipping</a>
                         </li>
-                        <li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Buat
-                                Akun</a>
+                        <li><a href="#" class="navbar-item-top">Payment</a>
                         </li>
-                        <?php else: ?>
-                        <li class="dropdown">
-                            <a href="<?= base_url('profil') ?>"><i class="fa fa-user-circle"></i>
-                                <?= $this->session->userdata('session_username') ?>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?= base_url('profil') ?>"><i class="fa fa-user" style="width: 20%"></i>
-                                        Profil Saya</a></li>
-                                <li><a href="<?= base_url('pesanan') ?>"><i class="fa fa-list" style="width: 20%"></i>
-                                        Data Pesanan</a></li>
-                                <li><a href="<?= base_url('logout') ?>" onclick="return confirm('Logout? ')"><i
-                                            class="fa fa-sign-out" style="width: 20%"></i> Logout</a></li>
-                            </ul>
-                        </li>
-                        <?php endif; ?>
-                        <li>
-                            <?php
-						$ci =& get_instance();
-						$ci->load->model('BayarModel');
-						$keranjang = $ci->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
-						if ($keranjang == null):
-							?>
-                            <a href="<?= base_url('keranjang') ?>"><i class="fa fa-shopping-cart"></i></a>
-                            <?php
-						else:
-							?>
-                            <a href="<?= base_url('keranjang') ?>"><i
-                                    class="fa fa-shopping-cart animated infinite tada"></i></a>
-                            <?php
-						endif;
-						?>
+                        <li><a href="#" class="navbar-item-top">Customer Support</a>
                         </li>
                     </ul>
                 </div>

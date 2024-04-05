@@ -41,10 +41,6 @@ class TransaksiController extends CI_Controller
 			'stiker' => $this->BayarModel->lihat_keranjang_stiker($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'kartu' => $this->BayarModel->lihat_keranjang_kartu($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'brosur' => $this->BayarModel->lihat_keranjang_brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'a4brosur' => $this->BayarModel->lihat_keranjang_a4brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'a5brosur' => $this->BayarModel->lihat_keranjang_a5brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'a6brosur' => $this->BayarModel->lihat_keranjang_a6brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'flyer10x21' => $this->BayarModel->lihat_keranjang_flyer10x21($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'kalender' => $this->BayarModel->lihat_keranjang_kalender($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'nota' => $this->BayarModel->lihat_keranjang_nota($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'dtf' => $this->BayarModel->lihat_keranjang_dtf($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
@@ -88,10 +84,6 @@ class TransaksiController extends CI_Controller
 			'stiker' => $this->BayarModel->lihat_keranjang_stiker($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'kartu' => $this->BayarModel->lihat_keranjang_kartu($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'brosur' => $this->BayarModel->lihat_keranjang_brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'a4brosur' => $this->BayarModel->lihat_keranjang_a4brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'a5brosur' => $this->BayarModel->lihat_keranjang_a5brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'a6brosur' => $this->BayarModel->lihat_keranjang_a6brosur($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
-			'flyer10x21' => $this->BayarModel->lihat_keranjang_flyer10x21($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'kalender' => $this->BayarModel->lihat_keranjang_kalender($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'nota' => $this->BayarModel->lihat_keranjang_nota($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'dtf' => $this->BayarModel->lihat_keranjang_dtf($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
@@ -147,54 +139,6 @@ class TransaksiController extends CI_Controller
 				'harga' => $harga
 			);
 			array_push($table, $brosur);
-		}
-		if ($data['a4brosur'] != null) {
-			$harga = 0;
-			foreach ($data['a4brosur'] as $key => $value) {
-				$harga = $harga + $value['a4brosur_total'];
-			}
-			$a4brosur = array(
-				'jenis' => 'Brosur A4',
-				'jumlah' => count($data['a4brosur']),
-				'harga' => $harga
-			);
-			array_push($table, $a4brosur);
-		}
-		if ($data['a5brosur'] != null) {
-			$harga = 0;
-			foreach ($data['a5brosur'] as $key => $value) {
-				$harga = $harga + $value['a5brosur_total'];
-			}
-			$a5brosur = array(
-				'jenis' => 'Brosur A5',
-				'jumlah' => count($data['a5brosur']),
-				'harga' => $harga
-			);
-			array_push($table, $a5brosur);
-		}
-		if ($data['a6brosur'] != null) {
-			$harga = 0;
-			foreach ($data['a6brosur'] as $key => $value) {
-				$harga = $harga + $value['a6brosur_total'];
-			}
-			$a6brosur = array(
-				'jenis' => 'Brosur A6',
-				'jumlah' => count($data['a6brosur']),
-				'harga' => $harga
-			);
-			array_push($table, $a6brosur);
-		}
-		if ($data['flyer10x21'] != null) {
-			$harga = 0;
-			foreach ($data['flyer10x21'] as $key => $value) {
-				$harga = $harga + $value['flyer10x21_total'];
-			}
-			$flyer10x21 = array(
-				'jenis' => 'Flalyer 10x21',
-				'jumlah' => count($data['flyer10x21']),
-				'harga' => $harga
-			);
-			array_push($table, $flyer10x21);
 		}
 		if ($data['kalender'] != null) {
 			$harga = 0;
