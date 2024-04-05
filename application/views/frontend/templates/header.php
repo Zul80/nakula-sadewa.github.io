@@ -230,7 +230,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/frontend/img/logo.png" alt="Image Alternative text" title="Image Title" />
+                        <img src="assets/frontend/img/Logo Nakulasadewa.png" alt="Image Alternative text" title="Image Title" />
                     </a>
                 </div>
                 <form class="navbar-form navbar-left navbar-main-search navbar-main-search-category" role="search">
