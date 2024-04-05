@@ -2257,15 +2257,15 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/icheck.js"></script>
-    <script src="js/ionrangeslider.js"></script>
-    <script src="js/jqzoom.js"></script>
-    <script src="js/card-payment.js"></script>
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/magnific.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets//bootstrap.js"></script>
+    <script src="assets//icheck.js"></script>
+    <script src="assets/js/ionrangeslider.js"></script>
+    <script src="assets/js/jqzoom.js"></script>
+    <script src="assets/js/card-payment.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/magnific.js"></script>
+    <script src="assets/js/custom.js"></script>
 
 
 
