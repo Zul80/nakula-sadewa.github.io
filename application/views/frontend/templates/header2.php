@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>the box - Index layout 2</title>
+    <title><?=$title?></title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="keywords" content="Template, html, premium, themeforest" />
@@ -10,101 +10,207 @@
     <meta name="author" content="Tsoy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400italic,400' rel='stylesheet' type='text/css'>
+    <link rel="shorcut icon" href="<?=base_url()?>assets/frontend/img/sipesan/favicon.png">
+    <link
+        href='<?= base_url() ?>assets/frontend/fonts/fonts.googleapis.com/cssb98c.css?family=Roboto:500,300,700,400italic,400'
+        rel='stylesheet' type='text/css'>
     <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-
+    <link href='<?= base_url() ?>assets/frontend/fonts/fonts.googleapis.com/css1c0e.css?family=Open+Sans:400,700,600'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/font-awesome.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/styles.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/mystyles.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/switcher.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/animate.min.css" />
+    <link rel="alternate stylesheet" type="text/css"
+        href="<?= base_url() ?>assets/frontend/css/schemes/bright-turquoise.css" title="bright-turquoise" media="all" />
+    <link rel="alternate stylesheet" type="text/css"
+        href="<?= base_url() ?>assets/frontend/css/schemes/turkish-rose.css" title="turkish-rose" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/salem.css"
+        title="salem" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/hippie-blue.css"
+        title="hippie-blue" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/mandy.css"
+        title="mandy" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/green-smoke.css"
+        title="green-smoke" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/horizon.css"
+        title="horizon" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/cerise.css"
+        title="cerise" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/brick-red.css"
+        title="brick-red" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/de-york.css"
+        title="de-york" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/shamrock.css"
+        title="shamrock" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/studio.css"
+        title="studio" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/leather.css"
+        title="leather" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/denim.css"
+        title="denim" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/schemes/scarlet.css"
+        title="scarlet" media="all" />
+    <link rel="stylesheet" href="<?= base_url() ?>assets/backend/node_modules/dropify/dist/css/dropify.min.css">
 </head>
 
 <body>
     <div class="global-wrapper clearfix" id="global-wrapper">
-        <div class="navbar-before mobile-hidden navbar-before-inverse">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="navbar-before-sign">Everything You Need is theBox</p>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="nav navbar-nav navbar-right navbar-right-no-mar">
-                            <li><a href="#">About Us</a>
-                            </li>
-                            <li><a href="#">Blog</a>
-                            </li>
-                            <li><a href="#">Contact Us</a>
-                            </li>
-                            <li><a href="#">FAQ</a>
-                            </li>
-                            <li><a href="#">Wishlist</a>
-                            </li>
-                            <li><a href="#">Help</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="demo_changer" id="demo_changer">
+            <div class="demo-icon fa fa-sliders"></div>
+            <div class="form_holder">
+                <div class="line"></div>
+                <p>Color Scheme</p>
+                <div class="predefined_styles" id="styleswitch_area">
+                    <a class="styleswitch" href="indexc392.html?default=true" style="background:#486D97;"></a>
+                    <a class="styleswitch" href="#" data-src="bright-turquoise" style="background:#0EBCF2;"></a>
+                    <a class="styleswitch" href="#" data-src="turkish-rose" style="background:#B66672;"></a>
+                    <a class="styleswitch" href="#" data-src="salem" style="background:#12A641;"></a>
+                    <a class="styleswitch" href="#" data-src="hippie-blue" style="background:#4F96B6;"></a>
+                    <a class="styleswitch" href="#" data-src="mandy" style="background:#E45E66;"></a>
+                    <a class="styleswitch" href="#" data-src="green-smoke" style="background:#96AA66;"></a>
+                    <a class="styleswitch" href="#" data-src="horizon" style="background:#5B84AA;"></a>
+                    <a class="styleswitch" href="#" data-src="cerise" style="background:#CA2AC6;"></a>
+                    <a class="styleswitch" href="#" data-src="brick-red" style="background:#cf315a;"></a>
+                    <a class="styleswitch" href="#" data-src="de-york" style="background:#74C683;"></a>
+                    <a class="styleswitch" href="#" data-src="shamrock" style="background:#30BBB1;"></a>
+                    <a class="styleswitch" href="#" data-src="studio" style="background:#7646B8;"></a>
+                    <a class="styleswitch" href="#" data-src="leather" style="background:#966650;"></a>
+                    <a class="styleswitch" href="#" data-src="denim" style="background:#1A5AE4;"></a>
+                    <a class="styleswitch" href="#" data-src="scarlet" style="background:#FF1D13;"></a>
                 </div>
+                <div class="line"></div>
+                <p>Layout</p>
+                <div class="predefined_styles"><a class="btn btn-xs" href="#" id="btn-wide">Wide</a>&nbsp;&nbsp;<a
+                        class="btn btn-xs" href="#" id="btn-boxed">Boxed</a>
+                </div>
+                <div class="line"></div>
+                <p>Background Patterns</p>
+                <div class="predefined_styles" id="patternswitch_area">
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/binding_light.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/binding_dark.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/dark_fish_skin.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/dimension.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/escheresque_ste.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/food.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/giftly.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/grey_wash_wall.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/ps_neutral.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/pw_maze_black.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/pw_pattern.png);"></a>
+                    <a class="patternswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/patterns/simple_dashed.png);"></a>
+                </div>
+                <div class="line"></div>
+                <p>Background Images</p>
+                <div class="predefined_styles" id="bgimageswitch_area">
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/bike.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/bike.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/flowers.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/flowers.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/wood.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/wood.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/taxi.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/taxi.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/phone.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/phone.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/road.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/road.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/keyboard.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/keyboard.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/beach.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/beach.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/street.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/street.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/nature.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/nature.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/bridge.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/bridge.jpg"></a>
+                    <a class="bgimageswitch" href="#"
+                        style="background-image: url(<?= base_url() ?>assets/frontend/img/switcher/cameras.jpg);"
+                        data-src="<?= base_url() ?>assets/frontend/img/backgrounds/cameras.jpg"></a>
+                </div>
+                <div class="line"></div>
             </div>
         </div>
         <div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
             <h3 class="widget-title">Member Login</h3>
             <p>Welcome back, friend. Login to get started</p>
             <hr />
-            <form>
-                <div class="form-group">
-                    <label>Email or Username</label>
-                    <input class="form-control" type="text" />
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input class="form-control" type="text" />
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input class="i-check" type="checkbox" />Remeber Me</label>
-                </div>
-                <input class="btn btn-primary" type="submit" value="Sign In" />
-            </form>
+            <?= form_open('login') ?>
+            <div class="form-group">
+                <label>Username</label>
+                <input class="form-control" type="text" name="username" required autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" name="password" required autocomplete="off" />
+            </div>
+            <input class="btn btn-primary" type="submit" value="Login" name="login" />
+            <?= form_close() ?>
             <div class="gap gap-small"></div>
             <ul class="list-inline">
-                <li><a href="#nav-account-dialog" class="popup-text">Not Member Yet</a>
+                <li><a href="#nav-account-dialog" class="popup-text">Belum Punya Akun?</a>
                 </li>
-                <li><a href="#nav-pwd-dialog" class="popup-text">Forgot Password?</a>
-                </li>
+                <!--			<li><a href="#nav-pwd-dialog" class="popup-text">Forgot Password?</a>-->
+                <!--			</li>-->
             </ul>
         </div>
         <div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-account-dialog">
-            <h3 class="widget-title">Create TheBox Account</h3>
+            <h3 class="widget-title">Buat Akun</h3>
             <p>Ready to get best offers? Let's get started!</p>
             <hr />
-            <form>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input class="form-control" type="text" />
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input class="form-control" type="text" />
-                </div>
-                <div class="form-group">
-                    <label>Repeat Password</label>
-                    <input class="form-control" type="text" />
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input class="form-control" type="text" />
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input class="i-check" type="checkbox" />Subscribe to the Newsletter</label>
-                </div>
-                <input class="btn btn-primary" type="submit" value="Create Account" />
-            </form>
+            <?= form_open('register') ?>
+            <div class="form-group">
+                <label>Username</label>
+                <input class="form-control" type="text" required name="username" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input class="form-control" type="text" required name="email" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" required name="password" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <label>Nama</label>
+                <input class="form-control" type="text" required name="nama" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <label>Nomor HP</label>
+                <input class="form-control" type="number" required name="no_hp" autocomplete="off" />
+            </div>
+            <input class="btn btn-primary" type="submit" value="Buat Akun" name="register" />
+            <?= form_close() ?>
             <div class="gap gap-small"></div>
             <ul class="list-inline">
-                <li><a href="#nav-login-dialog" class="popup-text">Already Memeber</a>
+                <li><a href="#nav-login-dialog" class="popup-text">Sudah Punya Akun ?</a>
                 </li>
             </ul>
         </div>
@@ -124,7 +230,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/frontend/img/logo.png" alt="Image Alternative text" title="Image Title" />
+                        <img src="assets/frontend/img/sipesan/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title" />
                     </a>
                 </div>
                 <form class="navbar-form navbar-left navbar-main-search navbar-main-search-category" role="search">
@@ -1026,1251 +1132,56 @@
                 </div>
             </div>
         </nav>
-
-        <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":5000}'>
-            <div class="owl-item">
-                <div class="slider-item" style="background-color:#E3D8FF;">
-                    <div class="container">
-                        <div class="slider-item-inner">
-                            <div class="slider-item-caption-left">
-                                <h4 class="slider-item-caption-title">Playstation 4</h4>
-                                <p class="slider-item-caption-desc">This is for The Players</p><a class="btn btn-lg btn-ghost btn-black" href="#">Shop Now</a>
-                            </div>
-                            <img class="slider-item-img-right" src="assets/frontend/img/test_slider/13-i.png" alt="Image Alternative text" title="Image Title" style="top: 60%; width: 56%;" />
-                        </div>
-                    </div>
-                </div>
+        <div class="alert-parent">
+            <?php if ($this->session->flashdata('alert') == 'login_sukses') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Login
             </div>
-            <div class="owl-item">
-                <div class="slider-item" style="background-image:url(img/1400x500.png);">
-                    <div class="container">
-                        <div class="slider-item-inner">
-                            <div class="slider-item-caption-right slider-item-caption-white">
-                                <h4 class="slider-item-caption-title">Smart Watches</h4>
-                                <p class="slider-item-caption-desc">Get One Just from $99</p><a class="btn btn-lg btn-ghost btn-white" href="#">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <?php elseif ($this->session->flashdata('alert') == 'success_register') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Register, Silahkan Login
             </div>
-            <div class="owl-item">
-                <div class="slider-item" style="background-color:#E5F54B;">
-                    <div class="container">
-                        <div class="slider-item-inner">
-                            <div class="slider-item-caption-left">
-                                <h4 class="slider-item-caption-title">Run! Run! Run!</h4>
-                                <p class="slider-item-caption-desc">Your Running Shoes, Right Away.</p><a class="btn btn-lg btn-ghost btn-black" href="#">Shop Now</a>
-                            </div>
-                            <img class="slider-item-img-right" src="assets/frontend/img/test_slider/3-i.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                    </div>
-                </div>
+            <?php elseif ($this->session->flashdata('alert') == 'login_gagal') : ?>
+            <div class="alert-danger animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-warning"></i> Username atau password salah
             </div>
+            <?php elseif ($this->session->flashdata('alert') == 'belum_login') : ?>
+            <div class="alert-danger animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-warning"></i> Silahkan Login Dahulu
+            </div>
+            <?php elseif ($this->session->flashdata('alert') == 'logout_sukses') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Logout
+            </div>
+            <?php elseif ($this->session->flashdata('alert') == 'bayar_sukses') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Melakukan Pembayaran
+            </div>
+            <?php elseif ($this->session->flashdata('alert') == 'konfirmasi_sukses') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Melakukan Konfirmasi
+            </div>
+            <?php elseif ($this->session->flashdata('alert') == 'pesan_sukses') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Melakukan Pemesanan
+            </div>
+            <?php elseif ($this->session->flashdata('alert') == 'pesan_hapus') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Menghapus Pesanan
+            </div>
+            <?php elseif ($this->session->flashdata('alert') == 'komentar_sukses') : ?>
+            <div class="alert-success animated fadeInDownBig hide-it">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <i class="fa fa-check"></i> Berhasil Menambahkan Komentar
+            </div>
+            <?php endif;?>
         </div>
-        <div class="gap"></div>
-        <div class="container">
-            <h3 class="widget-title">Trending Now</h3>
-            <div class="owl-carousel owl-loaded owl-nav-out" data-options='{"items":5,"loop":true,"nav":true}'>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Ridgid Fuego 9 Amp Compact Orbital Reciprocating Saw R3002 RECON</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$99</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>1 left</li>
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Cuisinart CSB-76BC SmartStick 200-Watt Immersion Hand Blender, Brushed Chrome</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$145</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">New Authentic Gucci Patent Leather Open Toe Platform Pump,Gren, 309984 3125</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$95</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$70</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Vera Bradley Mandy Tote Bag</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$75</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Google Nexus 6 XT1103 4G LTE - 32GB - Blue Factory Unlocked GSM</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$81</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">GoPro HERO4 Black 4K Action Camera Hero 4 Surf Camcorder . CHDHX-401. NEW</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$112</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Black Leather "Our Father" Wrap Bracelet Stainless Steel Magnetic Clasp - 7.5"</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$60</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels">
-                            <li>hot</li>
-                        </ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">New 26" Folding 6 Speed Mountain Bike Bicycle Shimano School Sport Black</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$67</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">iRobot BRAAVA 320 Floor Sweeping/Mopping Robot Cleaner - White</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$140</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap"></div>
-            <div class="row" data-gutter="15">
-                <div class="col-md-4">
-                    <div class="banner banner-o-hid" style="background-image:url(img/380x220.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Discover The Mountains</h5>
-                            <p class="banner-desc">Pro Backpacks 70% Off.</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                        <img class="banner-img" src="assets/frontend/img/test_banner/16-i.png" alt="Image Alternative text" title="Image Title" style="bottom: -68px; right: -32px; width: 200px;" />
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="banner banner-o-hid" style="background-image:url(img/750x200.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Family Vacation Packs</h5>
-                            <p class="banner-desc">Save Your Family Budget</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="banner banner-o-hid" style="background-color:#EA873B;">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Made by Nature</h5>
-                            <p class="banner-desc">Just for the Taste of Health</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                        <img class="banner-img" src="assets/frontend/img/test_banner/17-i.png" alt="Image Alternative text" title="Image Title" style="top: 17px; right: -45px; width: 350px;" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="banner banner-o-hid" style="background-image:url(img/560x200.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Smartphones Under $80</h5>
-                            <p class="banner-desc">Low Price for Great Perfomance</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                        <img class="banner-img" src="assets/frontend/img/test_banner/18-i.png" alt="Image Alternative text" title="Image Title" style="top: 17px; right: -45px; width: 350px;" />
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="banner banner-o-hid" style="background-image:url(img/380x200.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Back to School</h5>
-                            <p class="banner-desc">Class is Almost in Session!</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                        <img class="banner-img" src="assets/frontend/img/test_banner/20-i.png" alt="Image Alternative text" title="Image Title" style="bottom: -20px; right: -60px; width: 240px;" />
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="banner banner-o-hid" style="background-image:url(img/550x292.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">New Jeans Collection</h5>
-                            <p class="banner-desc">Exeedingly Good Jeans</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                        <img class="banner-img" src="assets/frontend/img/test_banner/21-i.png" alt="Image Alternative text" title="Image Title" style="bottom: -29px; right: -51px; width: 240px;" />
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="banner banner-o-hid" style="background-image:url(img/380x200.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Top Office Furniture</h5>
-                            <p class="banner-desc">Officeized!!</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                        <img class="banner-img" src="assets/frontend/img/test_banner/23-i.png" alt="Image Alternative text" title="Image Title" style="bottom: -118px; right: 8px; width: 190px;" />
-                    </div>
-                </div>
-            </div>
-            <div class="gap"></div>
-            <h3 class="widget-title">Featured Products</h3>
-            <div class="owl-carousel owl-loaded owl-nav-out" data-options='{"items":5,"loop":true,"nav":true}'>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">iRobot BRAAVA 320 Floor Sweeping/Mopping Robot Cleaner - White</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$103</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Bulova Women's Dress 98V02 Silver Stainless-Steel Quartz Watch</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$110</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>1 left</li>
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Hanes Women's Relaxed Fit Jersey ComfortSoft&reg; Crewneck T-Shirt style 5680</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$92</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>1 left</li>
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Military Shoulder Tactical Backpack Rucksacks Sport Travel Hiking Trekking Bag</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$63</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels">
-                            <li>stuff pick</li>
-                        </ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Motorola XT1096 Moto X 2nd Generation 16GB Verizon Wireless gsm unlocked</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$129</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$107</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>5 left</li>
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels">
-                            <li>-10%</li>
-                        </ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Lexington</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-old">$108</span><span class="product-caption-price-new">$98</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Fossil Women's Original Boyfriend ES3380 Rose-Gold Stainless-Steel Quartz Watch</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$90</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">HP EliteBook 8460p 2.7GHz i7 8GB 160GB DVD Win 7 Pro 64 Laptop Computer CAM B</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$133</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>1 left</li>
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product  owl-item-slide">
-                        <ul class="product-labels"></ul>
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">WENGER WOMEN'S STAINLESS STEEL DATE NEW WATCH 0721.102</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$94</span>
-                            </div>
-                            <ul class="product-caption-feature-list">
-                                <li>Free Shipping</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap"></div>
-            <div class="row" data-gutter="15">
-                <div class="col-md-6">
-                    <div class="banner banner-o-hid" style="background-image:url(img/600x300.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Woman Sunglasses</h5>
-                            <p class="banner-desc">Up to 70% Off.</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="banner banner-o-hid" style="background-image:url(img/600x300.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Hot Snowboards</h5>
-                            <p class="banner-desc">Save on Winter Sports</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                        <img class="banner-img" src="assets/frontend/img/test_banner/24-i.png" alt="Image Alternative text" title="Image Title" style="top: -10px; right: 0; width: 270px;" />
-                    </div>
-                </div>
-            </div>
-            <div class="gap"></div>
-            <h3 class="widget-title">Store Departments</h3>
-            <div class="owl-carousel owl-loaded owl-nav-out" data-options='{"items":7,"loop":true,"nav":true}'>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Home & Garden</h5>
-                        <p class="banner-category-desc">560 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Jewelry</h5>
-                        <p class="banner-category-desc">524 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Toy & Kids</h5>
-                        <p class="banner-category-desc">525 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Electronics</h5>
-                        <p class="banner-category-desc">208 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Clothes</h5>
-                        <p class="banner-category-desc">135 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Sports</h5>
-                        <p class="banner-category-desc">451 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Entertaiment</h5>
-                        <p class="banner-category-desc">544 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Travel</h5>
-                        <p class="banner-category-desc">538 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Art & Design</h5>
-                        <p class="banner-category-desc">198 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Motors</h5>
-                        <p class="banner-category-desc">226 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Tools</h5>
-                        <p class="banner-category-desc">367 products</p>
-                    </a>
-                </div>
-                <div class="owl-item">
-                    <a class="banner-category owl-item-slide" href="#">
-                        <img class="banner-category-img" src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                        <h5 class="banner-category-title">Hobbies & DIY</h5>
-                        <p class="banner-category-desc">533 products</p>
-                    </a>
-                </div>
-            </div>
-            <div class="gap"></div>
-            <h3 class="widget-title">Inspired by Your Browsing History</h3>
-            <div class="owl-carousel owl-loaded owl-nav-out" data-options='{"items":7,"loop":true,"nav":true}'>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">WENGER WOMEN'S STAINLESS STEEL DATE NEW WATCH 0721.102</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$106</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Black 1000-Watt 6-Quart Electric Pressure Cooker Brushed Stainless and Matte 603</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$109</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Apple iPhone 5c - 16GB - GSM Factory Unlocked White Blue Green Pink Yellow</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$108</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">SALAV GS34-BJ Performance Garment Steamer with 360 Swivel Multi-hook Hanger, 4 S</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$133</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Bulova Fairlawn Women's Quartz Watch 96R160</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-old">$67</span><span class="product-caption-price-new">$61</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-old">$62</span><span class="product-caption-price-new">$50</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Barnett 78649 Recruit Youth 100# Crossbow Package With Red Dot Sight Pink</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-old">$61</span><span class="product-caption-price-new">$25</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">PUMA Cell Riaze Mesh Women's Running Shoes</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$87</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Nikon COOLPIX L840 Digital Camera, Red - Refurbished by Nikon U.S.A. #26486 B</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$78</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item">
-                    <div class="product product-sm owl-item-slide">
-                        <div class="product-img-wrap">
-                            <img class="product-img" src="assets/frontend/img/500x500.png" alt="Image Alternative text" title="Image Title" />
-                        </div>
-                        <a class="product-link" href="#"></a>
-                        <div class="product-caption">
-                            <ul class="product-caption-rating">
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li class="rated"><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>
-                            <div class="product-caption-price"><span class="product-caption-price-new">$118</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gap"></div>
-            <div class="row" data-gutter="15">
-                <div class="col-md-12">
-                    <div class="banner banner-o-hid" style="background-image:url(img/1140x200.png);">
-                        <a class="banner-link" href="#"></a>
-                        <div class="banner-caption-left">
-                            <h5 class="banner-title">Latest Smartwatches</h5>
-                            <p class="banner-desc">Save up to 50%</p>
-                            <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gap"></div>
-
-        <footer class="main-footer">
-            <div class="container">
-                <div class="row row-col-gap" data-gutter="60">
-                    <div class="col-md-3">
-                        <h4 class="widget-title-sm">TheBox Shop</h4>
-                        <p>Justo viverra tincidunt pulvinar sociis maecenas gravida felis dolor penatibus pharetra aptent</p>
-                        <ul class="main-footer-social-list">
-                            <li>
-                                <a class="fa fa-facebook" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-twitter" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-pinterest" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-instagram" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-google-plus" href="#"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h4 class="widget-title-sm">Popular Tags</h4>
-                        <ul class="main-footer-tag-list">
-                            <li><a href="#">New Season</a>
-                            </li>
-                            <li><a href="#">Watches</a>
-                            </li>
-                            <li><a href="#">woman</a>
-                            </li>
-                            <li><a href="#">classic</a>
-                            </li>
-                            <li><a href="#">modern</a>
-                            </li>
-                            <li><a href="#">blue</a>
-                            </li>
-                            <li><a href="#">shoes</a>
-                            </li>
-                            <li><a href="#">running</a>
-                            </li>
-                            <li><a href="#">jeans</a>
-                            </li>
-                            <li><a href="#">sports</a>
-                            </li>
-                            <li><a href="#">laptops</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h4 class="widget-title-sm">Newsletter</h4>
-                        <form>
-                            <div class="form-group">
-                                <label>Sign up to the newsletter</label>
-                                <input class="newsletter-input form-control" placeholder="Your e-mail address" type="text" />
-                            </div>
-                            <input class="btn btn-primary" type="submit" value="Sign up" />
-                        </form>
-                    </div>
-                </div>
-                <ul class="main-footer-links-list">
-                    <li><a href="#">About Us</a>
-                    </li>
-                    <li><a href="#">Jobs</a>
-                    </li>
-                    <li><a href="#">Legal</a>
-                    </li>
-                    <li><a href="#">Support & Customer Service</a>
-                    </li>
-                    <li><a href="#">Blog</a>
-                    </li>
-                    <li><a href="#">Privacy</a>
-                    </li>
-                    <li><a href="#">Terms</a>
-                    </li>
-                    <li><a href="#">Press</a>
-                    </li>
-                    <li><a href="#">Shipping</a>
-                    </li>
-                    <li><a href="#">Payments & Refunds</a>
-                    </li>
-                </ul>
-                <img class="main-footer-img" src="assets/frontend/img/test_footer2-i.png" alt="Image Alternative text" title="Image Title" />
-            </div>
-        </footer>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="copyright-text">Copyright &copy; <a href="#">TheBox</a> 2014. Designed my remtsoy. All rights reseved</p>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="payment-icons-list">
-                            <li>
-                                <img src="assets/frontend/img/payment/visa-straight-32px.png" alt="Image Alternative text" title="Pay with Visa" />
-                            </li>
-                            <li>
-                                <img src="assets/frontend/img/payment/mastercard-straight-32px.png" alt="Image Alternative text" title="Pay with Mastercard" />
-                            </li>
-                            <li>
-                                <img src="assets/frontend/img/payment/paypal-straight-32px.png" alt="Image Alternative text" title="Pay with Paypal" />
-                            </li>
-                            <li>
-                                <img src="assets/frontend/img/payment/visa-electron-straight-32px.png" alt="Image Alternative text" title="Pay with Visa-electron" />
-                            </li>
-                            <li>
-                                <img src="assets/frontend/img/payment/maestro-straight-32px.png" alt="Image Alternative text" title="Pay with Maestro" />
-                            </li>
-                            <li>
-                                <img src="assets/frontend/img/payment/discover-straight-32px.png" alt="Image Alternative text" title="Pay with Discover" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/icheck.js"></script>
-    <script src="js/ionrangeslider.js"></script>
-    <script src="js/jqzoom.js"></script>
-    <script src="js/card-payment.js"></script>
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/magnific.js"></script>
-    <script src="js/custom.js"></script>
-
-
-
-
-
-</body>
-
-</html>
