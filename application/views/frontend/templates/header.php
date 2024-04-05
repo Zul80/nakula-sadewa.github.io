@@ -253,54 +253,23 @@
                 <ul class="nav navbar-nav navbar-right navbar-mob-item-left">
                     <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
                     </li>
-                    <li class="dropdown"><a href="keranjang.php"><span >Your Cart</span><i class="fa fa-shopping-cart"></i> 3 Items</a>
-                        <ul class="dropdown-menu dropdown-menu-shipping-cart">
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$80</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$53</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$59</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$30</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="dropdown-menu-shipping-cart-total">Total: $150</p>
-                                <button class="dropdown-menu-shipping-cart-checkout btn btn-primary">Checkout</button>
-                            </li>
-                        </ul>
-                    </li>
+                    <li>
+                            <?php
+						$ci =& get_instance();
+						$ci->load->model('BayarModel');
+						$keranjang = $ci->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
+						if ($keranjang == null):
+							?>
+                            <a href="<?= base_url('keranjang') ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <?php
+						else:
+							?>
+                            <a href="<?= base_url('keranjang') ?>"><i
+                                    class="fa fa-shopping-cart animated infinite tada"></i></a>
+                            <?php
+						endif;
+						?>
+                        </li>
                     <div class="navbar-header">
                         <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                         </button>
