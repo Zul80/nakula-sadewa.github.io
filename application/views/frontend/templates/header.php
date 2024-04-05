@@ -254,7 +254,7 @@
                     <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
                     </li>
                     <li class="dropdown"><a href="shopping-cart.html"><span >Your Cart</span><i class="fa fa-shopping-cart"></i> 3 Items</a>
-                        <ul class="dropdown-menu dropdown-menu-shipping-cart">
+                        
                         <li>
                             <?php
 						$ci =& get_instance();
@@ -272,7 +272,7 @@
 						endif;
 						?>
                         </li>
-                        </ul>
+                        
                     </li>
                    
                     <div class="navbar-header">

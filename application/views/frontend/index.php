@@ -1,3 +1,6 @@
+	
+	
+	
 	<div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true}'>
 	    <div class="owl-item">
 	        <div class="slider-item"
