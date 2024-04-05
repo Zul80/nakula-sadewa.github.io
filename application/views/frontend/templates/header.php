@@ -253,7 +253,9 @@
                 <ul class="nav navbar-nav navbar-right navbar-mob-item-left">
                     <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
                     </li>
-                    <li>
+                    <li class="dropdown"><a href="shopping-cart.html"><span >Your Cart</span><i class="fa fa-shopping-cart"></i> 3 Items</a>
+                        <ul class="dropdown-menu dropdown-menu-shipping-cart">
+                        <li>
                             <?php
 						$ci =& get_instance();
 						$ci->load->model('BayarModel');
@@ -270,6 +272,9 @@
 						endif;
 						?>
                         </li>
+                        </ul>
+                    </li>
+                   
                     <div class="navbar-header">
                         <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                         </button>
