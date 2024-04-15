@@ -354,540 +354,10 @@ class PesanController extends CI_Controller
 			}
 		}
 		$data = array(
-			'title' => 'Pesan Brosur | Nakula Sadewa Digital'
+			'title' => 'Pesan Brosur Nama | Nakula Sadewa Digital'
 		);
 		$this->load->view('frontend/templates/header', $data);
 		$this->load->view('frontend/pesanan/brosur');
-		$this->load->view('frontend/templates/footer');
-	}
-	public function pesanA4brosur()
-	{
-
-		if (isset ($_POST['keranjang'])) {
-			$a4brosurId = 'A4B-' . substr(time(), 5);
-			$bahan = $this->input->post('bahan');
-			$sisi = $this->input->post('sisi');
-			$laminasi = $this->input->post('laminasi');
-			$lipat = $this->input->post('lipat');
-			$jumlah = $this->input->post('jumlah');
-			$estimasi = $this->input->post('estimasi');
-			$total = 0;
-			
-
-			if ($bahan === "HVS 100") {
-				if ($sisi === "1 Muka" && $lipat === "Tanpa Lipat") {
-								$total = $jumlah * 380000;
-							} else if ($sisi === "1 Muka" && $lipat === "Lipat") {
-								$total = $jumlah * 430000;
-							}
-							if ($sisi === "2 Muka" && $lipat === "Tanpa Lipat") {
-								$total = $jumlah * 760000;
-							} else if ($sisi === "2 Muka" && $lipat === "Lipat") {
-								$total = $jumlah * 810000;
-							}
-						}
-			
-			if ($bahan === "Art Paper 120"){
-							if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-								$total = $jumlah * 400000;
-							} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-								$total = $jumlah * 450000;
-						}
-							if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-								$total = $jumlah * 800000;
-							} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-								$total = $jumlah * 850000;
-						}
-					}
-						if ($bahan === "Art Paper 150"){
-							if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-								$total = $jumlah * 420000;
-							} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-								$total = $jumlah * 470000;
-						}
-							if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-								$total = $jumlah * 840000;
-							} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-								$total = $jumlah * 890000;
-						}
-					}
-					
-						if ($bahan === "Art Carton 210") {
-							if (
-								$sisi === "1 Muka" &&
-								$laminasi === "Tanpa Laminasi" &&
-								$lipat === "Tanpa Lipat"
-							) {
-								$total = $jumlah * 550000;
-							} else if (
-								$sisi === "1 Muka" &&
-								$laminasi === "Tanpa Laminasi" &&
-								$lipat === "Lipat"
-							) {
-								$total = $jumlah * 600000;
-							} else if (
-								$sisi === "1 Muka" &&
-								$laminasi !== "Tanpa Laminasi" &&
-								$lipat === "Tanpa Lipat"
-							) {
-								$total = $jumlah * 675000;
-							} else if (
-								$sisi === "1 Muka" &&
-								$laminasi !== "Tanpa Laminasi" &&
-								$lipat === "Lipat"
-							) {
-								$total = $jumlah * 725000;
-							}
-							if (
-								$sisi === "2 Muka" &&
-								$laminasi === "Tanpa Laminasi" &&
-								$lipat === "Tanpa Lipat"
-							) {
-								$total = $jumlah * 1100000;
-							} else if (
-								$sisi === "2 Muka" &&
-								$laminasi === "Tanpa Laminasi" &&
-								$lipat === "Lipat"
-							) {
-								$total = $jumlah * 1150000;
-							} else if (
-								$sisi === "2 Muka" &&
-								$laminasi !== "Tanpa Laminasi" &&
-								$lipat === "Tanpa Lipat"
-							) {
-								$total = $jumlah * 1350000;
-							} else if (
-								$sisi === "2 Muka" &&
-								$laminasi !== "Tanpa Laminasi" &&
-								$lipat === "Lipat"
-							) {
-								$total = $jumlah * 1400000;
-							}
-						}
-
-			$config['upload_path'] = './assets/images/a4brosur/';
-			$config['allowed_types'] = 'jpg|png|jpeg|zip|rar|pdf';
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
-
-			if (!$this->upload->do_upload('upload')) {
-				$error = array('error' => $this->upload->display_errors());
-				var_dump($error);
-			} else {
-				$foto = $this->upload->data('file_name');
-
-				$dataA4brosur = array(
-					'a4brosur_id' => $a4brosurId,
-					'a4brosur_bahan' => $bahan,
-					'a4brosur_jumlah' => $jumlah,
-					'a4brosur_estimasi' => $estimasi,
-					'a4brosur_total' => $total,
-					'a4brosur_foto' => $foto,
-				);
-
-				$allCart = $this->BayarModel->lihat_keranjang();
-				$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
-
-				if ($allCart == null) {
-					$cartId = 'A4B-' . substr(time(), 5);
-					$dataA4brosur['a4brosur_keranjang_id'] = $cartId;
-					$dataCart = array(
-						'keranjang_id' => $cartId,
-						'keranjang_pengguna_id' => $this->session->userdata('session_id'),
-						'keranjang_total' => $total,
-					);
-					$this->PesanModel->simpan_a4brosur($dataA4brosur);
-					$this->BayarModel->simpan_keranjang($dataCart);
-					$this->session->set_flashdata('alert', 'pesan_sukses');
-					redirect('a4brosur');
-				} else {
-					if ($undoneCart != null) {
-						$cartId = $undoneCart['keranjang_id'];
-						$cartTotal = $undoneCart['keranjang_total'];
-						$dataA4brosur['a4brosur_keranjang_id'] = $cartId;
-						$dataCart['keranjang_total'] = $cartTotal + $total;
-
-						$this->PesanModel->simpan_a4brosur($dataA4brosur);
-						$this->BayarModel->update_keranjang($cartId, $dataCart);
-						$this->session->set_flashdata('alert', 'pesan_sukses');
-						redirect('a4brosur');
-					} else {
-						$cartId = 'A4B-' . substr(time(), 5);
-						$dataA4brosur['a4brosur_keranjang_id'] = $cartId;
-						$dataCart = array(
-							'keranjang_id' => $cartId,
-							'keranjang_pengguna_id' => $this->session->userdata('session_id'),
-							'keranjang_total' => $total,
-						);
-						$this->PesanModel->simpan_a4brosur($dataA4brosur);
-						$this->BayarModel->simpan_keranjang($dataCart);
-						$this->session->set_flashdata('alert', 'pesan_sukses');
-						redirect('a4brosur');
-					}
-				}
-			}
-		}
-		$data = array(
-			'title' => 'Pesan A4brosur Nama | Nakula Sadewa Digital'
-		);
-		$this->load->view('frontend/templates/header', $data);
-		$this->load->view('frontend/pesanan/a4brosur');
-		$this->load->view('frontend/templates/footer');
-	}
-	// public function pesanA4brosur()
-	// {
-
-	// 	if (isset ($_POST['keranjang'])) {
-	// 		$a4brosurId = 'A4B-' . substr(time(), 5);
-	// 		$bahan = $this->input->post('bahan');
-	// 		$sisi = $this->input->post('sisi');
-	// 		$laminasi = $this->input->post('laminasi');
-	// 		$lipat = $this->input->post('lipat');
-	// 		$jumlah = $this->input->post('jumlah');
-	// 		$estimasi = $this->input->post('estimasi');
-	// 		$total = 0;
-			
-	// 		if ($bahan === "HVS 100") {
-	// 			if ($sisi === "1 Muka" && $lipat === "Tanpa Lipat") {
-	// 				$total = $jumlah * 380000;
-	// 			} else if ($sisi === "1 Muka" && $lipat === "Lipat") {
-	// 				$total = $jumlah * 430000;
-	// 			}
-	// 			if ($sisi === "2 Muka" && $lipat === "Tanpa Lipat") {
-	// 				$total = $jumlah * 760000;
-	// 			} else if ($sisi === "2 Muka" && $lipat === "Lipat") {
-	// 				$total = $jumlah * 810000;
-	// 			}
-	// 		}
-
-	// 		if ($bahan === "Art Paper 120"){
-	// 			if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-	// 				$total = $jumlah * 400000;
-	// 			} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-	// 				$total = $jumlah * 450000;
-	// 		}
-	// 			if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-	// 				$total = $jumlah * 800000;
-	// 			} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-	// 				$total = $jumlah * 850000;
-	// 		}
-	// 	}
-	// 		if ($bahan === "Art Paper 150"){
-	// 			if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-	// 				$total = $jumlah * 420000;
-	// 			} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-	// 				$total = $jumlah * 470000;
-	// 		}
-	// 			if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-	// 				$total = $jumlah * 840000;
-	// 			} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-	// 				$total = $jumlah * 890000;
-	// 		}
-	// 	}
-		
-	// 		if ($bahan === "Art Carton 210") {
-	// 			if (
-	// 				$sisi === "1 Muka" &&
-	// 				$laminasi === "Tanpa Laminasi" &&
-	// 				$lipat === "Tanpa Lipat"
-	// 			) {
-	// 				$total = $jumlah * 550000;
-	// 			} else if (
-	// 				$sisi === "1 Muka" &&
-	// 				$laminasi === "Tanpa Laminasi" &&
-	// 				$lipat === "Lipat"
-	// 			) {
-	// 				$total = $jumlah * 600000;
-	// 			} else if (
-	// 				$sisi === "1 Muka" &&
-	// 				$laminasi !== "Tanpa Laminasi" &&
-	// 				$lipat === "Tanpa Lipat"
-	// 			) {
-	// 				$total = $jumlah * 675000;
-	// 			} else if (
-	// 				$sisi === "1 Muka" &&
-	// 				$laminasi !== "Tanpa Laminasi" &&
-	// 				$lipat === "Lipat"
-	// 			) {
-	// 				$total = $jumlah * 725000;
-	// 			}
-	// 			if (
-	// 				$sisi === "2 Muka" &&
-	// 				$laminasi === "Tanpa Laminasi" &&
-	// 				$lipat === "Tanpa Lipat"
-	// 			) {
-	// 				$total = $jumlah * 1100000;
-	// 			} else if (
-	// 				$sisi === "2 Muka" &&
-	// 				$laminasi === "Tanpa Laminasi" &&
-	// 				$lipat === "Lipat"
-	// 			) {
-	// 				$total = $jumlah * 1150000;
-	// 			} else if (
-	// 				$sisi === "2 Muka" &&
-	// 				$laminasi !== "Tanpa Laminasi" &&
-	// 				$lipat === "Tanpa Lipat"
-	// 			) {
-	// 				$total = $jumlah * 1350000;
-	// 			} else if (
-	// 				$sisi === "2 Muka" &&
-	// 				$laminasi !== "Tanpa Laminasi" &&
-	// 				$lipat === "Lipat"
-	// 			) {
-	// 				$total = $jumlah * 1400000;
-	// 			}
-	// 		}
-		
-	// 		$config['upload_path'] = './assets/images/a4brosur/';
-	// 		$config['allowed_types'] = 'jpg|png|jpeg|zip|rar|pdf';
-	// 		$this->load->library('upload', $config);
-	// 		$this->upload->initialize($config);
-
-	// 		if (!$this->upload->do_upload('upload')) {
-	// 			$error = array('error' => $this->upload->display_errors());
-	// 			var_dump($error);
-	// 		} else {
-	// 			$foto = $this->upload->data('file_name');
-
-	// 			$dataA4brosur = array(
-	// 				'a4brosur_id' => $a4brosurId,
-	// 				'a4brosur_bahan' => $bahan,
-	// 				'a4brosur_sisi' => $sisi,
-	// 				'a4brosur_laminasi' => $laminasi,
-	// 				'a4brosur_lipat' => $lipat,
-	// 				'a4brosur_jumlah' => $jumlah,
-	// 				'a4brosur_estimasi' => $estimasi,
-	// 				'a4brosur_total' => $total,
-	// 				'a4brosur_foto' => $foto,
-	// 			);
-
-	// 			$allCart = $this->BayarModel->lihat_keranjang();
-	// 			$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
-
-	// 			if ($allCart == null) {
-	// 				$cartId = 'A4B-' . substr(time(), 5);
-	// 				$dataA4brosur['a4brosur_keranjang_id'] = $cartId;
-	// 				$dataCart = array(
-	// 					'keranjang_id' => $cartId,
-	// 					'keranjang_pengguna_id' => $this->session->userdata('session_id'),
-	// 					'keranjang_total' => $total,
-	// 				);
-	// 				$this->PesanModel->simpan_a4brosur($dataA4brosur);
-	// 				$this->BayarModel->simpan_keranjang($dataCart);
-	// 				$this->session->set_flashdata('alert', 'pesan_sukses');
-	// 				redirect('a4brosur');
-	// 			} else {
-	// 				if ($undoneCart != null) {
-	// 					$cartId = $undoneCart['keranjang_id'];
-	// 					$cartTotal = $undoneCart['keranjang_total'];
-	// 					$dataA4brosur['a4brosur_keranjang_id'] = $cartId;
-	// 					$dataCart['keranjang_total'] = $cartTotal + $total;
-
-	// 					$this->PesanModel->simpan_a4brosur($dataA4brosur);
-	// 					$this->BayarModel->update_keranjang($cartId, $dataCart);
-	// 					$this->session->set_flashdata('alert', 'pesan_sukses');
-	// 					redirect('a4brosur');
-	// 				} else {
-	// 					$cartId = 'A4B-' . substr(time(), 5);
-	// 					$dataA4brosur['a4brosur_keranjang_id'] = $cartId;
-	// 					$dataCart = array(
-	// 						'keranjang_id' => $cartId,
-	// 						'keranjang_pengguna_id' => $this->session->userdata('session_id'),
-	// 						'keranjang_total' => $total,
-	// 					);
-	// 					$this->PesanModel->simpan_a4brosur($dataA4brosur);
-	// 					$this->BayarModel->simpan_keranjang($dataCart);
-	// 					$this->session->set_flashdata('alert', 'pesan_sukses');
-	// 					redirect('a4brosur');
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// 	$data = array(
-	// 		'title' => 'Pesan Brosur A4 | Nakula Sadewa Digital'
-	// 	);
-	// 	$this->load->view('frontend/templates/header', $data);
-	// 	$this->load->view('frontend/pesanan/a4brosur');
-	// 	$this->load->view('frontend/templates/footer');
-	// }
-	public function pesanA5brosur()
-	{
-
-		if (isset ($_POST['keranjang'])) {
-			$a5brosurId = 'A5B-' . substr(time(), 5);
-			$bahan = $this->input->post('bahan');
-			$sisi = $this->input->post('sisi');
-			$laminasi = $this->input->post('laminasi');
-			$lipat = $this->input->post('lipat');
-			$jumlah = $this->input->post('jumlah');
-			$estimasi = $this->input->post('estimasi');
-			$total = 0;
-			
-			if ($bahan === "HVS 100") {
-				if ($sisi === "1 Muka" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 190000;
-				} else if ($sisi === "1 Muka" && $lipat === "Lipat") {
-					$total = $jumlah * 215000;
-				}
-				if ($sisi === "2 Muka" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 380000;
-				} else if ($sisi === "2 Muka" && $lipat === "Lipat") {
-					$total = $jumlah * 405000;
-				}
-			}
-
-			if ($bahan === "Art Paper 120"){
-				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 200000;
-				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 225000;
-			}
-				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 400000;
-				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 425000;
-			}
-		}
-			if ($bahan === "Art Paper 150"){
-				if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 210000;
-				} else if ($sisi === "1 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 435000;
-			}
-				if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Tanpa Lipat") {
-					$total = $jumlah * 420000;
-				} else if ($sisi === "2 Muka" && $laminasi === "Tanpa Laminasi" && $lipat === "Lipat") {
-					$total = $jumlah * 445000;
-			}
-		}
-		
-			if ($bahan === "Art Carton 210") {
-				if (
-					$sisi === "1 Muka" &&
-					$laminasi === "Tanpa Laminasi" &&
-					$lipat === "Tanpa Lipat"
-				) {
-					$total = $jumlah * 280000;
-				} else if (
-					$sisi === "1 Muka" &&
-					$laminasi === "Tanpa Laminasi" &&
-					$lipat === "Lipat"
-				) {
-					$total = $jumlah * 330000;
-				} else if (
-					$sisi === "1 Muka" &&
-					$laminasi !== "Tanpa Laminasi" &&
-					$lipat === "Tanpa Lipat"
-				) {
-					$total = $jumlah * 405000;
-				} else if (
-					$sisi === "1 Muka" &&
-					$laminasi !== "Tanpa Laminasi" &&
-					$lipat === "Lipat"
-				) {
-					$total = $jumlah * 455000;
-				}
-				if (
-					$sisi === "2 Muka" &&
-					$laminasi === "Tanpa Laminasi" &&
-					$lipat === "Tanpa Lipat"
-				) {
-					$total = $jumlah * 560000;
-				} else if (
-					$sisi === "2 Muka" &&
-					$laminasi === "Tanpa Laminasi" &&
-					$lipat === "Lipat"
-				) {
-					$total = $jumlah * 610000;
-				} else if (
-					$sisi === "2 Muka" &&
-					$laminasi !== "Tanpa Laminasi" &&
-					$lipat === "Tanpa Lipat"
-				) {
-					$total = $jumlah * 810000;
-				} else if (
-					$sisi === "2 Muka" &&
-					$laminasi !== "Tanpa Laminasi" &&
-					$lipat === "Lipat"
-				) {
-					$total = $jumlah * 860000;
-				}
-			}
-		
-		
-
-
-
-			$config['upload_path'] = './assets/images/a5brosur/';
-			$config['allowed_types'] = 'jpg|png|jpeg|zip|rar|pdf';
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
-
-			if (!$this->upload->do_upload('upload')) {
-				$error = array('error' => $this->upload->display_errors());
-				var_dump($error);
-			} else {
-				$foto = $this->upload->data('file_name');
-
-				$dataA5brosur = array(
-					'a5brosur_id' => $a5brosurId,
-					'a5brosur_bahan' => $bahan,
-					'a5brosur_sisi' => $sisi,
-					'a5brosur_laminasi' => $laminasi,
-					'a5brosur_lipat' => $lipat,
-					'a5brosur_jumlah' => $jumlah,
-					'a5brosur_estimasi' => $estimasi,
-					'a5brosur_total' => $total,
-					'a5brosur_foto' => $foto,
-				);
-
-				$allCart = $this->BayarModel->lihat_keranjang();
-				$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
-
-				if ($allCart == null) {
-					$cartId = 'A5B-' . substr(time(), 5);
-					$dataA5brosur['a5brosur_keranjang_id'] = $cartId;
-					$dataCart = array(
-						'keranjang_id' => $cartId,
-						'keranjang_pengguna_id' => $this->session->userdata('session_id'),
-						'keranjang_total' => $total,
-					);
-					$this->PesanModel->simpan_a5brosur($dataA5brosur);
-					$this->BayarModel->simpan_keranjang($dataCart);
-					$this->session->set_flashdata('alert', 'pesan_sukses');
-					redirect('a5brosur');
-				} else {
-					if ($undoneCart != null) {
-						$cartId = $undoneCart['keranjang_id'];
-						$cartTotal = $undoneCart['keranjang_total'];
-						$dataA5brosur['a5brosur_keranjang_id'] = $cartId;
-						$dataCart['keranjang_total'] = $cartTotal + $total;
-
-						$this->PesanModel->simpan_a5brosur($dataA5brosur);
-						$this->BayarModel->update_keranjang($cartId, $dataCart);
-						$this->session->set_flashdata('alert', 'pesan_sukses');
-						redirect('a5brosur');
-					} else {
-						$cartId = 'A5B-' . substr(time(), 5);
-						$dataA5brosur['a5brosur_keranjang_id'] = $cartId;
-						$dataCart = array(
-							'keranjang_id' => $cartId,
-							'keranjang_pengguna_id' => $this->session->userdata('session_id'),
-							'keranjang_total' => $total,
-						);
-						$this->PesanModel->simpan_a5brosur($dataA5brosur);
-						$this->BayarModel->simpan_keranjang($dataCart);
-						$this->session->set_flashdata('alert', 'pesan_sukses');
-						redirect('a5brosur');
-					}
-				}
-			}
-		}
-		$data = array(
-			'title' => 'Pesan Brosur A5 | Nakula Sadewa Digital'
-		);
-		$this->load->view('frontend/templates/header', $data);
-		$this->load->view('frontend/pesanan/a5brosur');
 		$this->load->view('frontend/templates/footer');
 	}
 
@@ -902,92 +372,65 @@ class PesanController extends CI_Controller
 			$jumlah = $this->input->post('jumlah');
 			$estimasi = $this->input->post('estimasi');
 			$total = 0;
-
-			if ($bahan === "AC230") {
-				if ($isi === "7 Lembar" && $laminasi === "Tanpa Laminasi") {
-					$total = $jumlah * 39000;
-				} else if ($isi === "13 Lembar" && $laminasi === "Tanpa Laminasi") {
-					$total = $jumlah * 49500;
-				}
-				if ($isi === "7 Lembar" && $laminasi !== "Tanpa Laminasi") {
-					$total = $jumlah * 49000;
-				} else if ($isi === "13 Lembar" && $laminasi !== "Tanpa Laminasi") {
-					$total = $jumlah * 69500;
-				}
-			}
-			if ($bahan === "AC260") {
-				if ($isi === "7 Lembar" && $laminasi === "Tanpa Laminasi") {
-					$total = $jumlah * 40200;
-				} else if ($isi === "13 Lembar" && $laminasi === "Tanpa Laminasi") {
-					$total = $jumlah * 51600;
-				}
-				if ($isi === "7 Lembar" && $laminasi !== "Tanpa Laminasi") {
-					$total = $jumlah * 50200;
-				} else if ($isi === "13 Lembar" && $laminasi !== "Tanpa Laminasi") {
-					$total = $jumlah * 71600;
-				}
+			if ($bahan == 'AC230' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 39000;
+			} else if ($bahan == 'AC230' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 49000;
 			}
 
-			if ($bahan === "BCT" || $bahan === "B/W" || $bahan === "LINEN") {
-				if ($isi === "7 Lembar") {
-					$total = $jumlah * 42200;
-				} else $total = $jumlah * 55100;
+			if ($bahan == 'AC360' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 40200;
+			} else if ($bahan == 'AC230' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 50200;
 			}
-		
-			
-			// if ($bahan == 'AC360' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 40200;
-			// } else if ($bahan == 'AC360' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 50200;
-			// }
 
-			// if ($bahan == 'BCT' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 42200;
-			// } else if ($bahan == 'BCT' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 52200;
-			// }
+			if ($bahan == 'BCT' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 42200;
+			} else if ($bahan == 'BCT' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 52200;
+			}
 
-			// if ($bahan == 'B/W' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 42200;
-			// } else if ($bahan == 'B/W' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 52200;
-			// }
+			if ($bahan == 'B/W' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 42200;
+			} else if ($bahan == 'B/W' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 52200;
+			}
 
-			// if ($bahan == 'LINEN' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 42200;
-			// } else if ($bahan == 'LINEN' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 52200;
-			// }
+			if ($bahan == 'LINEN' && $isi == '7 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 42200;
+			} else if ($bahan == 'LINEN' && $isi == '7 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 52200;
+			}
 
-			// if ($bahan == 'AC230' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 49500;
-			// } else if ($bahan == 'AC230' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 59500;
-			// }
+			if ($bahan == 'AC230' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 49500;
+			} else if ($bahan == 'AC230' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 59500;
+			}
 
-			// if ($bahan == 'AC360' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 51600;
-			// } else if ($bahan == 'AC360' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 61600;
-			// }
+			if ($bahan == 'AC360' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 51600;
+			} else if ($bahan == 'AC360' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 61600;
+			}
 
-			// if ($bahan == 'BCT' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 55100;
-			// } else if ($bahan == 'BCT' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 65100;
-			// }
+			if ($bahan == 'BCT' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 55100;
+			} else if ($bahan == 'BCT' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 65100;
+			}
 
-			// if ($bahan == 'B/W' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 55100;
-			// } else if ($bahan == 'B/W' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 65100;
-			// }
+			if ($bahan == 'B/W' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 55100;
+			} else if ($bahan == 'B/W' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 65100;
+			}
 
-			// if ($bahan == 'LINEN' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
-			// 	$total = $jumlah * 55100;
-			// } else if ($bahan == 'LINEN' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
-			// 	$total = $jumlah * 65100;
-			// }
+			if ($bahan == 'LINEN' && $isi == '13 Lembar' && $laminasi == "Tanpa Laminasi") {
+				$total = $jumlah * 55100;
+			} else if ($bahan == 'LINEN' && $isi == '13 Lembar' && $laminasi == "Doff" || $laminasi == "Glossy") {
+				$total = $jumlah * 65100;
+			}
 
 			$config['upload_path'] = './assets/images/kalender/';
 			$config['allowed_types'] = 'jpg|png|jpeg|zip|rar|pdf';
@@ -1427,47 +870,74 @@ class PesanController extends CI_Controller
 			$estimasi = $this->input->post('estimasi');
 			$total = 0;
 			
-			if ($bahan === "Stiker Chromo" || $bahan === "Stiker HVS") {
-				if ($cutting === "Kiss Cut" && $laminasi === "Tanpa Laminasi"){
-					$total = $jumlah * 11000;
-				} else if ($cutting === "Die Cut" && $laminasi !== "Tanpa Laminasi"){
-					$total = $jumlah * 17500;
-				} else $total = $jumlah * 14000;
-			}
 			
+			if (
+				($bahan === "Stiker Vinyl Glossy" ||
+					$bahan === "Stiker Vinyl Doff" ||
+					$bahan === "Stiker Vinyl Transparant") &&
+				$cutting === "Kiss Cut" &&
+				$laminasi === "Tanpa Laminasi"
+			) {
+				$total = $jumlah * 14000;
+			} else if (
+				($bahan === "Stiker Vinyl Glossy" ||
+					$bahan === "Stiker Vinyl Doff" ||
+					$bahan === "Stiker Vinyl Transparant") &&
+				$cutting === "Die Cut" &&
+				$laminasi !== "Tanpa Laminasi"
+			) {
+				$total = $jumlah * 20500;
+			} else $total = $jumlah * 17500;
 			
-			if ($bahan === "Stiker Vinyl Glossy" || $bahan === "Stiker Vinyl Doff" || $bahan === "Stiker Vinyl Transparant") {
-				if ($cutting === "Kiss Cut" &&	$laminasi === "Tanpa Laminasi") {
-					$total = $jumlah * 14000;
-				} else if ($cutting === "Die Cut" && $laminasi !== "Tanpa Laminasi") {
-					$total = $jumlah * 20500;
-				} else $total = $jumlah * 17500;
-			}
+			if (
+				($bahan === "Stiker Gold Glossy" || $bahan === "Stiker Silver Glossy") &&
+				$cutting === "Kiss Cut" &&
+				$laminasi === "Tanpa Laminasi"
+			) {
+				$total = $jumlah * 17000;
+			} else if (
+				($bahan === "Stiker Gold Glossy" || $bahan === "Stiker Silver Glossy") &&
+				$cutting === "Die Cut" &&
+				$laminasi !== "Tanpa Laminasi"
+			) {
+				$total = $jumlah * 23500;
+			} else $total = $jumlah * 20500;
+
+			if ($bahan === "Stiker Craft" && $cutting === "Kiss Cut" && $laminasi === "Tanpa Laminasi") {
+				$total = $jumlah * 13000;
+			} else if ($bahan === "Stiker Craft" && $cutting === "Kiss Cut" && $laminasi === "Tanpa Laminasi") {
+				$total = $jumlah * 16500;
+			} else $total = $jumlah * 19500;
 			
-			if ($bahan === "Stiker Gold Glossy" || $bahan === "Stiker Silver Glossy") {
-				if ($cutting === "Kiss Cut" && $laminasi === "Tanpa Laminasi") {
-					$total = $jumlah * 17000;
-				}else if ( $cutting === "Die Cut" && $laminasi !== "Tanpa Laminasi") {
-					$total = $jumlah * 23500;
-				} else $total = $jumlah * 20500;
-			}
-			
-			if ($bahan === "Stiker Craft") {
-				if ($cutting === "Kiss Cut" && $laminasi === "Tanpa Laminasi") {
-					$total = $jumlah * 13000;
-				}else if ( $cutting === "Die Cut" && $laminasi !== "Tanpa Laminasi") {
-					$total = $jumlah * 16500;
-				} else $total = $jumlah * 19500;
-			}
-			
-			if ($bahan === "Stiker Hologram"){
-				if ($cutting === "Kiss Cut" && $laminasi === "Tanpa Laminasi"){
-					$total = $jumlah * 18000;
-				} else if ($cutting === "Die Cut" && $laminasi !== "Tanpa Laminasi"){
+			if (
+				$bahan === "Stiker Hologram" &&
+				$cutting === "Kiss Cut" &&
+				$laminasi === "Tanpa Laminasi"
+				) {
+				$total = $jumlah * 18000;
+			} else if (
+				$bahan === "Stiker Hologram" &&
+				$cutting === "Die Cut" &&
+				$laminasi !== "Tanpa Laminasi"
+				) {
 					$total = $jumlah * 24500;
 				} else $total = $jumlah * 21500;
-			}
-								
+				
+				if (
+					($bahan === "Stiker Chromo" || $bahan === "Stiker HVS") &&
+					$cutting === "Kiss Cut" &&
+					$laminasi === "Tanpa Laminasi"
+				) {
+					$total = $jumlah * 11000;
+				} else if (
+					($bahan === "Stiker Chromo" || $bahan === "Stiker HVS") &&
+					$cutting === "Die Cut" &&
+					$laminasi !== "Tanpa Laminasi"
+				) {
+					$total = $jumlah * 17500;
+				} else $total = $jumlah * 14000;
+				
+				
 			$config['upload_path'] = './assets/images/lbstiker/';
 			$config['allowed_types'] = 'jpg|png|jpeg|zip|rar|pdf';
 			$this->load->library('upload', $config);
@@ -1595,34 +1065,6 @@ class PesanController extends CI_Controller
 			'keranjang_total' => $keranjang['keranjang_total'] - $total
 		);
 		$this->PesanModel->delete('brosur_id', $id, 'sipesan_brosur');
-		$this->BayarModel->update_keranjang($keranjang_id, $data);
-		$this->session->set_flashdata('alert', 'pesan_hapus');
-		redirect('keranjang');
-	}
-	public function hapusA4brosur($id)
-	{
-		$a4brosur = $this->PesanModel->lihat_a4brosur_by_id($id);
-		$keranjang_id = $a4brosur['a4brosur_keranjang_id'];
-		$keranjang = $this->BayarModel->lihat_keranjang_by_id($keranjang_id);
-		$total = $a4brosur['a4brosur_total'];
-		$data = array(
-			'keranjang_total' => $keranjang['keranjang_total'] - $total
-		);
-		$this->PesanModel->delete('a4brosur_id', $id, 'sipesan_a4brosur');
-		$this->BayarModel->update_keranjang($keranjang_id, $data);
-		$this->session->set_flashdata('alert', 'pesan_hapus');
-		redirect('keranjang');
-	}
-	public function hapusA5brosur($id)
-	{
-		$a5brosur = $this->PesanModel->lihat_a5brosur_by_id($id);
-		$keranjang_id = $a5brosur['a5brosur_keranjang_id'];
-		$keranjang = $this->BayarModel->lihat_keranjang_by_id($keranjang_id);
-		$total = $a5brosur['a5brosur_total'];
-		$data = array(
-			'keranjang_total' => $keranjang['keranjang_total'] - $total
-		);
-		$this->PesanModel->delete('a5brosur_id', $id, 'sipesan_a5brosur');
 		$this->BayarModel->update_keranjang($keranjang_id, $data);
 		$this->session->set_flashdata('alert', 'pesan_hapus');
 		redirect('keranjang');

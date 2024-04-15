@@ -228,94 +228,6 @@
 					endif;
 					?>
                     <?php
-					if ($tipe == 'a4brosur'):
-						?>
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Bahan</th>
-                            <th>Sisi</th>
-                            <th>Laminasi</th>
-                            <th>Lipat</th>
-                            <th>Jumlah</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-						$total = 0;
-						$no = 1;
-						foreach ($a4brosur as $key => $value):
-							?>
-                        <tr>
-                            <td><?= $no ?></td>
-                            <td><?= $value['pengguna_nama'] ?></td>
-                            <td><?= ucfirst($value['a4brosur_bahan']) ?></td>
-                            <td><?= $value['a4brosur_sisi'] ?></td>
-                            <td><?= $value['a4brosur_laminasi'] ?></td>
-                            <td><?= $value['a4brosur_lipat'] ?></td>
-                            <td><?= $value['a4brosur_jumlah'] ?> rim</td>
-                            <td>Rp. <?= nominal($value['a4brosur_total']) ?></td>
-                        </tr>
-                        <?php
-							$total = $total + $value['a4brosur_total'];
-							$no++;
-						endforeach; ?>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="6">TOTAL</td>
-                            <td>Rp. <?= nominal($total) ?></td>
-                        </tr>
-                    </tfoot>
-                    <?php
-					endif;
-					?>
-                    <?php
-					if ($tipe == 'a5brosur'):
-						?>
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Bahan</th>
-                            <th>Sisi</th>
-                            <th>Laminasi</th>
-                            <th>Lipat</th>
-                            <th>Jumlah</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-						$total = 0;
-						$no = 1;
-						foreach ($a5brosur as $key => $value):
-							?>
-                        <tr>
-                            <td><?= $no ?></td>
-                            <td><?= $value['pengguna_nama'] ?></td>
-                            <td><?= ucfirst($value['a5brosur_bahan']) ?></td>
-                            <td><?= $value['a5brosur_sisi'] ?></td>
-                            <td><?= $value['a5brosur_laminasi'] ?></td>
-                            <td><?= $value['a5brosur_lipat'] ?></td>
-                            <td><?= $value['a5brosur_jumlah'] ?> rim</td>
-                            <td>Rp. <?= nominal($value['a5brosur_total']) ?></td>
-                        </tr>
-                        <?php
-							$total = $total + $value['a5brosur_total'];
-							$no++;
-						endforeach; ?>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="6">TOTAL</td>
-                            <td>Rp. <?= nominal($total) ?></td>
-                        </tr>
-                    </tfoot>
-                    <?php
-					endif;
-					?>
-                    <?php
 					if ($tipe == 'kalender'):
 						?>
                     <thead>
@@ -323,8 +235,6 @@
                             <th>No</th>
                             <th>Nama Pemesan</th>
                             <th>Isi</th>
-                            <th>Laminasi</th>
-                            <th>Orientasi</th>
                             <th>Jenis Bahan</th>
                             <th>Jumlah</th>
                             <th>Total</th>
@@ -340,8 +250,6 @@
                             <td><?= $no ?></td>
                             <td><?= $value['pengguna_nama'] ?></td>
                             <td><?= $value['kalender_isi'] ?></td>
-                            <td><?= $value['kalender_laminasi'] ?></td>
-                            <td><?= $value['kalender_orientasi'] ?></td>
                             <td><?= ucfirst($value['kalender_bahan']) ?></td>
                             <td><?= $value['kalender_jumlah'] ?> Pcs</td>
                             <td>Rp. <?= nominal($value['kalender_total']) ?></td>
@@ -353,7 +261,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="7">TOTAL</td>
+                            <td colspan="5">TOTAL</td>
                             <td>Rp. <?= nominal($total) ?></td>
                         </tr>
                     </tfoot>

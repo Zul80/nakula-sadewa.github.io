@@ -41,22 +41,6 @@ class PesanModel extends CI_Model
 		$this->db->where('brosur_id',$id);
 		return $this->db->get('sipesan_brosur')->row_array();
 	}
-	public function simpan_a4brosur($data){
-		$this->db->insert('sipesan_a4brosur',$data);
-		return $this->db->affected_rows();
-	}
-	public function lihat_a4brosur_by_id($id){
-		$this->db->where('a4brosur_id',$id);
-		return $this->db->get('sipesan_a4brosur')->row_array();
-	}
-	public function simpan_a5brosur($data){
-		$this->db->insert('sipesan_a5brosur',$data);
-		return $this->db->affected_rows();
-	}
-	public function lihat_a5brosur_by_id($id){
-		$this->db->where('a5brosur_id',$id);
-		return $this->db->get('sipesan_a5brosur')->row_array();
-	}
 	public function simpan_kalender($data){
 		$this->db->insert('sipesan_kalender',$data);
 		return $this->db->affected_rows();

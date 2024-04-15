@@ -187,92 +187,6 @@
 				?>
                 <hr>
                 <?php
-				if ($a4brosur == !null):
-					?>
-                <h5>Brosur A4</h5>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Bahan</th>
-                            <th>Sisi</th>
-                            <th>Laminasi</th>
-                            <th>Lipat</th>
-                            <th>Jumlah</th>
-                            <th>Foto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-						$no = 1;
-						foreach ($a4brosur as $key => $value):
-							?>
-                        <tr>
-                            <td><?= $no ?></td>
-                            <td><?= $value['a4brosur_bahan'] ?></td>
-                            <td><?= $value['a4brosur_sisi'] ?></td>
-                            <td><?= $value['a4brosur_laminasi'] ?></td>
-                            <td><?= $value['a4brosur_lipat'] ?></td>
-                            <td><?= $value['a4brosur_jumlah'] ?></td>
-                            <td>
-                                <a href="<?= base_url('admin/pesanan/foto/' . $value['a4brosur_id']) ?>"
-                                    class="badge badge-primary"><i class="fa fa-eye"></i> Lihat</a>
-                            </td>
-                        </tr>
-                        <?php
-							$no++;
-						endforeach;
-						?>
-                    </tbody>
-                </table>
-                <?php
-				endif;
-				?>
-                <hr>
-                <?php
-				if ($a5brosur == !null):
-					?>
-                <h5>Brosur A5</h5>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Bahan</th>
-                            <th>Sisi</th>
-                            <th>Laminasi</th>
-                            <th>Lipat</th>
-                            <th>Jumlah</th>
-                            <th>Foto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-						$no = 1;
-						foreach ($a5brosur as $key => $value):
-							?>
-                        <tr>
-                            <td><?= $no ?></td>
-                            <td><?= $value['a5brosur_bahan'] ?></td>
-                            <td><?= $value['a5brosur_sisi'] ?></td>
-                            <td><?= $value['a5brosur_laminasi'] ?></td>
-                            <td><?= $value['a5brosur_lipat'] ?></td>
-                            <td><?= $value['a5brosur_jumlah'] ?></td>
-                            <td>
-                                <a href="<?= base_url('admin/pesanan/foto/' . $value['a5brosur_id']) ?>"
-                                    class="badge badge-primary"><i class="fa fa-eye"></i> Lihat</a>
-                            </td>
-                        </tr>
-                        <?php
-							$no++;
-						endforeach;
-						?>
-                    </tbody>
-                </table>
-                <?php
-				endif;
-				?>
-                <hr>
-                <?php
 				if ($kalender == !null):
 					?>
                 <h5>Kalender</h5>
@@ -280,10 +194,8 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Ukuran</th>
                             <th>Jenis Bahan</th>
-                            <th>Isi</th>
-                            <th>Laminasi</th>
-                            <th>Orientasi</th>
                             <th>Jumlah</th>
                             <th>Foto</th>
                         </tr>
@@ -295,10 +207,8 @@
 							?>
                         <tr>
                             <td><?= $no ?></td>
+                            <td><?= $value['kalender_ukuran'] ?></td>
                             <td><?= $value['kalender_bahan'] ?></td>
-                            <td><?= $value['kalender_isi'] ?></td>
-                            <td><?= $value['kalender_laminasi'] ?></td>
-                            <td><?= $value['kalender_orientasi'] ?></td>
                             <td><?= $value['kalender_jumlah'] ?></td>
                             <td>
                                 <a href="<?= base_url('admin/pesanan/foto/' . $value['kalender_id']) ?>"

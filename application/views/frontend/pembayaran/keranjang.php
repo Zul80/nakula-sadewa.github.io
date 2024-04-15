@@ -181,84 +181,6 @@ elseif ($keranjang == !null):
 				endif;
 				?>
             <?php
-				if ($a4brosur != null):
-					?>
-            <h4>Brosur A4</h4>
-            <table class="table table-bordered table-shopping-cart">
-                <thead>
-                    <tr>
-                        <th>Foto</th>
-                        <th>Bahan</th>
-                        <th>Jumlah</th>
-                        <th>Estimasi</th>
-                        <th>Total</th>
-                        <th>Hapus</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-						foreach ($a4brosur as $key => $value):
-							?>
-                    <tr>
-                        <td><img src="<?= base_url('assets/images/a4brosur/') . $value['a4brosur_foto'] ?>" alt="foto"
-                                style="width: 100%"></td>
-                        <td><?= $value['a4brosur_bahan'] ?></td>
-                        <td><?= $value['a4brosur_jumlah'] ?> </td>
-                        <td><?= $value['a4brosur_estimasi'] ?> Hari</td>
-                        <td style="text-align: right"> Rp.<?= nominal($value['a4brosur_total']) ?></td>
-                        <td><a class="fa fa-close table-shopping-remove"
-                                href="<?= base_url('hapus/a4brosur/' . $value['a4brosur_id']) ?>"
-                                onclick="return confirm('Hapus Pesanan? ')"></a></td>
-                    </tr>
-                    <?php
-						endforeach;
-						?>
-                </tbody>
-            </table>
-            <div class="gap gap-small"></div>
-            <?php
-				endif;
-				?>
-            <?php
-				if ($a5brosur != null):
-					?>
-            <h4>Brosur A5</h4>
-            <table class="table table-bordered table-shopping-cart">
-                <thead>
-                    <tr>
-                        <th>Foto</th>
-                        <th>Bahan</th>
-                        <th>Jumlah</th>
-                        <th>Estimasi</th>
-                        <th>Total</th>
-                        <th>Hapus</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-						foreach ($a5brosur as $key => $value):
-							?>
-                    <tr>
-                        <td><img src="<?= base_url('assets/images/a5brosur/') . $value['a5brosur_foto'] ?>" alt="foto"
-                                style="width: 100%"></td>
-                        <td><?= $value['a5brosur_bahan'] ?></td>
-                        <td><?= $value['a5brosur_jumlah'] ?> </td>
-                        <td><?= $value['a5brosur_estimasi'] ?> Hari</td>
-                        <td style="text-align: right"> Rp.<?= nominal($value['a5brosur_total']) ?></td>
-                        <td><a class="fa fa-close table-shopping-remove"
-                                href="<?= base_url('hapus/a5brosur/' . $value['a5brosur_id']) ?>"
-                                onclick="return confirm('Hapus Pesanan? ')"></a></td>
-                    </tr>
-                    <?php
-						endforeach;
-						?>
-                </tbody>
-            </table>
-            <div class="gap gap-small"></div>
-            <?php
-				endif;
-				?>
-            <?php
 				if ($kalender != null):
 					?>
             <h4>Kalender</h4>
@@ -267,9 +189,6 @@ elseif ($keranjang == !null):
                     <tr>
                         <th>Foto</th>
                         <th>Bahan</th>
-                        <th>Isi</th>
-                        <th>Laminasi</th>
-                        <th>Orientasi</th>
                         <th>Jumlah</th>
                         <th>Estimasi</th>
                         <th>Total</th>
@@ -284,9 +203,6 @@ elseif ($keranjang == !null):
                         <td><img src="<?= base_url('assets/images/kalender/') . $value['kalender_foto'] ?>" alt="foto"
                                 style="width: 100%"></td>
                         <td><?= $value['kalender_bahan'] ?></td>
-                        <td><?= $value['kalender_isi'] ?></td>
-                        <td><?= $value['kalender_laminasi'] ?></td>
-                        <td><?= $value['kalender_orientasi'] ?></td>
                         <td><?= $value['kalender_jumlah'] ?> </td>
                         <td><?= $value['kalender_estimasi'] ?> Hari</td>
                         <td style="text-align: right"> Rp.<?= nominal($value['kalender_total']) ?></td>

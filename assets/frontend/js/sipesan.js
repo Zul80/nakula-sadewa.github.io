@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var root = window.location.origin + "/";
+	var root = window.location.origin + "/sipesan/";
 
 	setTimeout(function () {
 		$(".hide-it").addClass("fadeOutUpBig");
@@ -85,667 +85,6 @@ function showTotalBrosur() {
 	}
 }
 
-function showTotalA4brosur() {
-	var satuanlaminasi = $("satuanLaminasi").val();
-	var satuanlipat = $("satuanLipat").val();
-	var bahan = $("#bahan").val();
-	var sisi = $("#sisi").val();
-	var laminasi = $("#laminasi").val();
-	var lipat = $("#lipat").val();
-	var jumlah = $("#jumlah").val();
-	var total = 0;
-	var html = "";
-
-	if (bahan === "HVS 100") {
-		if (sisi === "1 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 380000;
-		} else if (sisi === "1 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 430000;
-		}
-		if (sisi === "2 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 760000;
-		} else if (sisi === "2 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 810000;
-		}
-	}
-
-	if (bahan === "Art Paper 120") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 400000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 450000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 800000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 850000;
-		}
-	}
-	if (bahan === "Art Paper 150") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 420000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 470000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 840000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 890000;
-		}
-	}
-
-	if (bahan === "Art Carton 210") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 550000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 600000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 675000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 725000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 1100000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 1150000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 1350000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 1400000;
-		}
-	}
-
-	html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
-	$("#total").html(html);
-}
-function showTotalA5brosur() {
-	var satuanlaminasi = $("satuanLaminasi").val();
-	var satuanlipat = $("satuanLipat").val();
-	var bahan = $("#bahan").val();
-	var sisi = $("#sisi").val();
-	var laminasi = $("#laminasi").val();
-	var lipat = $("#lipat").val();
-	var jumlah = $("#jumlah").val();
-	var total = 0;
-	var html = "";
-
-	if (bahan === "HVS 100") {
-		if (sisi === "1 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 190000;
-		} else if (sisi === "1 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 25.000";
-			total = jumlah * 215000;
-		}
-		if (sisi === "2 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 380000;
-		} else if (sisi === "2 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 25.000";
-			total = jumlah * 405000;
-		}
-	}
-
-	if (bahan === "Art Paper 120") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 200000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 225000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 400000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 425000;
-		}
-	}
-	if (bahan === "Art Paper 150") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 210000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 235000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 420000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			total = jumlah * 445000;
-		}
-	}
-
-	if (bahan === "Art Carton 210") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 280000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 330000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 405000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 455000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 560000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 610000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 810000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 50.000";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 860000;
-		}
-	}
-
-	html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
-	$("#total").html(html);
-}
-function showTotalA6brosur() {
-	var satuanlaminasi = $("satuanLaminasi").val();
-	var satuanlipat = $("satuanLipat").val();
-	var bahan = $("#bahan").val();
-	var sisi = $("#sisi").val();
-	var laminasi = $("#laminasi").val();
-	var lipat = $("#lipat").val();
-	var jumlah = $("#jumlah").val();
-	var total = 0;
-	var html = "";
-
-	if (bahan === "HVS 100") {
-		if (sisi === "1 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 115000;
-		} else if (sisi === "1 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 135000;
-		}
-		if (sisi === "2 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 230000;
-		} else if (sisi === "2 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 250000;
-		}
-	}
-
-	if (bahan === "Art Paper 120") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 130000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 150000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 260000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 280000;
-		}
-	}
-	if (bahan === "Art Paper 150") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 140000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 160000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 280000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 300000;
-		}
-	}
-
-	if (bahan === "Art Carton 210") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 165000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 195000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 290000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 320000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 330000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 360000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 580000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 610000;
-		}
-	}
-
-	html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
-	$("#total").html(html);
-}
-function showTotalFlyer10x21() {
-	var satuanlaminasi = $("satuanLaminasi").val();
-	var satuanlipat = $("satuanLipat").val();
-	var bahan = $("#bahan").val();
-	var sisi = $("#sisi").val();
-	var laminasi = $("#laminasi").val();
-	var lipat = $("#lipat").val();
-	var jumlah = $("#jumlah").val();
-	var total = 0;
-	var html = "";
-
-	if (bahan === "HVS 100") {
-		if (sisi === "1 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 115000;
-		} else if (sisi === "1 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 135000;
-		}
-		if (sisi === "2 Muka" && lipat === "Tanpa Lipat") {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 230000;
-		} else if (sisi === "2 Muka" && lipat === "Lipat") {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 250000;
-		}
-	}
-
-	if (bahan === "Art Paper 120") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 130000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 150000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 260000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 280000;
-		}
-	}
-	if (bahan === "Art Paper 150") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 140000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 160000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			total = jumlah * 280000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 20.000";
-			total = jumlah * 300000;
-		}
-	}
-
-	if (bahan === "Art Carton 210") {
-		if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 165000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 195000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 290000;
-		} else if (
-			sisi === "1 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 125.000";
-			total = jumlah * 320000;
-		}
-		if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 330000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi === "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 0";
-			total = jumlah * 360000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Tanpa Lipat"
-		) {
-			satuanLipat.value = "Rp. 0";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 580000;
-		} else if (
-			sisi === "2 Muka" &&
-			laminasi !== "Tanpa Laminasi" &&
-			lipat === "Lipat"
-		) {
-			satuanLipat.value = "Rp. 30.000";
-			satuanLaminasi.value = "Rp. 250.000";
-			total = jumlah * 610000;
-		}
-	}
-
-	html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
-	$("#total").html(html);
-}
-
 function showTotalKalender() {
 	var bahan = $("#bahan").val();
 	var isi = $("#isi").val();
@@ -754,49 +93,158 @@ function showTotalKalender() {
 	var total = 0;
 	var html = "";
 
-	if (bahan === "AC230") {
-		if (isi === "7 Lembar" && laminasi === "Tanpa Laminasi") {
-			total = jumlah * 39000;
-		} else if (isi === "13 Lembar" && laminasi === "Tanpa Laminasi") {
-			total = jumlah * 49500;
-		}
-		if (isi === "7 Lembar" && laminasi !== "Tanpa Laminasi") {
-			total = jumlah * 49000;
-		} else if (isi === "13 Lembar" && laminasi !== "Tanpa Laminasi") {
-			total = jumlah * 69500;
-		}
+	if (
+		bahan === "AC230" &&
+		isi === "7 Lembar" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 39000;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "AC230" && isi === "7 Lembar" && laminasi === "Doff") ||
+		(bahan === "AC230" && isi === "7 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 49000;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
 	}
 
-	if (bahan === "AC260") {
-		if (isi === "7 Lembar" && laminasi === "Tanpa Laminasi") {
-			total = jumlah * 40200;
-		} else if (isi === "13 Lembar" && laminasi === "Tanpa Laminasi") {
-			total = jumlah * 51600;
-		}
-		if (isi === "7 Lembar" && laminasi !== "Tanpa Laminasi") {
-			total = jumlah * 50200;
-		} else if (isi === "13 Lembar" && laminasi !== "Tanpa Laminasi") {
-			total = jumlah * 71600;
-		}
-	}
-	if (bahan === "BCT") {
-		if (isi === "7 Lembar") {
-			total = jumlah * 42200;
-		} else total = jumlah * 55100;
-	}
-	if (bahan === "B/W") {
-		if (isi === "7 Lembar") {
-			total = jumlah * 42200;
-		} else total = jumlah * 55100;
-	}
-	if (bahan === "LINEN") {
-		if (isi === "7 Lembar") {
-			total = jumlah * 42200;
-		} else total = jumlah * 55100;
+	if (
+		bahan === "AC360" &&
+		isi === "7 Lembar" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 40200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "AC360" && isi === "7 Lembar" && laminasi === "Doff") ||
+		(bahan === "AC360" && isi === "7 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 50200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
 	}
 
-	html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
-	$("#total").html(html);
+	if (bahan === "BCT" && isi === "7 Lembar" && laminasi === "Tanpa Laminasi") {
+		total = jumlah * 42200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "BCT" && isi === "7 Lembar" && laminasi === "Doff") ||
+		(bahan === "BCT" && isi === "7 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 52200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
+
+	if (bahan === "B/W" && isi === "7 Lembar" && laminasi === "Tanpa Laminasi") {
+		total = jumlah * 42200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "B/W" && isi === "7 Lembar" && laminasi === "Doff") ||
+		(bahan === "B/W" && isi === "7 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 52200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
+
+	if (
+		bahan === "LINEN" &&
+		isi === "7 Lembar" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 42200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "LINEN" && isi === "7 Lembar" && laminasi === "Doff") ||
+		(bahan === "LINEN" && isi === "7 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 52200;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
+	if (
+		bahan === "AC230" &&
+		isi === "13 Lembar" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 49500;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "AC230" && isi === "13 Lembar" && laminasi === "Doff") ||
+		(bahan === "AC230" && isi === "13 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 59500;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
+
+	if (
+		bahan === "AC360" &&
+		isi === "13 Lembar" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 51600;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "AC360" && isi === "13 Lembar" && laminasi === "Doff") ||
+		(bahan === "AC360" && isi === "13 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 61600;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
+
+	if (bahan === "BCT" && isi === "13 Lembar" && laminasi === "Tanpa Laminasi") {
+		total = jumlah * 55100;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "BCT" && isi === "13 Lembar" && laminasi === "Doff") ||
+		(bahan === "BCT" && isi === "13 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 65100;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
+
+	if (bahan === "B/W" && isi === "13 Lembar" && laminasi === "Tanpa Laminasi") {
+		total = jumlah * 55100;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "B/W" && isi === "13 Lembar" && laminasi === "Doff") ||
+		(bahan === "B/W" && isi === "13 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 65100;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
+
+	if (
+		bahan === "LINEN" &&
+		isi === "13 Lembar" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 55100;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	} else if (
+		(bahan === "LINEN" && isi === "13 Lembar" && laminasi === "Doff") ||
+		(bahan === "LINEN" && isi === "13 Lembar" && laminasi === "Glossy")
+	) {
+		total = jumlah * 65100;
+		html = "" + "<h3> Rp. " + formatRupiah(total.toString()) + "</h3>";
+		$("#total").html(html);
+	}
 }
 function showTotalNota() {
 	var warna = $("#warna").val();
@@ -1018,41 +466,39 @@ function showTotalLbstiker() {
 	var total = 0;
 	var html = "";
 
-	if (
-		bahan === "Stiker Vinyl Glossy" ||
-		bahan === "Stiker Vinyl Doff" ||
-		bahan === "Stiker Vinyl Transparant"
-	) {
+	if (bahan === "Stiker Vinyl Glossy") {
 		if (cutting === "Kiss Cut" && laminasi === "Tanpa Laminasi") {
 			total = jumlah * 14000;
-		} else if (cutting === "Die Cut" && laminasi !== "Tanpa Laminasi") {
+		} else if (cutting === "Kiss Cut" && laminasi !== "Tanpa Laminasi") {
+			total = jumlah * 20500;
+		} else total = jumlah * 17500;
+	} else if (bahan === "Stiker Vinyl Doff") {
+		if (cutting === "Kiss Cut" && laminasi === "Tanpa Laminasi") {
+			total = jumlah * 14000;
+		} else if (cutting === "Kiss Cut" && laminasi !== "Tanpa Laminasi") {
+			total = jumlah * 20500;
+		} else total = jumlah * 17500;
+	} else if (bahan === "Stiker Vinyl Transparant") {
+		if (cutting === "Kiss Cut" && laminasi === "Tanpa Laminasi") {
+			total = jumlah * 14000;
+		} else if (cutting === "Kiss Cut" && laminasi !== "Tanpa Laminasi") {
 			total = jumlah * 20500;
 		} else total = jumlah * 17500;
 	}
 
-	html = "" + "<h3> Rp. " + formatRupiah(parseInt(total).toString()) + "</h3>";
-	$("#total").html(html);
-
-	if (bahan === "Stiker Chromo" || bahan === "Stiker HVS") {
-		if (cutting === "Kiss Cut" && laminasi === "Tanpa Laminasi") {
-			total = jumlah * 11000;
-		} else if (cutting === "Die Cut" && laminasi !== "Tanpa Laminasi") {
-			total = jumlah * 17500;
-		} else total = jumlah * 14000;
-	}
-
-	html = "" + "<h3> Rp. " + formatRupiah(parseInt(total).toString()) + "</h3>";
-	$("#total").html(html);
-
-	if (bahan === "Stiker Gold Glossy" || bahan === "Stiker Silver Glossy")
-		if (cutting === "Kiss Cut" && laminasi === "Tanpa Laminasi") {
-			total = jumlah * 17000;
-		} else if (cutting === "Die Cut" && laminasi !== "Tanpa Laminasi") {
-			total = jumlah * 23500;
-		} else total = jumlah * 20500;
-
-	html = "" + "<h3> Rp. " + formatRupiah(parseInt(total).toString()) + "</h3>";
-	$("#total").html(html);
+	if (
+		(bahan === "Stiker Gold Glossy" || bahan === "Stiker Silver Glossy") &&
+		cutting === "Kiss Cut" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 17000;
+	} else if (
+		(bahan === "Stiker Gold Glossy" || bahan === "Stiker Silver Glossy") &&
+		cutting === "Die Cut" &&
+		laminasi !== "Tanpa Laminasi"
+	) {
+		total = jumlah * 23500;
+	} else total = jumlah * 20500;
 
 	if (bahan === "Stiker Craft") {
 		if (cutting === "Kiss Cut" && laminasi === "Tanpa Laminasi") {
@@ -1061,8 +507,6 @@ function showTotalLbstiker() {
 			total = jumlah * 19500;
 		} else total = jumlah * 16500;
 	}
-	html = "" + "<h3> Rp. " + formatRupiah(parseInt(total).toString()) + "</h3>";
-	$("#total").html(html);
 
 	if (bahan === "Stiker Hologram") {
 		if (cutting === "Kiss Cut" && laminasi === "Tanpa Laminasi") {
@@ -1071,6 +515,37 @@ function showTotalLbstiker() {
 			total = jumlah * 24500;
 		} else total = jumlah * 21500;
 	}
+	if (
+		(bahan === "Stiker Vinyl Glossy" ||
+			bahan === "Stiker Vinyl Doff" ||
+			bahan === "Stiker Vinyl Transparant") &&
+		cutting === "Kiss Cut" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 14000;
+	} else if (
+		(bahan === "Stiker Vinyl Glossy" ||
+			bahan === "Stiker Vinyl Doff" ||
+			bahan === "Stiker Vinyl Transparant") &&
+		cutting === "Die Cut" &&
+		laminasi !== "Tanpa Laminasi"
+	) {
+		total = jumlah * 20500;
+	} else total = jumlah * 17500;
+
+	if (
+		(bahan === "Stiker Chromo" || bahan === "Stiker HVS") &&
+		cutting === "Kiss Cut" &&
+		laminasi === "Tanpa Laminasi"
+	) {
+		total = jumlah * 11000;
+	} else if (
+		(bahan === "Stiker Chromo" || bahan === "Stiker HVS") &&
+		cutting === "Die Cut" &&
+		laminasi !== "Tanpa Laminasi"
+	) {
+		total = jumlah * 17500;
+	} else total = jumlah * 14000;
 	html = "" + "<h3> Rp. " + formatRupiah(parseInt(total).toString()) + "</h3>";
 	$("#total").html(html);
 }
@@ -1095,21 +570,3 @@ function formatRupiah(angka, prefix) {
 	rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
 	return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
 }
-
-// function updateField2() {
-// 	var laminasi = $("laminasi").val();
-// 	var lipat = $("lipat").val();
-// 	var satuanlaminasi = $("satuanlaminasi").val();
-// 	var satuanlipat = $("satuanlipat").val();
-
-// 	if (laminasi !== "Tanpa Laminasi") {
-// 		satuanlaminasi.value = "Rp. 125.000";
-// 	} else satuanlaminasi.value = "Rp. 0";
-
-// 	if (lipat !== "Tanpa Lipat") {
-// 		satuanlipat.value = "Rp. 50.000";
-// 	}
-// }
-
-// Panggil fungsi updateField2() saat halaman dimuat untuk menetapkan nilai awal
-// updateField2();
