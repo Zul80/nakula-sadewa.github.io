@@ -643,7 +643,7 @@ hr {
 	text-decoration: none;
 }
 .navbar-main-search-category {
-	width: 600px;
+	width: 100%;
 }
 .navbar-main-search-category .form-control {
 	padding-left: 150px;
