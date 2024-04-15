@@ -217,7 +217,6 @@ hr {
 }
 .navbar-brand {
 	padding: 15px;
-	width: 300px;
 }
 .navbar-brand > img {
 	width: 90px;
@@ -474,7 +473,8 @@ hr {
 	filter: alpha(opacity=30);
 }
 .dropdown-menu-category-section {
-	border-radius: 5px;
+	width: 600px;
+	height: 491px;
 	position: absolute;
 	top: 0;
 	left: 230px;
@@ -598,7 +598,7 @@ hr {
 	color: #a6a6a6;
 }
 .navbar-main-search {
-	width: 500px;
+	width: 700px;
 	position: relative;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
@@ -643,7 +643,7 @@ hr {
 	text-decoration: none;
 }
 .navbar-main-search-category {
-	width: 770px;
+	width: 5000px;
 }
 .navbar-main-search-category .form-control {
 	padding-left: 150px;
@@ -2267,6 +2267,8 @@ header.main {
 		display: -moz-box;
 		display: -ms-box;
 		display: -webkit-flex;
+	}
+	 {
 		display: box;
 		display: flex;
 	}
@@ -5584,6 +5586,7 @@ img.mfp-img {
 	max-width: 400px;
 	margin: 40px auto;
 	position: relative;
+	border-radius: 10px;
 }
 .mfp-search-dialog {
 	width: 100%;
@@ -5817,7 +5820,7 @@ undefinedundefined.owl-height {
 	top: 50%;
 	margin-left: -40px;
 	margin-top: -40px;
-	background: url("owl.video.play.html") no-repeat;
+	background: url("owl.video.play.png") no-repeat;
 	cursor: pointer;
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
