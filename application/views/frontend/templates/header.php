@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 
+
+
 <head>
     <title><?=$title?></title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -230,106 +232,69 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/frontend/img/sipesan/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title" />
+                        <img src="<?= base_url() ?>assets/frontend/img/sipesan/Logo NakulaSadewa.png" alt="Image Alternative text" title="Image Title"/>
                     </a>
                 </div>
-                <form class="navbar-form navbar-left navbar-main-search navbar-main-search-category" role="search">
+                <form class="navbar-form navbar-left navbar-main-search navbar-main-search-category" role="search"  >
                     <select class="navbar-main-search-category-select">
                         <option>All Departmens</option>
-                        <option>Appilances</option>
-                        <option>Apps & Games</option>
-                        <option>Arts, Crafts & Sewing</option>
-                        <option>Automotive</option>
-                        <option>Baby</option>
-                        <option>Books</option>
-                        <option>CDs & Vinyl</option>
-                        <option>Cell Phones & Accessories</option>
-                        <option>Clothing, Shoes & Jewelry</option>
-                        <option>&nbsp;&nbsp;&nbsp;Woman</option>
-                        <option>&nbsp;&nbsp;&nbsp;Men</option>
-                        <option>&nbsp;&nbsp;&nbsp;Girls</option>
-                        <option>&nbsp;&nbsp;&nbsp;Baby</option>
-                        <option>Collectibles & Fine Art</option>
-                        <option>Computers</option>
-                        <option>Credit and Payment Cards</option>
-                        <option>Digital Music</option>
-                        <option>Electronics</option>
-                        <option>Gift Cards</option>
-                        <option>Grocery & Gourmet</option>
-                        <option>Health & Personal Care</option>
-                        <option>Home & Kitchen</option>
-                        <option>Industrial & Scientific</option>
-                        <option>Luggage & Travel</option>
-                        <option>Luxury Beauty</option>
-                        <option>Magazine Subscribtions</option>
-                        <option>Movies & TV</option>
-                        <option>Musical Instuments</option>
-                        <option>Office Products</option>
-                        <option>Patio, Lawn & Garden</option>
-                        <option>Pet Supplies</option>
-                        <option>Software</option>
-                        <option>Sports & Outdoors</option>
-                        <option>Tools & Home Improvement</option>
-                        <option>Toys & Games</option>
-                        <option>Video Games</option>
-                        <option>Wine</option>
+                        <option>Brosur</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur A4</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur A5</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur A6</option>
+                        <option>&nbsp;&nbsp;&nbsp;Brosur Flyer 10x21</option>
+
                     </select>
-                    <div class="form-group">
+                    <div class="form-group" >
                         <input class="form-control" type="text" placeholder="Search the Entire Store..." />
                     </div>
-                    <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+                    <a class="fa fa-search navbar-main-search-submit" href="#" ></a>
                 </form>
                 <ul class="nav navbar-nav navbar-right navbar-mob-item-left">
-                    <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
-                    </li>
-                    <li class="dropdown"><a href="shopping-cart.html"><span >Your Cart</span><i class="fa fa-shopping-cart"></i> 3 Items</a>
-                        <ul class="dropdown-menu dropdown-menu-shipping-cart">
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$81</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$88</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$98</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-shipping-cart-img" href="#">
-                                    <img src="assets/frontend/img/100x100.png" alt="Image Alternative text" title="Image Title" />
-                                </a>
-                                <div class="dropdown-menu-shipping-cart-inner">
-                                    <p class="dropdown-menu-shipping-cart-price">$73</p>
-                                    <p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="dropdown-menu-shipping-cart-total">Total: $150</p>
-                                <button class="dropdown-menu-shipping-cart-checkout btn btn-primary">Checkout</button>
-                            </li>
-                        </ul>
-                    </li>
+                        <?php if ($this->session->userdata('session_level') == null): ?>
+                        <li><a href="<?=base_url('admin')?>">Login Admin</a></li>
+                        <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">Login</a>
+                        </li>
+                        <li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Buat
+                                Akun</a>
+                        <?php else: ?>
+                        <li class="dropdown">
+                            <a href="<?= base_url('profil') ?>"><i class="fa fa-user-circle"></i>
+                                <?= $this->session->userdata('session_username') ?>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?= base_url('profil') ?>"><i class="fa fa-user" style="width: 20%"></i>
+                                        Profil Saya</a></li>
+                                <li><a href="<?= base_url('pesanan') ?>"><i class="fa fa-list" style="width: 20%"></i>
+                                        Data Pesanan</a></li>
+                                <li><a href="<?= base_url('logout') ?>" onclick="return confirm('Logout? ')"><i
+                                            class="fa fa-sign-out" style="width: 20%"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                        <?php endif; ?>
+                        <li>
+                
+                
+                
+                </li>
+                        <li>
+                        <?php
+						$ci =& get_instance();
+						$ci->load->model('BayarModel');
+						$keranjang = $ci->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'), 'belum')->row_array();
+						if ($keranjang == null):
+							?>
+                            <a href="<?= base_url('keranjang') ?>"><span >Your Cart</span><i class="fa fa-shopping-cart">   Items</i></a>
+                            <?php
+						else:
+							?>
+                            <a href="<?= base_url('keranjang') ?>"><span >Your Cart</span><i
+                                    class="fa fa-shopping-cart animated infinite tada"></i>   Items</a>
+                            <?php
+						endif;
+						?>
+                        </li>
+                </ul>                
                     <div class="navbar-header">
                         <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                         </button>
@@ -341,620 +306,89 @@
             <div class="container">
                 <div class="collapse navbar-collapse navbar-collapse-no-pad" id="main-nav-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown"><a href="#"><span >Shop by</span>Department<i class="drop-caret" data-toggle="dropdown"></i></a>
+                        <li class="dropdown"><a href="#"><span >Print by</span>Department<i class="drop-caret" data-toggle="dropdown"></i></a>
                             <ul class="dropdown-menu dropdown-menu-category">
-                                <li><a href="#"><i class="fa fa-home dropdown-menu-category-icon"></i>Home & Garden</a>
+                                <li><a href="#"><i class="fa fa-home dropdown-menu-category-icon"></i>Print on Paper</a>
                                     <div class="dropdown-menu-category-section">
                                         <div class="dropdown-menu-category-section-inner">
                                             <div class="dropdown-menu-category-section-content">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Home & Garden</h5>
+                                                        <h5 class="dropdown-menu-category-title">Print on Paper</h5>
                                                         <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Home</a>
-                                                                <p>Vehicula nostra lacus dapibus himenaeos</p>
+                                                            <li><a href="<?= base_url('a4brosur') ?>"><i
+                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A4</a>
+                                                                <p>Cetak Brosur dengan ukuran Kertas A4</p>
                                                             </li>
-                                                            <li><a href="#">Kitchen</a>
-                                                                <p>Vel dolor duis libero ligula</p>
+                                                            <li><a href="<?= base_url('a5brosur') ?>"><i
+                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A5</a>
+                                                                <p>Cetak Brosur dengan ukuran Kertas A5</p>
                                                             </li>
-                                                            <li><a href="#">Furniture & Decor</a>
-                                                                <p>Magnis consectetur facilisi habitasse curae</p>
+                                                            <li><a href="<?= base_url('a6brosur') ?>"><i
+                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur A6</a>
+                                                                <p>Cetak Brosur dengan ukuran Kertas A6</p>
                                                             </li>
-                                                            <li><a href="#">Bedding & Bath</a>
-                                                                <p>Semper maecenas habitasse metus scelerisque</p>
-                                                            </li>
-                                                            <li><a href="#">Appilances</a>
-                                                                <p>Consectetur placerat leo aenean sagittis</p>
-                                                            </li>
-                                                            <li><a href="#">Patio, Lawn & Garden</a>
-                                                                <p>Arcu eros vitae netus porta</p>
-                                                            </li>
-                                                            <li><a href="#">Wedding Registry</a>
-                                                                <p>Senectus non consectetur felis litora</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Home Improvement</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Home Improvement</a>
-                                                                <p>Inceptos ligula cras aliquam fames</p>
-                                                            </li>
-                                                            <li><a href="#">Lamps & Light Fixtures</a>
-                                                                <p>Dui tempus tempor sed luctus</p>
-                                                            </li>
-                                                            <li><a href="#">Kitchen & Bath Fixtures</a>
-                                                                <p>Quis sociis tellus sociosqu magnis</p>
-                                                            </li>
-                                                            <li><a href="#">Home Automation</a>
-                                                                <p>Elit venenatis in faucibus venenatis</p>
+                                                            <li><a href="<?= base_url('flyer10x21') ?>"><i
+                                            class="fa fa-file-image-o dropdown-menu-category-icon"></i>Flyer 10x21</a>
+                                                                <p>Cetak Brosur dengan ukuran Flyer 10 x 21 cm</p>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/2-i.png" alt="Image Alternative text" title="Image Title" style="right: -10px;" />
+                                            <img class="dropdown-menu-category-section-theme-img" src="img/test_cat/2-i.png" alt="Image Alternative text" title="Image Title" style="right: -10px;" />
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#"><i class="fa fa-diamond dropdown-menu-category-icon"></i>Jewelry</a>
+                                <li><a href="#"><i class="fa fa-diamond dropdown-menu-category-icon"></i>Kartu Nama</a>
                                     <div class="dropdown-menu-category-section">
                                         <div class="dropdown-menu-category-section-inner">
                                             <div class="dropdown-menu-category-section-content">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Jewelry</h5>
+                                                        <h5 class="dropdown-menu-category-title">Kartu Nama</h5>
                                                         <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Necklances & Pendants</a>
-                                                                <p>Ante proin ultrices feugiat non</p>
+                                                            <li><a href="#">Kartu Nama Standart</a>
+                                                                <p>Kartu Nama dengan potongan standart, banyak pilihan bahan</p>
                                                             </li>
-                                                            <li><a href="#">Bracelets</a>
-                                                                <p>Velit mollis dictumst nisi pellentesque</p>
+                                                            <li><a href="#">Kartu Nama Hook</a>
+                                                                <p>Kartu Nama dengan potongan Lengkung tiap sudutnya, banyak pilihan bahan</p>
                                                             </li>
-                                                            <li><a href="#">Rings</a>
-                                                                <p>Torquent tellus magnis ultricies dis</p>
+                                                            <li><a href="#">Kartu Nama Pola</a>
+                                                                <p>Kartu Nama dengan potongan Lengkung tiap sudutnya, banyak pilihan bahan</p>
                                                             </li>
-                                                            <li><a href="#">Errings</a>
-                                                                <p>Elementum est habitant diam nullam</p>
-                                                            </li>
-                                                            <li><a href="#">Wedding & Engagement</a>
-                                                                <p>Iaculis aliquam aliquet tempus scelerisque</p>
-                                                            </li>
-                                                            <li><a href="#">Charms</a>
-                                                                <p>Nascetur mattis gravida a amet</p>
-                                                            </li>
-                                                            <li><a href="#">Booches</a>
-                                                                <p>Sem suspendisse vehicula arcu parturient</p>
-                                                            </li>
-                                                            <li><a href="#">Men's Jewelry</a>
-                                                                <p>Rhoncus consectetur porttitor erat ultrices</p>
+                                                            <li><a href="#">Kartu Nama Lipat</a>
+                                                                <p>Kartu Nama dengan ukuran 85x55 jika dilipat, isi 48 pcs/box</p>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <!-- <div class="col-md-6">
                                                         <h5 class="dropdown-menu-category-title">Jewelry Shops</h5>
                                                         <ul class="dropdown-menu-category-list">
                                                             <li><a href="#">Contemporary & Designer</a>
-                                                                <p>Lobortis natoque gravida pellentesque lorem</p>
+                                                                <p>Ipsum rhoncus id aliquet fusce</p>
                                                             </li>
                                                             <li><a href="#">Juniors</a>
-                                                                <p>Quisque cras senectus commodo suspendisse</p>
+                                                                <p>Eget quisque posuere condimentum lectus</p>
                                                             </li>
                                                             <li><a href="#">Meternity</a>
-                                                                <p>Gravida quis senectus vestibulum dis</p>
+                                                                <p>Molestie pulvinar placerat ac interdum</p>
                                                             </li>
                                                             <li><a href="#">Pettite</a>
-                                                                <p>Fames nisl pharetra inceptos semper</p>
+                                                                <p>Maecenas mollis ad nostra rutrum</p>
                                                             </li>
                                                             <li><a href="#">Uniforms, Works & Safety</a>
-                                                                <p>Ullamcorper auctor dictum conubia praesent</p>
+                                                                <p>Ornare arcu taciti vitae lobortis</p>
                                                             </li>
                                                         </ul>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/3-i.png" alt="Image Alternative text" title="Image Title" style="right: -10px; bottom: -10px;" />
+                                            <img class="dropdown-menu-category-section-theme-img" src="img/test_cat/3-i.png" alt="Image Alternative text" title="Image Title" style="right: -10px; bottom: -10px;" />
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#"><i class="fa fa-child dropdown-menu-category-icon"></i>Toy & Kids</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Kids Clothing</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Accessories</a>
-                                                                <p>Quis eros neque magnis senectus</p>
-                                                            </li>
-                                                            <li><a href="#">Active Wear</a>
-                                                                <p>Sollicitudin aliquam donec taciti pharetra</p>
-                                                            </li>
-                                                            <li><a href="#">Coats & Jackets</a>
-                                                                <p>Semper fermentum vitae vehicula risus</p>
-                                                            </li>
-                                                            <li><a href="#">Jeans</a>
-                                                                <p>Sem purus in erat cubilia</p>
-                                                            </li>
-                                                            <li><a href="#">Sets</a>
-                                                                <p>Et egestas condimentum etiam curabitur</p>
-                                                            </li>
-                                                            <li><a href="#">Indoors</a>
-                                                                <p>Cursus pellentesque porttitor lorem lacus</p>
-                                                            </li>
-                                                            <li><a href="#">Swimwear</a>
-                                                                <p>Rhoncus himenaeos sociis pulvinar ridiculus</p>
-                                                            </li>
-                                                            <li><a href="#">Special Occasion</a>
-                                                                <p>Quam fermentum felis metus senectus</p>
-                                                            </li>
-                                                            <li><a href="#">Shoes</a>
-                                                                <p>Molestie tempor habitant ante nascetur</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">More For Kids</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Kids Furniture</a>
-                                                                <p>Nunc congue inceptos ac faucibus</p>
-                                                            </li>
-                                                            <li><a href="#">Kids Jewelry & Watches</a>
-                                                                <p>Cras fringilla velit convallis etiam</p>
-                                                            </li>
-                                                            <li><a href="#">Toys & Games</a>
-                                                                <p>Sociis ac sed tempus hendrerit</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/4-i.png" alt="Image Alternative text" title="Image Title" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-plug dropdown-menu-category-icon"></i>Electronics</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Electronics</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">TV & Video</a>
-                                                                <p>Enim mus sagittis torquent etiam</p>
-                                                            </li>
-                                                            <li><a href="#">Home Audio & Theater</a>
-                                                                <p>Commodo gravida tincidunt dignissim pellentesque</p>
-                                                            </li>
-                                                            <li><a href="#">Camera, Photo & Video</a>
-                                                                <p>Id felis nec vel eros</p>
-                                                            </li>
-                                                            <li><a href="#">Cell Phones & Accessories</a>
-                                                                <p>Ornare mi dis sem suscipit</p>
-                                                            </li>
-                                                            <li><a href="#">Headphones</a>
-                                                                <p>Orci congue imperdiet integer ad</p>
-                                                            </li>
-                                                            <li><a href="#">Video Games</a>
-                                                                <p>Turpis sociis eros eleifend fermentum</p>
-                                                            </li>
-                                                            <li><a href="#">Gar Electronics</a>
-                                                                <p>Luctus tristique inceptos mus dictum</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Computers</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Laptops & Tablets</a>
-                                                                <p>Euismod condimentum fringilla eu torquent</p>
-                                                            </li>
-                                                            <li><a href="#">Desktops & Monitors</a>
-                                                                <p>Laoreet tempor nulla phasellus volutpat</p>
-                                                            </li>
-                                                            <li><a href="#">Computer Accessories</a>
-                                                                <p>Tristique montes conubia taciti nunc</p>
-                                                            </li>
-                                                            <li><a href="#">Software</a>
-                                                                <p>Torquent dignissim parturient risus ad</p>
-                                                            </li>
-                                                            <li><a href="#">Printers & Ink</a>
-                                                                <p>Habitant leo nascetur quis nascetur</p>
-                                                            </li>
-                                                            <li><a href="#">Networking</a>
-                                                                <p>Sociosqu posuere libero felis ultricies</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/5-i.png" alt="Image Alternative text" title="Image Title" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-tags dropdown-menu-category-icon"></i>Clothes & Shoes</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">TheBox Fashion</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Woman</a>
-                                                                <p>Lacus vel nam facilisis lectus</p>
-                                                            </li>
-                                                            <li><a href="#">Men</a>
-                                                                <p>Nisi ridiculus aptent vestibulum eleifend</p>
-                                                            </li>
-                                                            <li><a href="#">Girls</a>
-                                                                <p>Ultrices rutrum primis dolor lorem</p>
-                                                            </li>
-                                                            <li><a href="#">Boys</a>
-                                                                <p>Neque varius habitant inceptos aliquet</p>
-                                                            </li>
-                                                            <li><a href="#">Baby</a>
-                                                                <p>Feugiat ad dapibus erat class</p>
-                                                            </li>
-                                                            <li><a href="#">Luggage</a>
-                                                                <p>Aptent purus senectus vitae scelerisque</p>
-                                                            </li>
-                                                            <li><a href="#">Accessories</a>
-                                                                <p>Nisl sit diam class posuere</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/6-i.png" alt="Image Alternative text" title="Image Title" style="right: -20px;" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-futbol-o dropdown-menu-category-icon"></i>Sports</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Sports</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Athletic Clothing</a>
-                                                                <p>Tempor lacinia euismod mi ante</p>
-                                                            </li>
-                                                            <li><a href="#">Exorcise & Fitness</a>
-                                                                <p>Varius duis aliquet vel laoreet</p>
-                                                            </li>
-                                                            <li><a href="#">Hunting & Fishing</a>
-                                                                <p>Eleifend porttitor per convallis dictum</p>
-                                                            </li>
-                                                            <li><a href="#">Team Sports</a>
-                                                                <p>Maecenas scelerisque purus inceptos suspendisse</p>
-                                                            </li>
-                                                            <li><a href="#">Fan Sports</a>
-                                                                <p>Laoreet malesuada primis scelerisque diam</p>
-                                                            </li>
-                                                            <li><a href="#">Golf</a>
-                                                                <p>Consectetur mauris rhoncus condimentum scelerisque</p>
-                                                            </li>
-                                                            <li><a href="#">Sports Collections</a>
-                                                                <p>Nostra primis senectus eu habitasse</p>
-                                                            </li>
-                                                            <li><a href="#">Camping & Hiking</a>
-                                                                <p>Cursus justo rutrum neque aenean</p>
-                                                            </li>
-                                                            <li><a href="#">Cycling</a>
-                                                                <p>Magna accumsan ornare scelerisque convallis</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/7-i.png" alt="Image Alternative text" title="Image Title" style="right: -39px;" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-music dropdown-menu-category-icon"></i>Entertaiment</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Entertaiment</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Video Games & Consoles</a>
-                                                                <p>Dignissim imperdiet leo ut amet</p>
-                                                            </li>
-                                                            <li><a href="#">Music</a>
-                                                                <p>Curabitur lacus vulputate rutrum risus</p>
-                                                            </li>
-                                                            <li><a href="#">DVD & Movies</a>
-                                                                <p>Primis tristique conubia nostra sed</p>
-                                                            </li>
-                                                            <li><a href="#">Tickets</a>
-                                                                <p>Quis facilisis massa nullam cubilia</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Memorabilia</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Autographs</a>
-                                                            </li>
-                                                            <li><a href="#">Movie</a>
-                                                            </li>
-                                                            <li><a href="#">Music</a>
-                                                            </li>
-                                                            <li><a href="#">Television</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/9-i.png" alt="Image Alternative text" title="Image Title" style="right: -27px;" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-location-arrow dropdown-menu-category-icon"></i>Travel</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Travel Equepment</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Luggage</a>
-                                                                <p>Ad sapien per cursus malesuada</p>
-                                                            </li>
-                                                            <li><a href="#">Travel Accessories</a>
-                                                                <p>Fermentum tortor interdum litora lacus</p>
-                                                            </li>
-                                                            <li><a href="#">Luggage Accessories</a>
-                                                                <p>Risus vitae conubia vestibulum etiam</p>
-                                                            </li>
-                                                            <li><a href="#">Lodging</a>
-                                                                <p>Leo dui etiam tempor urna</p>
-                                                            </li>
-                                                            <li><a href="#">Maps</a>
-                                                                <p>Ut dolor molestie ac ad</p>
-                                                            </li>
-                                                            <li><a href="#">Other Travel</a>
-                                                                <p>Blandit praesent rutrum pharetra ridiculus</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Booking</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Vacation Packages</a>
-                                                                <p>Integer sodales nullam non ante</p>
-                                                            </li>
-                                                            <li><a href="#">Campground & RV</a>
-                                                                <p>Eu class lacus odio porttitor</p>
-                                                            </li>
-                                                            <li><a href="#">Rail</a>
-                                                                <p>Sagittis netus nullam dictumst varius</p>
-                                                            </li>
-                                                            <li><a href="#">Car Rental</a>
-                                                                <p>Ultricies volutpat fringilla erat rutrum</p>
-                                                            </li>
-                                                            <li><a href="#">Cruises</a>
-                                                                <p>Dis eleifend vestibulum a dui</p>
-                                                            </li>
-                                                            <li><a href="#">Airline</a>
-                                                                <p>Magna rutrum ut massa dictumst</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/11-i.png" alt="Image Alternative text" title="Image Title" style="right: -100px;" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-picture-o dropdown-menu-category-icon"></i>Art & Design</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Art</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Paintings from Dealers & Resellers</a>
-                                                                <p>Ultricies justo ante ullamcorper congue</p>
-                                                            </li>
-                                                            <li><a href="#">Paintings Direct from Artist</a>
-                                                                <p>Scelerisque fames risus nam ultrices</p>
-                                                            </li>
-                                                            <li><a href="#">Art Prints</a>
-                                                                <p>Enim himenaeos volutpat conubia habitasse</p>
-                                                            </li>
-                                                            <li><a href="#">Art Photographs from Resellers</a>
-                                                                <p>Ridiculus nullam erat nec nibh</p>
-                                                            </li>
-                                                            <li><a href="#">Art Photographs from the Artist</a>
-                                                                <p>Dictum pellentesque imperdiet ultrices tellus</p>
-                                                            </li>
-                                                            <li><a href="#">Art Posters</a>
-                                                                <p>Dictum quisque gravida justo curae</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Design</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Home Decor Decals</a>
-                                                                <p>Dapibus velit ante laoreet natoque</p>
-                                                            </li>
-                                                            <li><a href="#">Furniture</a>
-                                                                <p>Hendrerit lobortis hendrerit lectus ornare</p>
-                                                            </li>
-                                                            <li><a href="#">Wallpapers</a>
-                                                                <p>Tristique rutrum purus interdum auctor</p>
-                                                            </li>
-                                                            <li><a href="#">Bar Flasks</a>
-                                                                <p>Aliquam vel pulvinar dictumst venenatis</p>
-                                                            </li>
-                                                            <li><a href="#">Posters & Prints</a>
-                                                                <p>Aliquam eget vitae ullamcorper ligula</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/12-i.png" alt="Image Alternative text" title="Image Title" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-motorcycle dropdown-menu-category-icon"></i>Motors</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Motors</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Parts & Accessories</a>
-                                                                <p>Vitae parturient primis dignissim natoque</p>
-                                                            </li>
-                                                            <li><a href="#">Cars & Trucks</a>
-                                                                <p>Ut quam posuere congue amet</p>
-                                                            </li>
-                                                            <li><a href="#">Motorcycles</a>
-                                                                <p>Sociis vestibulum dictumst porttitor fames</p>
-                                                            </li>
-                                                            <li><a href="#">Passenger Vehicles</a>
-                                                                <p>Leo tortor consequat ad congue</p>
-                                                            </li>
-                                                            <li><a href="#">Industry Vehicles</a>
-                                                                <p>Sit adipiscing felis lacus augue</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Brands</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">BMW</a>
-                                                            </li>
-                                                            <li><a href="#">Land Rover</a>
-                                                            </li>
-                                                            <li><a href="#">Nissan</a>
-                                                            </li>
-                                                            <li><a href="#">Honda</a>
-                                                            </li>
-                                                            <li><a href="#">Ford</a>
-                                                            </li>
-                                                            <li><a href="#">Porsche</a>
-                                                            </li>
-                                                            <li><a href="#">Audi</a>
-                                                            </li>
-                                                            <li><a href="#">Mercedes-Benz</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/13-i.png" alt="Image Alternative text" title="Image Title" style="right: -15px; bottom: -15px;" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-paw dropdown-menu-category-icon"></i>Pets</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <h5 class="dropdown-menu-category-title">Pet Supplies</h5>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Backyard Poultry Supplies</a>
-                                                                <p>Elementum taciti habitant aptent dapibus</p>
-                                                            </li>
-                                                            <li><a href="#">Bird Supplies</a>
-                                                                <p>Urna fringilla tortor porttitor donec</p>
-                                                            </li>
-                                                            <li><a href="#">Cat Supplies</a>
-                                                                <p>Commodo platea arcu molestie non</p>
-                                                            </li>
-                                                            <li><a href="#">Dog Supplies</a>
-                                                                <p>Ad vestibulum erat fusce vitae</p>
-                                                            </li>
-                                                            <li><a href="#">Pet Memorials & Urns</a>
-                                                                <p>Odio egestas enim curabitur sagittis</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Fish & Aquariums</a>
-                                                                <p>Ridiculus senectus parturient orci purus</p>
-                                                            </li>
-                                                            <li><a href="#">Horse Supplies</a>
-                                                                <p>Accumsan at ullamcorper magnis facilisi</p>
-                                                            </li>
-                                                            <li><a href="#">Reptile Supplies</a>
-                                                                <p>Maecenas senectus suscipit odio massa</p>
-                                                            </li>
-                                                            <li><a href="#">Small Animal Supplies</a>
-                                                                <p>Class dictum mattis duis ut</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Wholesale Lots</a>
-                                                                <p>Facilisis tempus dui augue natoque</p>
-                                                            </li>
-                                                            <li><a href="#">Other Pet Supplies</a>
-                                                                <p>Duis nibh primis sociis magna</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/14-i.png" alt="Image Alternative text" title="Image Title" style="right: -15px;" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa fa-cubes dropdown-menu-category-icon"></i>Hobbies & DIY</a>
-                                    <div class="dropdown-menu-category-section">
-                                        <div class="dropdown-menu-category-section-inner">
-                                            <div class="dropdown-menu-category-section-content">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <h5 class="dropdown-menu-category-title">Hobby & DIY</h5>
-                                                        <ul class="dropdown-menu-category-list">
-                                                            <li><a href="#">Model & Kit Tools</a>
-                                                                <p>Nullam amet himenaeos elementum ornare</p>
-                                                            </li>
-                                                            <li><a href="#">Supplies & Engines</a>
-                                                                <p>Mollis integer interdum fames parturient</p>
-                                                            </li>
-                                                            <li><a href="#">RC Airline & Helicopter</a>
-                                                                <p>Magnis diam feugiat pretium consequat</p>
-                                                            </li>
-                                                            <li><a href="#">RC Car, Truck & motorcycle</a>
-                                                                <p>Odio ultrices nisi elementum imperdiet</p>
-                                                            </li>
-                                                            <li><a href="#">Military Airline Models & Kits</a>
-                                                                <p>Sem nulla feugiat mauris dui</p>
-                                                            </li>
-                                                            <li><a href="#">Craft Airbrushing Supplies</a>
-                                                                <p>Nunc habitasse nulla sollicitudin vitae</p>
-                                                            </li>
-                                                            <li><a href="#">Card Making Supplies</a>
-                                                                <p>Risus sagittis ut malesuada neque</p>
-                                                            </li>
-                                                            <li><a href="#">Craft Sewing</a>
-                                                                <p>Nullam dignissim montes egestas duis</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <img class="dropdown-menu-category-section-theme-img" src="assets/frontend/img/test_cat/15-i.png" alt="Image Alternative text" title="Image Title" style="height: 100%;" />
-                                        </div>
-                                    </div>
-                                </li>
+                                
                             </ul>
                         </li>
                         <li class="dropdown yamm-fw"><a class="navbar-item-top" href="#">Pages<i class="drop-caret" data-toggle="dropdown"></i></a>
