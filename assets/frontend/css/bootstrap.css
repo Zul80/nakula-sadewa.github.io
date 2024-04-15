@@ -267,13 +267,13 @@ th {
 @font-face {
 	font-family: "Glyphicons Halflings";
 
-	src: url("../fonts/glyphicons-halflings-regular.html");
-	src: url("../fonts/glyphicons-halflings-regulard41d.html?#iefix")
+	src: url("../fonts/glyphicons-halflings-regular.eot");
+	src: url("../fonts/glyphicons-halflings-regular.eot?#iefix")
 			format("embedded-opentype"),
-		url("../fonts/glyphicons-halflings-regular-2.html") format("woff2"),
-		url("../fonts/glyphicons-halflings-regular-3.html") format("woff"),
-		url("../fonts/glyphicons-halflings-regular-4.html") format("truetype"),
-		url("../fonts/glyphicons-halflings-regular-5.html#glyphicons_halflingsregular")
+		url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"),
+		url("../fonts/glyphicons-halflings-regular.woff") format("woff"),
+		url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"),
+		url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")
 			format("svg");
 }
 .glyphicon {
@@ -4279,8 +4279,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 	border-width: 1px 0 0;
 }
 .navbar-brand {
-	width: 300px;
 	float: left;
+	height: 50px;
 	padding: 15px 15px;
 	font-size: 18px;
 	line-height: 20px;
