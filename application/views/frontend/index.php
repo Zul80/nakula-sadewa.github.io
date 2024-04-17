@@ -1,4 +1,14 @@
-	<div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true}'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="assets/frontend/css/styles.css">
+
+</head>
+<body>
+<div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true}'>
 	    <div class="owl-item">
 	        <div class="slider-item"
 	            style="background-image:url(<?=base_url()?>assets/frontend/img/sipesan/nakula_spanduk.jpg); height: 500px">
@@ -199,3 +209,55 @@
 	        </div>
 	    </div>
 	</div>
+
+	<!-- WhatsApp button -->
+	<div id="whatsapp-button">
+    <a href="https://api.whatsapp.com/send?phone=6281997793067" target="_blank">
+        <img src="assets/frontend/img/whatsapp_icon.png" alt="WhatsApp">
+    </a>
+</div>
+
+
+<!-- Popup Iklan -->
+<div id="popup" class="popup">
+    <img src="assets/frontend/img/iklan.png" style="width: 600px;" alt="Iklan">
+    <img class="close" src="assets/frontend/img/close.png" alt="Close" style="width: 20px;"  onclick="closePopup()">
+</div>
+
+<!-- Konten utama -->
+<!-- Konten utama Anda di sini -->
+
+<script>
+    // Fungsi untuk menutup popup
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+	5000
+
+    // Tampilkan popup ketika halaman dimuat
+    window.onload = function() {
+        document.getElementById('popup').style.display = 'block';
+    }
+	5000
+</script>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("whatsapp-button").style.display = "block";
+        } else {
+            document.getElementById("whatsapp-button").style.display = "none";
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
+	
+	
+
+

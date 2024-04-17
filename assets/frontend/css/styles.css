@@ -598,7 +598,7 @@ hr {
 	color: #a6a6a6;
 }
 .navbar-main-search {
-	width: 700px;
+	width: 500px;
 	position: relative;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
@@ -643,7 +643,7 @@ hr {
 	text-decoration: none;
 }
 .navbar-main-search-category {
-	width: 700px;
+	width: 770px;
 }
 .navbar-main-search-category .form-control {
 	padding-left: 150px;
@@ -2267,8 +2267,6 @@ header.main {
 		display: -moz-box;
 		display: -ms-box;
 		display: -webkit-flex;
-	}
-	 {
 		display: box;
 		display: flex;
 	}
@@ -4098,7 +4096,7 @@ header.main {
 .i-check,
 .i-radio {
 	display: inline-block;
-	*display: inlne;
+	display: inlne;
 	vertical-align: middle;
 	margin: 0;
 	padding: 0;
@@ -4583,8 +4581,8 @@ header.main {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	*width: 100px;
-	*height: 49px;
+	width: 100px;
+	height: 49px;
 }
 .zoomPup {
 	overflow: hidden;
@@ -5586,7 +5584,6 @@ img.mfp-img {
 	max-width: 400px;
 	margin: 40px auto;
 	position: relative;
-	border-radius: 10px;
 }
 .mfp-search-dialog {
 	width: 100%;
@@ -5980,3 +5977,36 @@ undefinedundefined.owl-height {
 	transform: scale(1.4);
 }
 /****** End of Owl Slider ******/
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0); /* Transparan */
+	padding: 5px;
+	border-radius: 10px;
+	z-index: 9999;
+}
+
+.popup img.close {
+	position: absolute;
+	top: 140px;
+	right: 40px;
+	cursor: pointer;
+}
+
+#whatsapp-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+}
+
+#whatsapp-button img {
+	width: 50px; /* Sesuaikan ukuran ikon WhatsApp */
+	height: auto;
+	border-radius: 50%; /* Agar ikon menjadi lingkaran */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
