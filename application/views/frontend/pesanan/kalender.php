@@ -29,24 +29,31 @@
                 <div class="col-md-8">
                     <div class="box">
                         <div class="form-group">
-                            <label for="">Tipe Bahan<span style="color: red">*</span> :</label><br>
-                            <select name="bahan" id="bahan" class="form-control" onchange="showTotalKalender()"
-                                required>
-                                <option value="AC230">Art Carton 230</option>
-                                <option value="AC360">Art Carton 360</option>
-                                <option value="BCT">BC TIK</option>
-                                <option value="B/W">BW - Blues White</option>
-                                <option value="LINEN">Linen</option>
-                            </select>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="">Bahan :</label>
+                                    <select name="bahan" id="bahan" class="form-control" onchange="checkOption()"
+                                        onchange="showTotalKalender()" required>
+                                        <option value="AC230">Art Carton 230</option>
+                                        <option value="AC260">Art Carton 260</option>
+                                        <option value="BCT">BC TIK</option>
+                                        <option value="B/W">BW - Blues White</option>
+                                        <option value="LINEN">Linen</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="">Isi :</label>
+                                    <select name="isi" id="isi" class="form-control" onchange="showTotalKalender()"
+                                        required>
+                                        <option value="7 Lembar">7 Lembar</option>
+                                        <option value="13 Lembar">13 Lembar</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="">Isi :</label><br>
-                            <select name="isi" id="isi" class="form-control" onchange="showTotalKalender()" required>
-                                <option value="7 Lembar">7 Lembar</option>
-                                <option value="13 Lembar">13 Lembar</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
+
+                        <div class="form-group" id="ilang">
                             <label for="">Laminasi :</label><br>
                             <select name="laminasi" id="laminasi" class="form-control" onchange="showTotalKalender()"
                                 required>
@@ -54,12 +61,28 @@
                                 <option value="Doff">Laminasi Doff</option>
                                 <option value="Glossy">Laminasi Glossy</option>
                             </select>
+
                         </div>
+
                         <div class="form-group">
-                            <label for="">Jumlah :</label>
-                            <input type="number" name="jumlah" class="form-control" id="jumlah"
-                                onkeyup="showTotalKalender()" autocomplete="off">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="">Orientasi
+                                    </label>
+                                    <select name="orientasi" id="orientasi" class="form-control"
+                                        onchange="showTotalKalender()" required>
+                                        <option value="Landscape">Landscape</option>
+                                        <option value="Potrait">Potrait</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="">Jumlah :</label>
+                                    <input type="number" name="jumlah" class="form-control" id="jumlah"
+                                        onkeyup="showTotalKalender()" autocomplete="off">
+                                </div>
+                            </div>
                         </div>
+
                         <div class="form-group">
                             <label for="">Estimasi Waktu (hari) :</label>
                             <input type="number" class="form-control" required autocomplete="off" name="estimasi">
@@ -119,5 +142,48 @@
             </div>
         </div>
     </div>
+    <!-- <script>
+    document.getElementById('bahan').addEventListener('change', function() {
+        var selectedOption = this.value;
+        var hiddenLabel = document.getElementById('ilang');
+
+        if (selectedOption === 'BCT' || selectedOption === 'B/W' || selectedOption === 'LINEN') {
+            hiddenLabel.classList.add('hidden');
+        } else {
+            hiddenLabel.classList.remove('hidden');
+        }
+    });
+    </script>
+    <script>
+    window.onload = function() {
+        var formControl1 = document.getElementById('bahan');
+        var formControl2 = document.getElementById('laminasi');
+
+        formControl1.addEventListener('change', function() {
+            if (formControl1.value === 'BCT' || formControl1.value === 'B/W' || formControl1.value ===
+                'LINEN') {
+                formControl2.style.display = 'none';
+                // hiddenLabel.classList.add('hidden');
+            } else {
+                formControl2.style.display = 'block';
+                // hiddenLabel.classList.remvoe('hidden');
+            }
+        });
+    };
+    </script> -->
+    <script>
+    function checkOption() {
+        var selectedOption = document.getElementById("bahan").value;
+        var groupForm = document.getElementById("ilang");
+
+        if (selectedOption === "BCT" || selectedOption === "B/W" || selectedOption === "LINEN") {
+            groupForm.style.display = "none";
+        } else {
+            groupForm.style.display = "block";
+        }
+    }
+    </script>
+
+
     <div class="gap"></div>
 </div>

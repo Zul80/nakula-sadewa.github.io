@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -152,7 +151,9 @@
                                     <li class="nav-item"> <a class="nav-link"
                                             href="<?=base_url('admin/laporan/kartu')?>">Kartu Nama</a></li>
                                     <li class="nav-item"> <a class="nav-link"
-                                            href="<?=base_url('admin/laporan/brosur')?>">Brosur</a></li>
+                                            href="<?=base_url('admin/laporan/a4brosur')?>">Brosur A4</a></li>
+                                    <li class="nav-item"> <a class="nav-link"
+                                            href="<?=base_url('admin/laporan/a5brosur')?>">Brosur A5</a></li>
                                     <li class="nav-item"> <a class="nav-link"
                                             href="<?=base_url('admin/laporan/kalender')?>">Kalender</a></li>
                                     <li class="nav-item"> <a class="nav-link"

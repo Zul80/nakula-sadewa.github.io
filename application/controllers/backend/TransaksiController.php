@@ -44,6 +44,7 @@ class TransaksiController extends CI_Controller
 			'kalender' => $this->BayarModel->lihat_keranjang_kalender($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'nota' => $this->BayarModel->lihat_keranjang_nota($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'dtf' => $this->BayarModel->lihat_keranjang_dtf($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
+			'lbstiker' => $this->BayarModel->lihat_keranjang_lbstiker($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 		);
 		$this->load->view('backend/templates/header');
 		$this->load->view('backend/transaksi/lihat', $data);
@@ -87,6 +88,7 @@ class TransaksiController extends CI_Controller
 			'nota' => $this->BayarModel->lihat_keranjang_nota($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'dtf' => $this->BayarModel->lihat_keranjang_dtf($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 			'tdtf' => $this->BayarModel->lihat_keranjang_tdtf($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
+			'lbstiker' => $this->BayarModel->lihat_keranjang_lbstiker($transaksi['keranjang_pengguna_id'], 'bayar_menunggu', $transaksi['keranjang_id'])->result_array(),
 		);
 
 		$table = array();
