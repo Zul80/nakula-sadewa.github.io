@@ -6,6 +6,10 @@
     <title>Frontend</title>
     <link rel="stylesheet" href="assets/frontend/css/styles.css">
 <!-- WhatsApp button -->
+
+</head>
+<body>
+
 <div id="whatsapp-button">
     <a href="https://api.whatsapp.com/send?phone=6281997793067" target="_blank">
         <img src="assets/frontend/img/whatsapp_icon.png" alt="WhatsApp">
@@ -21,8 +25,7 @@
 
 <!-- Konten utama -->
 <!-- Konten utama Anda di sini -->
-</head>
-<body>
+
 <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true}'>
 	    <div class="owl-item">
 	        <div class="slider-item"
